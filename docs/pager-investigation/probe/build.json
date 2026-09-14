@@ -1,0 +1,129 @@
+{
+  "format": "ios-ui-compiled-probe-build/v1",
+  "createdAt": "2026-09-14T21:10:23.731516+00:00",
+  "platform": "iOS Simulator only",
+  "architecture": "arm64",
+  "minimumIOS": "17.0",
+  "targetTriple": "arm64-apple-ios17.0-simulator",
+  "commands": [
+    {
+      "argv": [
+        "xcrun",
+        "--sdk",
+        "iphonesimulator",
+        "--show-sdk-path"
+      ],
+      "timeoutSeconds": 60,
+      "returncode": 0,
+      "stdout": "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "xcodebuild",
+        "-version"
+      ],
+      "timeoutSeconds": 60,
+      "returncode": 0,
+      "stdout": "Xcode 27.0\nBuild version 27A5194q\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "xcrun",
+        "--sdk",
+        "iphonesimulator",
+        "clang",
+        "--version"
+      ],
+      "timeoutSeconds": 60,
+      "returncode": 0,
+      "stdout": "Apple clang version 21.0.0 (clang-2100.3.20.102)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "xcrun",
+        "--sdk",
+        "iphonesimulator",
+        "clang",
+        "-x",
+        "objective-c++",
+        "-fblocks",
+        "-dynamiclib",
+        "-fvisibility=hidden",
+        "-O0",
+        "-Wno-deprecated-declarations",
+        "-isysroot",
+        "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk",
+        "-target",
+        "arm64-apple-ios17.0-simulator",
+        "-framework",
+        "UIKit",
+        "-framework",
+        "QuartzCore",
+        "-framework",
+        "Foundation",
+        "-framework",
+        "CoreGraphics",
+        "-framework",
+        "CoreFoundation",
+        "-lobjc",
+        "/Users/samin/Documents/ComplexLayout/docs/pager-investigation/probe/PuppetUIProbe.mm",
+        "-o",
+        "/Users/samin/Documents/ComplexLayout/docs/pager-investigation/probe/PuppetUIProbe.dylib"
+      ],
+      "timeoutSeconds": 60,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "codesign",
+        "--force",
+        "--sign",
+        "-",
+        "--timestamp=none",
+        "/Users/samin/Documents/ComplexLayout/docs/pager-investigation/probe/PuppetUIProbe.dylib"
+      ],
+      "timeoutSeconds": 60,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/Users/samin/Documents/ComplexLayout/docs/pager-investigation/probe/PuppetUIProbe.dylib: replacing existing signature\n"
+    },
+    {
+      "argv": [
+        "codesign",
+        "--verify",
+        "--strict",
+        "/Users/samin/Documents/ComplexLayout/docs/pager-investigation/probe/PuppetUIProbe.dylib"
+      ],
+      "timeoutSeconds": 60,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "xcrun",
+        "nm",
+        "-gU",
+        "/Users/samin/Documents/ComplexLayout/docs/pager-investigation/probe/PuppetUIProbe.dylib"
+      ],
+      "timeoutSeconds": 60,
+      "returncode": 0,
+      "stdout": "0000000000000a10 T _PuppetUICapture\n00000000000062b8 T _PuppetUIFree\n0000000000006290 T _PuppetUIIsMainThread\n",
+      "stderr": ""
+    }
+  ],
+  "status": "built-and-signature-verified",
+  "doesNotAttachLaunchOrLoad": true,
+  "sdkPath": "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk",
+  "xcodeVersion": "Xcode 27.0\nBuild version 27A5194q",
+  "compilerVersion": "Apple clang version 21.0.0 (clang-2100.3.20.102)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+  "exportedSymbols": "0000000000000a10 T _PuppetUICapture\n00000000000062b8 T _PuppetUIFree\n0000000000006290 T _PuppetUIIsMainThread",
+  "sourceSHA256": "b595a44752d7da67ea5764c0a4d905904d2af6a9a9dea0a0a1724d9bdc34ebac",
+  "dylibSHA256": "5e7b512a81f30c099ad898f90c5789806f7a7a48adddd33d26ed544df67ce683",
+  "dylib": "/Users/samin/Documents/ComplexLayout/docs/pager-investigation/probe/PuppetUIProbe.dylib"
+}

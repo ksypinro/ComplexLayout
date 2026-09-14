@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 58-Point Band</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap">
+
+<style>
+:root {
+  --ground:      #F6F8FA;
+  --surface:     #FFFFFF;
+  --surface-alt: #EDF1F5;
+  --ink:         #0F1720;
+  --ink-dim:     #5C6B7A;
+  --ink-faint:   #8797A6;
+  --rule:        #D8E0E8;
+  --rule-strong: #B9C6D2;
+  --accent:      #2F4C7E;
+  --ok:          #0B7A6B;
+  --ok-wash:     #E2F1EE;
+  --defect:      #BE3227;
+  --defect-wash: #FAE7E4;
+  --shadow:      0 1px 2px rgba(15,23,32,.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:      #0D1218;
+    --surface:     #141C24;
+    --surface-alt: #1B242D;
+    --ink:         #E6EDF3;
+    --ink-dim:     #9AAABA;
+    --ink-faint:   #6B7C8C;
+    --rule:        #26313B;
+    --rule-strong: #384552;
+    --accent:      #8FB0E4;
+    --ok:          #45C9B2;
+    --ok-wash:     #0E2A28;
+    --defect:      #F2796A;
+    --defect-wash: #2E1714;
+    --shadow:      0 1px 2px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:      #0D1218;
+  --surface:     #141C24;
+  --surface-alt: #1B242D;
+  --ink:         #E6EDF3;
+  --ink-dim:     #9AAABA;
+  --ink-faint:   #6B7C8C;
+  --rule:        #26313B;
+  --rule-strong: #384552;
+  --accent:      #8FB0E4;
+  --ok:          #45C9B2;
+  --ok-wash:     #0E2A28;
+  --defect:      #F2796A;
+  --defect-wash: #2E1714;
+  --shadow:      0 1px 2px rgba(0,0,0,.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.62;
+  margin: 0;
+  padding: 0 20px 96px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; }
+.col  { max-width: 64ch; }
+
+/* ---------- masthead ---------- */
+.masthead {
+  border-bottom: 2px solid var(--ink);
+  padding: 52px 0 22px;
+  margin-bottom: 40px;
+}
+.eyebrow {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+h1 {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 700;
+  letter-spacing: -.022em;
+  line-height: 1.08;
+  text-wrap: balance;
+  margin: 0 0 16px;
+}
+.dek {
+  font-size: 18px;
+  color: var(--ink-dim);
+  max-width: 60ch;
+  margin: 0 0 30px;
+}
+.dek b { color: var(--ink); font-weight: 500; }
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px 32px;
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+}
+.meta div { display: flex; flex-direction: column; gap: 3px; }
+.meta dt {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.meta dd {
+  margin: 0;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+/* ---------- sections ---------- */
+section { margin: 0 0 56px; }
+h2 {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 22px; font-weight: 600;
+  letter-spacing: -.012em;
+  margin: 0 0 6px;
+  display: flex; align-items: baseline; gap: 14px;
+}
+h2 .num {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px; font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0;
+}
+.sub {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--ink-dim);
+  margin: 0 0 22px 38px;
+}
+p { margin: 0 0 16px; }
+.col p:last-child { margin-bottom: 0; }
+section > .col { margin-left: 38px; }
+
+code, .m {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: .88em;
+  font-variant-numeric: tabular-nums;
+}
+code {
+  background: var(--surface-alt);
+  border-radius: 3px;
+  padding: .1em .34em;
+}
+b, strong { font-weight: 500; color: var(--ink); }
+
+/* ---------- headline figures ---------- */
+.figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 0 0 26px 38px;
+}
+.fig { background: var(--surface); padding: 18px 20px; }
+.fig .v {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 27px; font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+  display: block; line-height: 1.1;
+}
+.fig .k {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 11px; color: var(--ink-dim);
+  display: block; margin-top: 7px;
+}
+.fig.bad .v { color: var(--defect); }
+.fig.good .v { color: var(--ok); }
+
+/* ---------- steps ---------- */
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0 0 0 38px; }
+ol.steps li {
+  counter-increment: s;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+ol.steps li:first-child { border-top: 1px solid var(--rule); }
+ol.steps li::before {
+  content: counter(s);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+ol.steps .res {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 13px;
+  display: block;
+  margin-top: 2px;
+}
+ol.steps .res.ok  { color: var(--ok); }
+ol.steps .res.bad { color: var(--defect); font-weight: 600; }
+
+/* ---------- tables ---------- */
+.scroller { overflow-x: auto; margin-left: 38px; border: 1px solid var(--rule); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; min-width: 640px; }
+th, td {
+  text-align: left;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+th {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-faint);
+  background: var(--surface-alt);
+  position: sticky; top: 0;
+}
+td { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+td.name { font-family: "IBM Plex Sans", system-ui, sans-serif; white-space: normal; min-width: 210px; }
+tr:last-child td { border-bottom: none; }
+tr.mark td { background: var(--defect-wash); }
+tr.mark td.name { font-weight: 600; }
+.hl { color: var(--defect); font-weight: 600; }
+.hl-ok { color: var(--ok); font-weight: 600; }
+.muted { color: var(--ink-faint); }
+caption {
+  caption-side: top;
+  text-align: left;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 12px;
+  color: var(--ink-dim);
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface-alt);
+}
+
+/* ---------- delta ---------- */
+.deltas { display: grid; gap: 14px; margin-left: 38px; }
+.delta {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--defect);
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: minmax(200px, 1.4fr) auto auto auto;
+  gap: 8px 18px;
+  align-items: center;
+}
+.delta .prop {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+}
+.delta .from, .delta .to {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 21px; font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.delta .from { color: var(--ok); }
+.delta .to   { color: var(--defect); }
+.delta .arr  { color: var(--ink-faint); font-size: 16px; }
+
+/* ---------- figure ---------- */
+figure { margin: 0 0 24px; }
+.figframe {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 22px 20px 12px;
+  overflow-x: auto;
+}
+figure svg { display: block; max-width: 100%; height: auto; margin: 0 auto; color: var(--ink-dim); }
+figcaption {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  margin-top: 12px;
+  max-width: 68ch;
+}
+
+/* diagram parts */
+.d-screen  { fill: none; stroke: var(--rule-strong); stroke-width: 1; stroke-dasharray: 3 3; }
+.d-cell-ok { fill: var(--ok-wash); stroke: var(--ok); stroke-width: 1.5; }
+.d-cell-bad{ fill: var(--defect-wash); stroke: var(--defect); stroke-width: 1.5; }
+.d-content { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.d-band    { fill: var(--defect); opacity: .16; }
+.d-band-e  { fill: none; stroke: var(--defect); stroke-width: 1; }
+.d-dim     { stroke: currentColor; stroke-width: 1; }
+.d-t {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px; fill: currentColor;
+  font-variant-numeric: tabular-nums;
+}
+.d-t.lbl {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 12px; font-weight: 600; fill: var(--ink);
+}
+.d-t.ok  { fill: var(--ok); }
+.d-t.bad { fill: var(--defect); font-weight: 600; }
+.d-t.acc { fill: var(--accent); }
+
+/* ---------- math ---------- */
+.math {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  padding: 18px 22px;
+  margin-left: 38px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
+  line-height: 2.05;
+  overflow-x: auto;
+}
+.math .note { color: var(--ink-faint); }
+.math .out  { color: var(--defect); font-weight: 600; }
+
+/* ---------- callout ---------- */
+.callout {
+  background: var(--ok-wash);
+  border: 1px solid var(--ok);
+  padding: 18px 22px;
+  margin-left: 38px;
+}
+.callout h3 {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 14px; font-weight: 600; margin: 0 0 8px;
+  color: var(--ok);
+}
+.callout p { margin: 0 0 10px; font-size: 15px; }
+.callout p:last-child { margin: 0; }
+
+ul.gaps { margin: 0 0 0 38px; padding: 0; list-style: none; }
+ul.gaps li {
+  padding: 12px 0 12px 20px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  font-size: 15px;
+}
+ul.gaps li:first-child { border-top: 1px solid var(--rule); }
+ul.gaps li::before {
+  content: "—"; position: absolute; left: 0; color: var(--ink-faint);
+}
+
+td.wrap {
+  white-space: normal;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  min-width: 230px;
+  line-height: 1.5;
+}
+td.tag {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.verdict-fail { color: var(--defect); font-weight: 600; }
+.verdict-pass { color: var(--ok); font-weight: 600; }
+
+.d-box    { fill: var(--surface-alt); stroke: var(--rule-strong); stroke-width: 1; }
+.d-box-bad{ fill: var(--defect-wash); stroke: var(--defect); stroke-width: 1.5; }
+.d-box-ok { fill: var(--ok-wash); stroke: var(--ok); stroke-width: 1.5; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 60px; padding-top: 20px;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 12px; color: var(--ink-faint);
+  display: flex; flex-wrap: wrap; gap: 8px 26px;
+}
+
+@media (max-width: 680px) {
+  section > .col, .figures, .deltas, .math, .callout, ol.steps, ul.gaps, .scroller { margin-left: 0; }
+  .sub { margin-left: 0; }
+  .delta { grid-template-columns: 1fr auto auto auto; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">View hierarchy analysis · ComplexLayout</p>
+  <h1>The 58-Point Band</h1>
+  <p class="dek">After a portrait&#8202;→&#8202;landscape rotation on iPad, tab&nbsp;3's paged content stops <b>58&nbsp;pt short</b> of the display bottom. Across 451 captured views, exactly <b>two values</b> change — and their arithmetic accounts for the symptom to half a point. The reverse rotation is clean, so the defect belongs to one direction only. Three attempts to fix it in place were measured failing; the fix that works replaces the pager.</p>
+  <dl class="meta">
+    <div><dt>Device</dt><dd>iPad Air 11-inch (M4)</dd></div>
+    <div><dt>Runtime</dt><dd>iPadOS 27.0 · 24A5355p</dd></div>
+    <div><dt>Screen</dt><dd>1180 × 820 pt @2×</dd></div>
+    <div><dt>Capture</dt><dd>lldb-public-uikit</dd></div>
+    <div><dt>Captures</dt><dd>4 · 186–455 nodes</dd></div>
+    <div><dt>Status</dt><dd>Fixed — see §12</dd></div>
+  </dl>
+</header>
+
+<section>
+  <h2><span class="num">01</span> The symptom</h2>
+  <p class="sub">Measured by decoding the raw framebuffer column at x&nbsp;=&nbsp;200.</p>
+  <div class="figures">
+    <div class="fig bad"><span class="v">761.5</span><span class="k">last content pixel row (pt)</span></div>
+    <div class="fig bad"><span class="v">762.0</span><span class="k">first white row (pt)</span></div>
+    <div class="fig"><span class="v">820</span><span class="k">display height (pt)</span></div>
+    <div class="fig bad"><span class="v">58</span><span class="k">band height (pt)</span></div>
+  </div>
+  <div class="col">
+    <p>The band renders pure white, <code>255,255,255</code> — not <code>systemGroupedBackground</code> (<code>242,242,247</code>), which is what <code>MosaicViewController</code> paints on its own view. The mosaic view is therefore <em>absent</em> from that region rather than showing its own background, which rules out every background-colour explanation and points at geometry.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">02</span> Reproduction</h2>
+  <p class="sub">Deterministic. Three steps, one rotation.</p>
+  <ol class="steps">
+    <li><div>Launch the app with the device already in landscape<span class="res ok">Correct — content reaches y = 819.5</span></div></li>
+    <li><div>Rotate to portrait<span class="res ok">Correct</span></div></li>
+    <li><div>Rotate back to landscape<span class="res bad">Defect — content stops at y = 761.5</span></div></li>
+  </ol>
+
+  <div class="scroller" style="margin-top:22px">
+    <table>
+      <caption>One process, PID 57665 — three consecutive states, no relaunch</caption>
+      <thead><tr><th>State</th><th>Orient.</th><th>contentSize.h</th><th>full h</th><th>safe-inset h</th><th>picked</th><th>cell y</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Launched into landscape</td><td>4</td><td class="muted">not captured</td><td>820</td><td>704</td><td class="hl-ok">full</td><td class="hl-ok">—</td></tr>
+        <tr><td class="name">→ rotated to portrait</td><td>2</td><td>1180</td><td>1180</td><td>1064</td><td class="hl-ok">full</td><td class="hl-ok">0</td></tr>
+        <tr class="mark"><td class="name">→ rotated to landscape</td><td>3</td><td class="hl">704</td><td>820</td><td>704</td><td class="hl">safe-inset</td><td class="hl">−58</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col" style="margin-top:20px">
+    <p><b>The defect is directional.</b> Landscape&#8202;→&#8202;portrait re-laid out correctly and chose the full 1180. Only portrait&#8202;→&#8202;landscape chooses the safe-inset height. The safe-area insets are <code>T96 B20</code> in <em>both</em> orientations, so <code>96 + 20 = 116</code> is the constant being subtracted — 1180&nbsp;−&nbsp;116&nbsp;=&nbsp;1064 in portrait, which is <em>not</em> what portrait used, against 820&nbsp;−&nbsp;116&nbsp;=&nbsp;704 in landscape, which is.</p>
+    <p><b>It is deterministic and not tied to a landscape variant.</b> The defect reproduced across two separate processes and both landscape orientations — LandscapeRight (4) and LandscapeLeft (3) — producing byte-identical results each time: <code>contentSize</code> 704, cell <code>y = −58</code>, band boundary 762.0.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">03</span> Portrait — the pre-rotation state</h2>
+  <p class="sub">Captured first-hand. This is repro step 2 — the state the breaking rotation starts from.</p>
+  <div class="scroller">
+    <table>
+      <caption>Capture <span class="m">portrait-prerotation/native.json</span> — 455 nodes, untruncated, orientation 2</caption>
+      <thead><tr><th>View</th><th>frame</th><th>screenFrame</th><th>safeArea</th></tr></thead>
+      <tbody>
+        <tr><td class="name">UIWindow → … → UIViewControllerWrapperView <span class="muted">(6 views)</span></td><td>(0,0) 820×1180</td><td>(0,0) 820×1180</td><td>T32 B20</td></tr>
+        <tr><td class="name">_UIHostingView&lt;OverviewView&gt;</td><td>(0,0) 820×1180</td><td>(0,0) 820×1180</td><td>T96 B20</td></tr>
+        <tr><td class="name">SwiftUI.PagingCollectionView</td><td>(0,0) 820×1180</td><td>(0,0) 820×1180</td><td>T96 B20</td></tr>
+        <tr><td class="name">SwiftUI.UIKitPagingCell</td><td class="hl-ok">(0,<b>0</b>) 820×1180</td><td class="hl-ok">(0,0) 820×1180</td><td>T96 B20</td></tr>
+        <tr><td class="name">UICollectionView <span class="muted">(mosaic)</span></td><td>(0,0) 820×1180</td><td class="hl-ok">(0,0) 820×1180</td><td>T96 B20</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="scroller" style="margin-top:14px">
+    <table>
+      <caption>Scroll state — portrait</caption>
+      <thead><tr><th>Scroll view</th><th>contentSize</th><th>contentOffset</th><th>contentInset</th></tr></thead>
+      <tbody>
+        <tr><td class="name">SwiftUI.PagingCollectionView</td><td>2460 × <span class="hl-ok">1180</span></td><td>(0, 0)</td><td>all 0</td></tr>
+        <tr><td class="name">UICollectionView (mosaic)</td><td>820 × 932.25</td><td>(0, −216)</td><td>T216 B20</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col" style="margin-top:18px">
+    <p>Portrait picks the <b>full</b> height — <code>contentSize.height = 1180</code>, not the safe-inset 1064. The cell sits at <code>y = 0</code> and nothing is displaced. Page width tracks correctly too: <code>2460 = 3 × 820</code>.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">04</span> Landscape — expected</h2>
+  <p class="sub">Landscape, fresh launch, no rotation. Every view in the chain is 1180 × 820 at the origin.</p>
+  <div class="scroller">
+    <table>
+      <caption>Capture <span class="m">good-landscape/native.json</span> — 186 nodes, untruncated</caption>
+      <thead><tr><th>View</th><th>frame</th><th>screenFrame</th><th>safeArea</th><th>constraints</th></tr></thead>
+      <tbody>
+        <tr><td class="name">UIWindow → … → UIViewControllerWrapperView <span class="muted">(6 views)</span></td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T32 B20</td><td>0</td></tr>
+        <tr><td class="name">_UIHostingView&lt;OverviewView&gt;</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">UIKitPlatformViewHost&lt;PagingView&gt;</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">SwiftUI.PagingCollectionView</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">SwiftUI.UIKitPagingCell</td><td class="hl-ok">(0,<b>0</b>) 1180×820</td><td class="hl-ok">(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">UIView <span class="muted">(cell content)</span></td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">_UIHostingView&lt;_ViewList_View&gt;</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">UIKitPlatformViewHost&lt;PagingView&gt; <span class="muted">(inner)</span></td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">UIView <span class="muted">(MosaicViewController.view)</span></td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">UICollectionView <span class="muted">(mosaic)</span></td><td>(0,0) 1180×820</td><td class="hl-ok">(0,0) 1180×820</td><td>T96 B20</td><td>8</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="scroller" style="margin-top:14px">
+    <table>
+      <caption>Scroll state — expected</caption>
+      <thead><tr><th>Scroll view</th><th>contentSize</th><th>contentOffset</th><th>contentInset</th><th>adjusted</th></tr></thead>
+      <tbody>
+        <tr><td class="name">SwiftUI.PagingCollectionView</td><td>3540 × <span class="hl-ok">820</span></td><td>(0, 0)</td><td>all 0</td><td>all 0</td></tr>
+        <tr><td class="name">UICollectionView (mosaic)</td><td>1180 × 1247.25</td><td>(0, −216)</td><td>T216 B20</td><td>T216 B20</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">05</span> Landscape — actual</h2>
+  <p class="sub">Landscape, after portrait&#8202;→&#8202;landscape rotation. Same process, no relaunch — the pointer IDs are the same objects, so this is an exact object-level comparison rather than an inferred match.</p>
+  <div class="scroller">
+    <table>
+      <caption>Capture <span class="m">bad-landscape/native.json</span> — 451 nodes, untruncated</caption>
+      <thead><tr><th>View</th><th>frame</th><th>screenFrame</th><th>safeArea</th><th>constraints</th></tr></thead>
+      <tbody>
+        <tr><td class="name">UIWindow → … → UIViewControllerWrapperView <span class="muted">(6 views)</span></td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T32 B20</td><td>0</td></tr>
+        <tr><td class="name">_UIHostingView&lt;OverviewView&gt;</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr><td class="name">UIKitPlatformViewHost&lt;PagingView&gt;</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr class="mark"><td class="name">SwiftUI.PagingCollectionView</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td>T96 B20</td><td>0</td></tr>
+        <tr class="mark"><td class="name">SwiftUI.UIKitPagingCell</td><td class="hl">(0,<b>−58</b>) 1180×820</td><td class="hl">(0,−58) 1180×820</td><td>T96 <span class="hl">B0</span></td><td>0</td></tr>
+        <tr><td class="name">UIView <span class="muted">(cell content)</span></td><td>(0,0) 1180×820</td><td class="hl">(0,−58) 1180×820</td><td>T96 B0</td><td>0</td></tr>
+        <tr><td class="name">_UIHostingView&lt;_ViewList_View&gt;</td><td>(0,0) 1180×820</td><td class="hl">(0,−58) 1180×820</td><td>T96 B0</td><td>0</td></tr>
+        <tr><td class="name">UIKitPlatformViewHost&lt;PagingView&gt; <span class="muted">(inner)</span></td><td>(0,0) 1180×820</td><td class="hl">(0,−58) 1180×820</td><td>T96 B0</td><td>0</td></tr>
+        <tr><td class="name">UIView <span class="muted">(MosaicViewController.view)</span></td><td>(0,0) 1180×820</td><td class="hl">(0,−58) 1180×820</td><td>T96 B0</td><td>0</td></tr>
+        <tr><td class="name">UICollectionView <span class="muted">(mosaic)</span></td><td>(0,0) 1180×820</td><td class="hl">(0,−58) 1180×820</td><td>T96 B0</td><td>8</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="scroller" style="margin-top:14px">
+    <table>
+      <caption>Scroll state — actual</caption>
+      <thead><tr><th>Scroll view</th><th>contentSize</th><th>contentOffset</th><th>contentInset</th><th>adjusted</th></tr></thead>
+      <tbody>
+        <tr class="mark"><td class="name">SwiftUI.PagingCollectionView</td><td>3540 × <span class="hl">704</span></td><td>(0, 0)</td><td>all 0</td><td>all 0</td></tr>
+        <tr><td class="name">UICollectionView (mosaic)</td><td>1180 × 1247.25</td><td>(0, −216)</td><td>T216 B20</td><td>T216 B20</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="scroller" style="margin-top:14px">
+    <table>
+      <caption>Surviving portrait-layout views — present only after rotation, never re-laid out</caption>
+      <thead><tr><th>View</th><th>frame</th><th>safeArea</th><th>hidden</th></tr></thead>
+      <tbody>
+        <tr><td class="name">SwiftUI.UIKitPagingCell <span class="muted">v:0x10dacfc00</span></td><td>(820,<b>0</b>) 820×1180</td><td>T96 B20</td><td>true</td></tr>
+        <tr><td class="name">UICollectionView <span class="muted">v:0x10d42ea00</span></td><td>(0,0) 820×1180</td><td>T96 B20</td><td>false</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col" style="margin-top:18px">
+    <p>The portrait cell sits at <code>y = 0</code> with a bottom safe area of 20 — portrait itself laid out correctly. The off-screen page is still carrying full portrait geometry, 820&nbsp;×&nbsp;1180, never resized for landscape.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">06</span> The delta</h2>
+  <p class="sub">Two values change across 451 nodes. Nothing else does.</p>
+  <div class="deltas">
+    <div class="delta">
+      <span class="prop">PagingCollectionView<br>.contentSize.height</span>
+      <span class="from">820</span><span class="arr">→</span><span class="to">704</span>
+    </div>
+    <div class="delta">
+      <span class="prop">UIKitPagingCell<br>.frame.origin.y</span>
+      <span class="from">0</span><span class="arr">→</span><span class="to">−58</span>
+    </div>
+  </div>
+  <div class="col" style="margin-top:20px">
+    <p>No frame <em>size</em> changes anywhere. No constraint changes. <code>layout.ambiguous</code> is <code>false</code> on all 451 nodes. Every view in the suspect chain has <code>translatesAutoresizingMaskIntoConstraints = true</code> and owns <b>zero</b> constraints — the only constrained view is the mosaic collection view, whose 8 constraints are identical in both captures and are internal supplementary-view sizing. <b>There is nothing constraint-shaped to fix.</b></p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">07</span> Mechanism</h2>
+  <p class="sub">A full-height cell centred inside a safe-area-height content box.</p>
+
+  <div class="figframe">
+  <figure>
+    <svg viewBox="0 0 760 502" role="img" aria-label="Scale drawing comparing expected and actual paging layout. Expected: an 820 point content box and an 820 point cell align flush with the display. Actual: the content box is 704 points tall while the cell is still 820 points, and centring the cell leaves it 58 points above the top and 58 points short of the bottom.">
+      <!-- ============ EXPECTED ============ -->
+      <text class="d-t lbl" x="130" y="30">Expected</text>
+      <text class="d-t" x="130" y="48">contentSize.height = 820</text>
+
+      <!-- display outline -->
+      <rect class="d-screen" x="130" y="90" width="180" height="328"/>
+      <!-- cell, flush -->
+      <rect class="d-cell-ok" x="130" y="90" width="180" height="328"/>
+      <text class="d-t ok" x="220" y="246" text-anchor="middle">page cell</text>
+      <text class="d-t ok" x="220" y="262" text-anchor="middle">1180 × 820</text>
+
+      <!-- dimension: 820 total -->
+      <line class="d-dim" x1="104" y1="90" x2="104" y2="418"/>
+      <line class="d-dim" x1="98" y1="90" x2="110" y2="90"/>
+      <line class="d-dim" x1="98" y1="418" x2="110" y2="418"/>
+      <text class="d-t" x="92" y="258" text-anchor="end">820</text>
+
+      <!-- display edge labels -->
+      <text class="d-t" x="318" y="94">y = 0</text>
+      <text class="d-t" x="318" y="422">y = 820</text>
+
+      <text class="d-t ok" x="220" y="446" text-anchor="middle">flush — no band</text>
+
+      <!-- ============ ACTUAL ============ -->
+      <text class="d-t lbl" x="470" y="30">Actual, after rotation</text>
+      <text class="d-t bad" x="470" y="48">contentSize.height = 704</text>
+
+      <!-- display outline -->
+      <rect class="d-screen" x="470" y="90" width="180" height="328"/>
+
+      <!-- cell 820 tall, centred in 704 -> top at -58 -->
+      <rect class="d-cell-bad" x="470" y="66.8" width="180" height="328"/>
+      <text class="d-t bad" x="560" y="230" text-anchor="middle">page cell</text>
+      <text class="d-t bad" x="560" y="246" text-anchor="middle">1180 × 820</text>
+
+      <!-- content box 704 -->
+      <rect class="d-content" x="470" y="90" width="180" height="281.6"/>
+      <text class="d-t acc" x="560" y="362" text-anchor="middle">content box 704</text>
+
+      <!-- the white band -->
+      <rect class="d-band"   x="470" y="394.8" width="180" height="23.2"/>
+      <rect class="d-band-e" x="470" y="394.8" width="180" height="23.2"/>
+
+      <!-- overhang dimension, top -->
+      <line class="d-dim" x1="444" y1="66.8" x2="444" y2="90"/>
+      <line class="d-dim" x1="438" y1="66.8" x2="450" y2="66.8"/>
+      <line class="d-dim" x1="438" y1="90" x2="450" y2="90"/>
+      <text class="d-t bad" x="432" y="82" text-anchor="end">58</text>
+
+      <!-- band dimension, bottom -->
+      <line class="d-dim" x1="444" y1="394.8" x2="444" y2="418"/>
+      <line class="d-dim" x1="438" y1="394.8" x2="450" y2="394.8"/>
+      <line class="d-dim" x1="438" y1="418" x2="450" y2="418"/>
+      <text class="d-t bad" x="432" y="410" text-anchor="end">58</text>
+
+      <!-- edge labels -->
+      <text class="d-t" x="658" y="71">y = −58</text>
+      <text class="d-t bad" x="658" y="399">y = 762</text>
+      <text class="d-t" x="658" y="422">y = 820</text>
+
+      <text class="d-t bad" x="560" y="446" text-anchor="middle">58 pt white band</text>
+
+      <!-- centring callout -->
+      <text class="d-t" x="380" y="484" text-anchor="middle">the 116 pt surplus splits evenly: (704 − 820) ÷ 2 = −58</text>
+    </svg>
+    <figcaption>Drawn to scale at 0.4&#8202;px&#8202;/&#8202;pt. The cell keeps its correct 820&nbsp;pt height in both states; only the content box it is centred within changes. That is enough to lift it 58&nbsp;pt and strand its bottom edge at y&nbsp;=&nbsp;762.</figcaption>
+  </figure>
+  </div>
+
+  <div class="math">
+    820 − 96 − 20 &nbsp;=&nbsp; <b>704</b> &nbsp;&nbsp;<span class="note">height − safeArea.top − safeArea.bottom = new contentSize.height</span><br>
+    (704 − 820) ÷ 2 &nbsp;=&nbsp; <span class="out">−58</span> &nbsp;&nbsp;<span class="note">cell centred in content → observed frame.origin.y</span><br>
+    −58 + 820 &nbsp;=&nbsp; <span class="out">762</span> &nbsp;&nbsp;<span class="note">cell bottom edge = measured start of the white band</span>
+  </div>
+
+  <div class="col" style="margin-top:20px">
+    <p>On re-layout after rotation, <code>PagingCollectionView</code> derives its content height from the <b>safe-area-inset</b> height (704) instead of its full bounds height (820). Its page cell is still 820 tall, because <code>CustomPageView</code> declares <code>.ignoresSafeArea()</code> and therefore genuinely <em>is</em> full-height. The paging layout centres the cell within the content height, so the 116&nbsp;pt surplus splits evenly above and below.</p>
+    <p>Everything below the cell — the hosting views, <code>MosaicViewController.view</code>, and the mosaic collection view — has a correct <code>frame</code> of <code>(0,0) 1180×820</code> relative to its own parent and is simply carried along. That is why their <code>frame</code> reads correct while <code>screenFrame</code> reads <code>−58</code>.</p>
+    <p>The cell's <code>safeAreaInsets.bottom</code> falling from 20 to 0 is a <b>consequence, not a cause</b>: once the cell's bottom edge at 762 sits above the window's safe-area boundary at 800, UIKit correctly reports no bottom inset for it.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">08</span> Initial reasoning</h2>
+  <p class="sub">A size contract that only the rotation re-layout path breaks.</p>
+  <div class="col">
+    <p>The fresh-launch path sizes paging content to the full height (820), which matches the cell, so the cell sits at 0 and the layout is correct. The rotation re-layout path sizes it to the safe-area height (704), which no longer matches the 820&nbsp;pt cell — and the centring rule converts that size disagreement into a position error.</p>
+    <p>The application-side ingredient is the pair of <code>.ignoresSafeArea()</code> calls added for the edge-to-edge requirement: one on the <code>TabView</code> in <code>CustomView</code>, one on the page in <code>CustomPageView</code>. These make the page legitimately full-height, which is exactly the condition under which a safe-area-height content box misaligns. Without them the cell would be 704&nbsp;pt tall and would agree with the recomputed content height.</p>
+    <p>The directional evidence sharpens this. Portrait re-layout picks the full height and is correct, so the paging container is not simply "wrong after any rotation" — something specific to the portrait&#8202;→&#8202;landscape transition selects the inset height. Whether that is the shrinking height, the orientation itself, or the order in which size and safe area are applied is not observable from outside SwiftUI; what is established is that the choice differs by direction and that the wrong choice is exactly the safe-inset height.</p>
+    <p>Corroborating that this is a paging-container re-layout weakness rather than anything downstream: the off-screen page is still 820&nbsp;×&nbsp;1180, full portrait geometry, and carries an 820&nbsp;×&nbsp;1180 mosaic collection view inside it.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">09</span> Explicitly exonerated</h2>
+  <p class="sub">The inset plumbing is behaving correctly.</p>
+  <div class="callout">
+    <h3>The mosaic collection view's own state is byte-identical before and after</h3>
+    <p><span class="m">contentInset</span> T216 B20 · <span class="m">adjustedContentInset</span> T216 B20 · <span class="m">contentOffset</span> (0, −216) · <span class="m">contentSize</span> 1180 × 1247.25</p>
+    <p><span class="m">216 = 96 + 120</span> is precisely the <span class="m">safeAreaInsets.top + reservedHeight</span> that <span class="m">OverviewView</span> computes. The <span class="m">contentInsetOverride</span> plumbing, the <span class="m">GeometryReader</span>, and <span class="m">reservedHeight</span> are all correct and are not implicated. The scroll view is perfectly configured and is simply being carried 58 pt too high by its ancestor.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">10</span> Acceptance criteria</h2>
+  <p class="sub">Fixed before any fix was attempted, so that "it looks right" could not stand in for "it is right".</p>
+  <div class="scroller">
+    <table>
+      <caption>Every row is checkable against a capture, not a screenshot</caption>
+      <thead><tr><th></th><th>Requirement</th><th>How it is checked</th></tr></thead>
+      <tbody>
+        <tr><td class="tag">AC-1</td><td class="wrap">Content reaches the physical display edges in both orientations, after any rotation</td><td class="wrap"><span class="m">UIKitPagingCell.frame.origin.y == 0</span>; page host and mosaic at <span class="m">screenFrame (0,0) W×H</span>; no pure-white run at either edge</td></tr>
+        <tr><td class="tag">AC-2</td><td class="wrap">Header keeps its floating-capsule behaviour, content passing behind it</td><td class="wrap"><span class="m">contentInset.top == safeAreaInsets.top + reservedHeight</span>, <span class="m">.bottom == safeAreaInsets.bottom</span>; swipe and tap-to-page stay in step</td></tr>
+        <tr><td class="tag">AC-3</td><td class="wrap">Structure preserved</td><td class="wrap">UITabBarController → UIHostingController → UIViewControllerRepresentable per page</td></tr>
+        <tr><td class="tag">AC-4</td><td class="wrap">No regression in tabs 1 and 2</td><td class="wrap">Tab 1 unchanged on the <span class="m">contentInsetOverride == nil</span> path</td></tr>
+        <tr><td class="tag">AC-5</td><td class="wrap">Rotation invariance</td><td class="wrap">Holds after P→L, L→P and repeated rotations, verified by capture</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col" style="margin-top:18px">
+    <p>Two constraints framed the search: keep <code>TabView(.page)</code> unless there was genuinely no way, and if it had to go, replace it with SwiftUI — a UIKit paging container was not permitted. Scope was rotation only; Split View and Stage Manager were excluded by decision, not by oversight.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">11</span> What was tried, and why each failed</h2>
+  <p class="sub">Three attempts to keep the pager. Each was measured rather than assumed.</p>
+  <div class="scroller">
+    <table>
+      <caption>All three aimed at the same thing: stop the paging view receiving a safe area to subtract</caption>
+      <thead><tr><th>Attempt</th><th>Mechanism</th><th>Measured</th><th>Why it failed</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="tag">1st Try</td>
+          <td class="wrap"><span class="m">UIHostingController<br>.safeAreaRegions = []</span></td>
+          <td class="wrap">Paging view still <span class="m">T96 B20</span>; <span class="m">contentSize 3540×704</span>; cell at <span class="m">y = −58</span></td>
+          <td class="wrap">Governs SwiftUI's own layout system only. The paging view is a UIKit collection view reading the UIView chain, which the flag never touches.</td>
+        </tr>
+        <tr>
+          <td class="tag">Fix 2a</td>
+          <td class="wrap">Container view controller setting negative <span class="m">additionalSafeAreaInsets</span> on the hosting controller</td>
+          <td class="wrap">Hosting view <span class="m">T96 B20</span> — identical to its parent, as if nothing had been set</td>
+          <td class="wrap">UIKit only <em>adds</em> with that property. Negative values are ignored, so it cannot subtract an inherited inset.</td>
+        </tr>
+        <tr>
+          <td class="tag">Fix 2b</td>
+          <td class="wrap">Overriding <span class="m">safeAreaInsets</span> on the container's own view to return zero</td>
+          <td class="wrap">Container reports <span class="m">T0 B0</span>; its child hosting view still reports <span class="m">T96 B20</span></td>
+          <td class="wrap">The override changes what that view reports to callers. It does not change what UIKit propagates.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col" style="margin-top:22px">
+    <p><b>Fix 2b is the conclusive measurement</b>, because of a detail in its numbers: the container's wrapper reports <code>T32</code>, but the child hosting controller receives <code>T96</code>. The tab bar's 64 pt is not inherited down the view tree — UIKit computes the safe area <b>per view controller</b> and applies it to each one directly.</p>
+    <p>That closes the search. No parent view and no parent controller can withhold the safe area from a child hosting controller, and <code>additionalSafeAreaInsets</code> — the only supported lever — cannot subtract. Two further options were rejected by analysis rather than experiment: confining the <code>TabView</code> inside the safe area makes the two heights agree but leaves content 96 pt short at the top, failing AC-1 outright; and enlarging the pager's frame does not help, because the cell height tracks the bounds, so the mismatch simply follows.</p>
+    <p>So <code>TabView(.page)</code> can satisfy <em>either</em> "content reaches the physical edges" <em>or</em> "survives rotation" — not both, through public API.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">12</span> The fix</h2>
+  <p class="sub">Replace the pager, so there is only one height in play.</p>
+
+  <div class="figframe">
+  <figure>
+    <svg viewBox="0 0 760 300" role="img" aria-label="Two flow diagrams. In the TabView implementation, cell height and content size are derived separately from the same bounds, one subtracting the safe area, producing a mismatch resolved by centring. In the ScrollView implementation, the page frame is set explicitly from the container size and the content size is the sum of those frames, so no mismatch can arise.">
+      <text class="d-t lbl" x="40" y="22">TabView(.page) — two derived heights</text>
+      <text class="d-t lbl" x="410" y="22">ScrollView paging — one explicit height</text>
+
+      <!-- Panel A -->
+      <rect class="d-box" x="40" y="38" width="310" height="34"/>
+      <text class="d-t" x="195" y="59" text-anchor="middle">PagingCollectionView bounds — 820</text>
+
+      <line class="d-dim" x1="115" y1="72" x2="115" y2="112" marker-end="url(#ar)"/>
+      <line class="d-dim" x1="275" y1="72" x2="275" y2="112" marker-end="url(#ar)"/>
+
+      <rect class="d-box" x="40" y="114" width="150" height="62"/>
+      <text class="d-t" x="115" y="134" text-anchor="middle">cell height</text>
+      <text class="d-t" x="115" y="150" text-anchor="middle">= bounds</text>
+      <text class="d-t" x="115" y="168" text-anchor="middle">820</text>
+
+      <rect class="d-box-bad" x="200" y="114" width="150" height="62"/>
+      <text class="d-t" x="275" y="134" text-anchor="middle">contentSize</text>
+      <text class="d-t bad" x="275" y="150" text-anchor="middle">= bounds − insets</text>
+      <text class="d-t bad" x="275" y="168" text-anchor="middle">704</text>
+
+      <line class="d-dim" x1="115" y1="176" x2="115" y2="216" marker-end="url(#ar)"/>
+      <line class="d-dim" x1="275" y1="176" x2="275" y2="216" marker-end="url(#ar)"/>
+
+      <rect class="d-box-bad" x="40" y="218" width="310" height="44"/>
+      <text class="d-t bad" x="195" y="238" text-anchor="middle">centre cell in content</text>
+      <text class="d-t bad" x="195" y="254" text-anchor="middle">(704 − 820) ÷ 2 = −58</text>
+
+      <!-- Panel B -->
+      <rect class="d-box" x="410" y="38" width="310" height="34"/>
+      <text class="d-t" x="565" y="59" text-anchor="middle">container size — 820</text>
+
+      <line class="d-dim" x1="485" y1="72" x2="485" y2="112" marker-end="url(#ar)"/>
+
+      <rect class="d-box-ok" x="410" y="114" width="150" height="62"/>
+      <text class="d-t" x="485" y="134" text-anchor="middle">page frame</text>
+      <text class="d-t ok" x="485" y="150" text-anchor="middle">set explicitly</text>
+      <text class="d-t ok" x="485" y="168" text-anchor="middle">820</text>
+
+      <line class="d-dim" x1="560" y1="145" x2="568" y2="145" marker-end="url(#ar)"/>
+
+      <rect class="d-box-ok" x="570" y="114" width="150" height="62"/>
+      <text class="d-t" x="645" y="134" text-anchor="middle">contentSize</text>
+      <text class="d-t ok" x="645" y="150" text-anchor="middle">= Σ page frames</text>
+      <text class="d-t ok" x="645" y="168" text-anchor="middle">820</text>
+
+      <line class="d-dim" x1="565" y1="176" x2="565" y2="216" marker-end="url(#ar)"/>
+
+      <rect class="d-box-ok" x="410" y="218" width="310" height="44"/>
+      <text class="d-t ok" x="565" y="238" text-anchor="middle">one source — nothing</text>
+      <text class="d-t ok" x="565" y="254" text-anchor="middle">left to disagree</text>
+
+      <defs>
+        <marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+          <polygon points="0,0 8,4 0,8" fill="currentColor"/>
+        </marker>
+      </defs>
+    </svg>
+    <figcaption>The defect is not that one number is computed wrongly — it is that two numbers are computed independently and only agree on a fresh layout. Setting the page frame explicitly removes the second derivation entirely.</figcaption>
+  </figure>
+  </div>
+
+  <div class="col">
+    <p>Paging becomes <code>ScrollView(.horizontal)</code> + <code>LazyHStack</code> + <code>.scrollTargetBehavior(.paging)</code>, with <code>.scrollPosition(id:)</code> bound to the selection in both directions so swipe and header-tap stay in step. Each page's size is set explicitly from the container — <code>.frame(width: proxy.size.width, height: proxy.size.height)</code> — so there is no second, independently derived content height that can drift away from it.</p>
+  </div>
+
+  <div class="scroller" style="margin-top:22px">
+    <table>
+      <caption>Verified after rotation — capture <span class="m">fix2-after-rotation/native.json</span>, 255 nodes, untruncated, orientation 3</caption>
+      <thead><tr><th>Check</th><th>Expected</th><th>Actual</th><th></th></tr></thead>
+      <tbody>
+        <tr><td class="name">mosaic UICollectionView screenFrame</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td class="verdict-pass">PASS</td></tr>
+        <tr><td class="name">page host screenFrame</td><td>(0,0) 1180×820</td><td>(0,0) 1180×820</td><td class="verdict-pass">PASS</td></tr>
+        <tr><td class="name">contentInset.top</td><td>216 (96 + 120)</td><td>216</td><td class="verdict-pass">PASS</td></tr>
+        <tr><td class="name">contentInset.bottom</td><td>20</td><td>20</td><td class="verdict-pass">PASS</td></tr>
+        <tr><td class="name">PlatformGroupContainer height</td><td>820</td><td>3540 × 820</td><td class="verdict-pass">PASS</td></tr>
+        <tr><td class="name">HostingScrollView contentSize height</td><td>820</td><td>3540 × 820</td><td class="verdict-pass">PASS</td></tr>
+        <tr><td class="name">pure-white run, either edge</td><td>0 pt</td><td>0 pt</td><td class="verdict-pass">PASS</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col" style="margin-top:20px">
+    <p><b>The trade-off, stated plainly.</b> This replaces the pager, which was the change we were trying hardest to avoid. Paging, page identity and scroll position all now work differently. Against that: the three in-place attempts are not near-misses, they are measured dead ends, and the structural reason they fail is not going to change.</p>
+    <p>One incidental improvement shows up in the capture. The <code>TabView</code> kept a stale <code>820×1180</code> portrait page alive after rotation, with a full portrait mosaic collection view inside it. <code>LazyHStack</code> instantiates only the visible page — the post-fix capture holds a single page host and a single mosaic collection view.</p>
+    <p>All four implementations are kept side by side in the project as switchable specimens — <code>CustomView_Issue</code>, <code>CustomView_1stTry</code>, <code>CustomView_Fix2</code> and <code>CustomView_Fix1</code> — each documented with what was measured rather than what was hoped, so the dead ends do not get re-explored.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">13</span> Method and evidence gaps</h2>
+  <p class="sub">Stated plainly, so the conclusions can be weighed.</p>
+  <ul class="gaps">
+    <li><b>Why SwiftUI derives 704 is not directly observable.</b> That computation lives inside SwiftUI's paging layout, which this provider cannot see: no logical SwiftUI tree, no private layout internals. What is established is the value, its exact arithmetic relationship to the symptom, and that no application-owned property changed.</li>
+    <li><b>No cold-launch portrait capture.</b> Portrait was captured by rotating into it, which is the state the defect actually starts from. A cold launch straight into portrait would additionally separate "landscape re-layout is special" from "any re-layout to a shorter height is special" — a refinement of the mechanism, not a challenge to it.</li>
+    <li><b>Model-layer geometry, not presentation layer.</b> Occlusion and ancestor clipping are not established by this provider; getters may run application code; text and accessibility labels are intentionally omitted from the capture.</li>
+    <li><b>Hierarchy evidence outranked pixel evidence once.</b> A framebuffer probe using a fixed rotation correction read the wrong screen edge under LandscapeLeft and briefly suggested a clean layout; the captured hierarchy contradicted it and was right. Raw simulator buffers are always portrait-shaped — the orientation enum has to be applied, not a constant.</li>
+    <li><b>The fix is verified on one device and one trigger.</b> iPad Air 11-inch, rotation only. The working implementation has not been re-checked on iPhone since the pager was swapped, and Split View / Stage Manager resizing stayed out of scope by decision — the same class of re-layout trigger, so worth testing before relying on it there.</li>
+    <li><b>Pointer identity is meaningful where it is used.</b> The portrait and post-rotation landscape captures come from PID 57665 with no relaunch between them, so that comparison is object-level rather than heuristically matched.</li>
+  </ul>
+</section>
+
+<footer>
+  <span>Provider: lldb-public-uikit-compiled-probe</span>
+  <span>Coherence: main-thread expression while process stopped</span>
+  <span>Evidence: good-landscape · portrait-prerotation · landscape-postrotation · bad-landscape · fix1 · fix2a · fix2b</span>
+</footer>
+
+</div>
+</body>
+</html>
