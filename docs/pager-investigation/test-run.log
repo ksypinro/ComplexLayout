@@ -1,0 +1,207 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project docs/pager-investigation/Runner.xcodeproj -scheme Investigation -destination id=16592CE0-AE1E-42E7-BA7D-8A5107A25680 -derivedDataPath /tmp/complex-layout-ui-tests -parallel-testing-enabled NO -resultBundlePath /tmp/complex-layout-alternatives.xcresult test-without-building CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Writing result bundle at path:
+	/tmp/complex-layout-alternatives.xcresult
+
+2026-09-15 09:05:51.816823+0600 PagerInvestigationTests-Runner[83641:25047962] [Default] Running tests...
+2026-09-15 09:05:51.889534+0600 PagerInvestigationTests-Runner[83641:25047962] [UIKit App Config] Update the Info.plist: Launch screens will soon be required.
+objc[83641]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x10a348310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x112f24398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =      nans Interface orientation changed to Landscape Right
+Test Suite 'All tests' started at 2026-09-15 09:06:01.005.
+Test Suite 'PagerInvestigationTests.xctest' started at 2026-09-15 09:06:01.013.
+Test Suite 'PagerInvestigationTests' started at 2026-09-15 09:06:01.014.
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testAlternatives]' started.
+    t =     0.00s Start Test at 2026-09-15 09:06:01.017
+    t =     0.69s Set Up
+    t =     0.69s Setting device orientation to Portrait
+    t =     0.70s     Device orientation changed to Portrait
+    t =     1.31s     Interface orientation changed to Portrait
+    t =     1.52s     Wait for com.example.ComplexLayout to idle
+    t =     2.13s     Wait for com.apple.springboard to idle
+    t =     2.76s Open com.example.ComplexLayout
+    t =     2.76s     Launch com.example.ComplexLayout
+    t =     2.76s         Terminate com.example.ComplexLayout:82591
+2026-09-15 09:06:05.630 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 09:06:05.630 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     7.60s         Setting up automation session
+    t =    11.44s         Wait for com.example.ComplexLayout to idle
+    t =    14.40s Waiting 10.0s for "Featured, 9" Button to exist
+    t =    15.48s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    15.48s         Checking existence of `"Featured, 9" Button`
+    t =    15.91s Setting device orientation to Landscape Left
+    t =    15.94s     Device orientation changed to Landscape Left
+    t =    16.49s     Interface orientation changed to Landscape Right
+    t =    16.69s     Wait for com.example.ComplexLayout to idle
+    t =    17.06s     Wait for com.apple.springboard to idle
+    t =    18.35s Getting device orientation
+    t =    18.37s Find the Target Application 'com.example.ComplexLayout'
+    t =    18.46s Requesting snapshot of accessibility hierarchy for app with pid 83700
+    t =    18.87s Requesting snapshot of accessibility hierarchy for app with pid 83700
+    t =    18.95s Find the Target Application 'com.example.ComplexLayout'
+    t =    43.47s Terminate com.example.ComplexLayout:83700
+    t =    44.58s Setting device orientation to Portrait
+    t =    44.58s     Device orientation changed to Portrait
+    t =    44.79s     Interface orientation changed to Portrait
+    t =    44.79s     Wait for com.apple.springboard to idle
+    t =    45.36s Open com.example.ComplexLayout
+    t =    45.36s     Launch com.example.ComplexLayout
+2026-09-15 09:06:46.386 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 09:06:46.386 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =    45.59s         Setting up automation session
+    t =    49.63s         Wait for com.example.ComplexLayout to idle
+    t =    51.71s Waiting 10.0s for "Featured, 9" Button to exist
+    t =    52.78s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    52.79s         Checking existence of `"Featured, 9" Button`
+    t =    52.97s Setting device orientation to Landscape Left
+    t =    52.97s     Device orientation changed to Landscape Left
+    t =    53.06s     Interface orientation changed to Landscape Right
+    t =    53.06s     Wait for com.example.ComplexLayout to idle
+    t =    53.07s     Wait for com.apple.springboard to idle
+    t =    54.08s Getting device orientation
+    t =    54.09s Find the Target Application 'com.example.ComplexLayout'
+    t =    54.13s Requesting snapshot of accessibility hierarchy for app with pid 83896
+    t =    54.50s Requesting snapshot of accessibility hierarchy for app with pid 83896
+    t =    54.57s Find the Target Application 'com.example.ComplexLayout'
+    t =    71.93s Terminate com.example.ComplexLayout:83896
+    t =    73.01s Setting device orientation to Portrait
+    t =    73.23s     Interface orientation changed to Portrait
+    t =    73.25s     Device orientation changed to Portrait
+    t =    73.31s     Wait for com.apple.springboard to idle
+    t =    73.73s Open com.example.ComplexLayout
+    t =    73.74s     Launch com.example.ComplexLayout
+2026-09-15 09:07:14.782 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 09:07:14.783 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =    73.98s         Setting up automation session
+    t =    77.62s         Wait for com.example.ComplexLayout to idle
+    t =    79.97s Waiting 10.0s for "Featured, 9" Button to exist
+    t =    80.98s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    80.98s         Checking existence of `"Featured, 9" Button`
+    t =    81.21s Setting device orientation to Landscape Left
+    t =    81.21s     Device orientation changed to Landscape Left
+    t =    81.31s     Interface orientation changed to Landscape Right
+    t =    81.35s     Wait for com.example.ComplexLayout to idle
+    t =    81.75s     Wait for com.apple.springboard to idle
+    t =    83.05s Getting device orientation
+    t =    83.06s Find the Target Application 'com.example.ComplexLayout'
+    t =    83.12s Requesting snapshot of accessibility hierarchy for app with pid 84024
+    t =    83.38s Requesting snapshot of accessibility hierarchy for app with pid 84024
+    t =    83.44s Find the Target Application 'com.example.ComplexLayout'
+    t =    97.25s Terminate com.example.ComplexLayout:84024
+    t =    98.35s Setting device orientation to Portrait
+    t =    98.36s     Device orientation changed to Portrait
+    t =    98.46s     Interface orientation changed to Portrait
+    t =    98.46s     Wait for com.apple.springboard to idle
+    t =    98.98s Open com.example.ComplexLayout
+    t =    98.98s     Launch com.example.ComplexLayout
+2026-09-15 09:07:40.045 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 09:07:40.045 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =    99.24s         Setting up automation session
+    t =   102.55s         Wait for com.example.ComplexLayout to idle
+    t =   104.69s Waiting 10.0s for "Featured, 9" Button to exist
+    t =   105.71s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =   105.71s         Checking existence of `"Featured, 9" Button`
+    t =   106.10s Setting device orientation to Landscape Left
+    t =   106.11s     Device orientation changed to Landscape Left
+    t =   106.23s     Interface orientation changed to Landscape Right
+    t =   106.24s     Wait for com.example.ComplexLayout to idle
+    t =   106.27s     Wait for com.apple.springboard to idle
+    t =   107.96s Getting device orientation
+    t =   107.97s Find the Target Application 'com.example.ComplexLayout'
+    t =   108.05s Requesting snapshot of accessibility hierarchy for app with pid 84167
+    t =   108.41s Requesting snapshot of accessibility hierarchy for app with pid 84167
+    t =   108.49s Find the Target Application 'com.example.ComplexLayout'
+    t =   126.05s Terminate com.example.ComplexLayout:84167
+    t =   127.08s Setting device orientation to Portrait
+    t =   127.09s     Device orientation changed to Portrait
+    t =   127.19s     Interface orientation changed to Portrait
+    t =   127.19s     Wait for com.apple.springboard to idle
+    t =   127.78s Open com.example.ComplexLayout
+    t =   127.79s     Launch com.example.ComplexLayout
+2026-09-15 09:08:08.833 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 09:08:08.834 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =   128.03s         Setting up automation session
+    t =   131.60s         Wait for com.example.ComplexLayout to idle
+    t =   133.88s Waiting 10.0s for "Featured, 9" Button to exist
+    t =   134.91s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =   134.91s         Checking existence of `"Featured, 9" Button`
+    t =   135.19s Setting device orientation to Landscape Left
+    t =   135.19s     Device orientation changed to Landscape Left
+    t =   135.29s     Interface orientation changed to Landscape Right
+    t =   135.30s     Wait for com.example.ComplexLayout to idle
+    t =   135.34s     Wait for com.apple.springboard to idle
+    t =   137.02s Getting device orientation
+    t =   137.03s Find the Target Application 'com.example.ComplexLayout'
+    t =   137.10s Requesting snapshot of accessibility hierarchy for app with pid 84345
+    t =   137.42s Requesting snapshot of accessibility hierarchy for app with pid 84345
+    t =   137.50s Find the Target Application 'com.example.ComplexLayout'
+    t =   151.38s Terminate com.example.ComplexLayout:84345
+    t =   152.45s Setting device orientation to Portrait
+    t =   152.46s     Device orientation changed to Portrait
+    t =   152.54s     Interface orientation changed to Portrait
+    t =   152.54s     Wait for com.apple.springboard to idle
+    t =   153.02s Open com.example.ComplexLayout
+    t =   153.02s     Launch com.example.ComplexLayout
+2026-09-15 09:08:34.091 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 09:08:34.091 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =   153.29s         Setting up automation session
+    t =   156.65s         Wait for com.example.ComplexLayout to idle
+    t =   158.80s Waiting 10.0s for "Featured, 9" Button to exist
+    t =   159.81s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =   159.82s         Checking existence of `"Featured, 9" Button`
+    t =   160.08s Setting device orientation to Landscape Left
+    t =   160.08s     Device orientation changed to Landscape Left
+    t =   160.14s     Interface orientation changed to Landscape Right
+    t =   160.14s     Wait for com.example.ComplexLayout to idle
+    t =   160.21s     Wait for com.apple.springboard to idle
+    t =   161.86s Getting device orientation
+    t =   161.87s Find the Target Application 'com.example.ComplexLayout'
+    t =   161.94s Requesting snapshot of accessibility hierarchy for app with pid 84473
+    t =   162.24s Requesting snapshot of accessibility hierarchy for app with pid 84473
+    t =   162.32s Find the Target Application 'com.example.ComplexLayout'
+    t =   174.95s Terminate com.example.ComplexLayout:84473
+    t =   176.04s Setting device orientation to Portrait
+    t =   176.04s     Device orientation changed to Portrait
+    t =   176.14s     Interface orientation changed to Portrait
+    t =   176.14s     Wait for com.apple.springboard to idle
+    t =   176.64s Open com.example.ComplexLayout
+    t =   176.64s     Launch com.example.ComplexLayout
+2026-09-15 09:08:57.712 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 09:08:57.712 xcodebuild[83596:25047599] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =   176.91s         Setting up automation session
+    t =   180.22s         Wait for com.example.ComplexLayout to idle
+    t =   182.39s Waiting 10.0s for "Featured, 9" Button to exist
+    t =   183.40s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =   183.40s         Checking existence of `"Featured, 9" Button`
+    t =   183.64s Setting device orientation to Landscape Left
+    t =   183.64s     Device orientation changed to Landscape Left
+    t =   183.71s     Interface orientation changed to Landscape Right
+    t =   183.71s     Wait for com.example.ComplexLayout to idle
+    t =   183.75s     Wait for com.apple.springboard to idle
+    t =   185.45s Getting device orientation
+    t =   185.46s Find the Target Application 'com.example.ComplexLayout'
+    t =   185.53s Requesting snapshot of accessibility hierarchy for app with pid 84587
+    t =   185.86s Requesting snapshot of accessibility hierarchy for app with pid 84587
+    t =   185.95s Find the Target Application 'com.example.ComplexLayout'
+    t =   198.39s Terminate com.example.ComplexLayout:84587
+    t =   199.47s Tear Down
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testAlternatives]' passed (200.082 seconds).
+Test Suite 'PagerInvestigationTests' passed at 2026-09-15 09:09:21.104.
+	 Executed 1 test, with 0 failures (0 unexpected) in 200.082 (200.090) seconds
+Test Suite 'PagerInvestigationTests.xctest' passed at 2026-09-15 09:09:21.105.
+	 Executed 1 test, with 0 failures (0 unexpected) in 200.082 (200.092) seconds
+Test Suite 'All tests' passed at 2026-09-15 09:09:21.106.
+	 Executed 1 test, with 0 failures (0 unexpected) in 200.082 (200.101) seconds
+2026-09-15 09:09:21.606 xcodebuild[83596:25047599] [MT] IDETestOperationsObserverDebug: 223.453 elapsed -- Testing started completed.
+2026-09-15 09:09:21.607 xcodebuild[83596:25047599] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-15 09:09:21.607 xcodebuild[83596:25047599] [MT] IDETestOperationsObserverDebug: 223.453 sec, +223.453 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/complex-layout-alternatives.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

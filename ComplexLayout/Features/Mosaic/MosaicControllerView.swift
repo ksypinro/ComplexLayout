@@ -41,15 +41,4 @@ struct MosaicControllerView: UIViewControllerRepresentable {
             right: contentInsets.trailing
         )
     }
-
-    func sizeThatFits(_ proposal: ProposedViewSize, uiViewController: MosaicViewController, context: Context) -> CGSize? {
-        #if DEBUG
-        if PagerExperiment.current == .proposedSize,
-           let width = proposal.width, let height = proposal.height,
-           width.isFinite, height.isFinite {
-            return CGSize(width: width, height: height)
-        }
-        #endif
-        return nil
-    }
 }

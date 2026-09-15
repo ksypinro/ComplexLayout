@@ -74,8 +74,8 @@ private struct ExperimentPage: View {
     let page: OverviewPage
     let insets: EdgeInsets
 
-    private var mosaic: MosaicControllerView {
-        MosaicControllerView(sections: page.sections, contentInsets: insets)
+    private var mosaic: ExperimentMosaicControllerView {
+        ExperimentMosaicControllerView(sections: page.sections, contentInsets: insets)
     }
 
     @ViewBuilder var body: some View {
@@ -140,5 +140,25 @@ private struct PlainControllerPage: UIViewControllerRepresentable {
         return controller
     }
     func updateUIViewController(_ controller: UIViewController, context: Context) {}
+}
+private struct ExperimentMosaicControllerView: UIViewControllerRepresentable {
+    let sections: [MosaicSection]
+    let contentInsets: EdgeInsets
+
+    func makeUIViewController(context: Context) -> MosaicViewController {
+        MosaicViewController(sections: sections)
+    }
+    func updateUIViewController(_ controller: MosaicViewController, context: Context) {
+        controller.contentInsetOverride = UIEdgeInsets(
+            top: contentInsets.top, left: contentInsets.leading,
+            bottom: contentInsets.bottom, right: contentInsets.trailing
+        )
+    }
+    func sizeThatFits(_ proposal: ProposedViewSize, uiViewController: MosaicViewController, context: Context) -> CGSize? {
+        guard PagerExperiment.current == .proposedSize,
+              let width = proposal.width, let height = proposal.height,
+              width.isFinite, height.isFinite else { return nil }
+        return CGSize(width: width, height: height)
+    }
 }
 #endif
