@@ -1,0 +1,52 @@
+(lldb) process attach --pid 84167
+Process 84167 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = signal SIGSTOP
+       frame #0: 0x0000000205112b70 libsystem_kernel.dylib`mach_msg2_trap + 8
+libsystem_kernel.dylib`mach_msg2_trap:
+->  0x205112b70 <+8>: ret    
+
+libsystem_kernel.dylib`macx_swapon:
+    0x205112b74 <+0>: mov    x16, #-0x30               ; =-48 
+    0x205112b78 <+4>: svc    #0x80
+    0x205112b7c <+8>: ret    
+Target 0: (ComplexLayout) stopped.
+Executable binary set to "/Users/samin/Library/Developer/CoreSimulator/Devices/16592CE0-AE1E-42E7-BA7D-8A5107A25680/data/Containers/Bundle/Application/2EC05737-114E-4237-B11E-D0A7307CFB17/ComplexLayout.app/ComplexLayout".
+Architecture set to: arm64-apple-ios-simulator.
+(lldb) process status
+Process 84167 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = signal SIGSTOP
+       frame #0: 0x0000000205112b70 libsystem_kernel.dylib`mach_msg2_trap + 8
+libsystem_kernel.dylib`mach_msg2_trap:
+->  0x205112b70 <+8>: ret    
+
+libsystem_kernel.dylib`macx_swapon:
+    0x205112b74 <+0>: mov    x16, #-0x30               ; =-48 
+    0x205112b78 <+4>: svc    #0x80
+    0x205112b7c <+8>: ret    
+(lldb) thread list
+Process 84167 stopped
+* thread #1: tid = 0x17e4759, 0x0000000205112b70 libsystem_kernel.dylib`mach_msg2_trap + 8, queue = 'com.apple.main-thread', stop reason = signal SIGSTOP
+  thread #2: tid = 0x17e4788, 0x0000000205114698 libsystem_kernel.dylib`__workq_kernreturn + 8
+  thread #3: tid = 0x17e4789, 0x0000000205114698 libsystem_kernel.dylib`__workq_kernreturn + 8
+  thread #4: tid = 0x17e478a, 0x0000000205114698 libsystem_kernel.dylib`__workq_kernreturn + 8
+  thread #5: tid = 0x17e478b, 0x0000000205114698 libsystem_kernel.dylib`__workq_kernreturn + 8
+  thread #6: tid = 0x17e478d, 0x0000000205114698 libsystem_kernel.dylib`__workq_kernreturn + 8
+  thread #7: tid = 0x17e47af, 0x0000000205114698 libsystem_kernel.dylib`__workq_kernreturn + 8
+  thread #8: tid = 0x17e47b0, 0x0000000000000000
+(lldb) script t = next(t for t in lldb.debugger.GetSelectedTarget().GetProcess() if t.GetQueueName() == "com.apple.main-thread"); lldb.debugger.GetSelectedTarget().GetProcess().SetSelectedThread(t)
+True
+(lldb) frame select 0
+frame #0: 0x0000000205112b70 libsystem_kernel.dylib`mach_msg2_trap + 8
+libsystem_kernel.dylib`mach_msg2_trap:
+->  0x205112b70 <+8>: ret    
+
+libsystem_kernel.dylib`macx_swapon:
+    0x205112b74 <+0>: mov    x16, #-0x30               ; =-48 
+    0x205112b78 <+4>: svc    #0x80
+    0x205112b7c <+8>: ret    
+(lldb) command script import /Users/samin/.codex/skills/ios-view-hierarchy-debugger/scripts/lldb_ui.py
+ui_capture installed. Capture requires a stopped, selected main-thread frame; see ui_capture --help.
+(lldb) ui_capture /Users/samin/Documents/ComplexLayout/docs/pager-investigation/auto-geometryPage-landscape/native.json --compiled-probe /Users/samin/Documents/ComplexLayout/docs/pager-investigation/probe/PuppetUIProbe.dylib
+Captured 253 native views to /Users/samin/Documents/ComplexLayout/docs/pager-investigation/auto-geometryPage-landscape/native.json; truncated=False; mode=compiled-simulator-probe; cleanup={"probeImage": "dlclose-succeeded", "targetBuffer": "freed"}. Target remains stopped.
+(lldb) process detach
+Process 84167 detached

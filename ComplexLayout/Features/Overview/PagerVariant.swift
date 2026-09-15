@@ -30,6 +30,9 @@ enum PagerVariant: String, CaseIterable, Identifiable, Sendable {
     /// `OverviewSafeAreaCancellingContainer` for what was measured.
     case fix2
 
+    /// Preserves TabView(.page); additional experiments live in CustomView_Fix3.
+    case fix3
+
     var id: String { rawValue }
 
     var title: String {
@@ -38,6 +41,7 @@ enum PagerVariant: String, CaseIterable, Identifiable, Sendable {
         case .firstTry: "1st Try"
         case .fix1: "Fix 1"
         case .fix2: "Fix 2"
+        case .fix3: "Fix 3"
         }
     }
 
@@ -47,6 +51,7 @@ enum PagerVariant: String, CaseIterable, Identifiable, Sendable {
         case .firstTry: "TabView(.page) + safeAreaRegions = [] — no effect"
         case .fix1: "ScrollView paging — no band, but replaces the pager"
         case .fix2: "TabView kept; container tries to cancel the safe area — still bands"
+        case .fix3: "TabView kept; refresh its layout when the container size changes"
         }
     }
 
@@ -78,6 +83,9 @@ enum PagerVariant: String, CaseIterable, Identifiable, Sendable {
     /// Persisted so a relaunch keeps whichever variant is being tested.
     static var current: PagerVariant {
         get {
+            #if DEBUG
+            if PagerExperiment.current != nil { return .fix3 }
+            #endif
             let raw = UserDefaults.standard.string(forKey: defaultsKey) ?? ""
             return PagerVariant(rawValue: raw) ?? .fix1
         }

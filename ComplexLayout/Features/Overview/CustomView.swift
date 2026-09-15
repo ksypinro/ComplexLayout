@@ -25,18 +25,6 @@ struct CustomView: View {
     let variant: PagerVariant
 
     var body: some View {
-        #if DEBUG
-        if let experiment = PagerExperiment.current {
-            ExperimentPager(experiment: experiment, pages: pages, selection: $selection, contentInsets: contentInsets)
-        } else {
-            selectedPager
-        }
-        #else
-        selectedPager
-        #endif
-    }
-
-    @ViewBuilder private var selectedPager: some View {
         switch variant {
         case .issue:
             CustomView_Issue(pages: pages, selection: $selection, contentInsets: contentInsets)
@@ -44,6 +32,8 @@ struct CustomView: View {
             CustomView_1stTry(pages: pages, selection: $selection, contentInsets: contentInsets)
         case .fix1:
             CustomView_Fix1(pages: pages, selection: $selection, contentInsets: contentInsets)
+        case .fix3:
+            CustomView_Fix3(pages: pages, selection: $selection, contentInsets: contentInsets)
         case .fix2:
             CustomView_Fix2(pages: pages, selection: $selection, contentInsets: contentInsets)
         }
