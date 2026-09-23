@@ -1,0 +1,185 @@
+Attributes: Application, 0x115fd9180, pid: 84167, label: 'ComplexLayout'
+Element subtree:
+ →Application, 0x115fd9180, pid: 84167, label: 'ComplexLayout'
+    Window, 0x115fd92c0, {{0.0, 0.0}, {1180.0, 820.0}}
+      Other, 0x115fd8f00, {{0.0, 0.0}, {1180.0, 820.0}}
+        Other, 0x115fd9040, {{0.0, 0.0}, {1180.0, 820.0}}
+          Other, 0x115fd8c80, {{0.0, 0.0}, {1180.0, 820.0}}
+    Window (Main), 0x115fd8dc0, {{0.0, 0.0}, {1180.0, 820.0}}
+      Other, 0x115fd88c0, {{0.0, 0.0}, {1180.0, 820.0}}
+      Other, 0x115fd8a00, {{0.0, 0.0}, {1180.0, 820.0}}
+        Other, 0x115fd8280, {{0.0, 0.0}, {1180.0, 820.0}}
+          Other, 0x115fd83c0, {{0.0, 0.0}, {1180.0, 820.0}}
+            Other, 0x115fd8640, {{0.0, 0.0}, {1180.0, 820.0}}
+              Other, 0x115fd8500, {{0.0, 0.0}, {1180.0, 820.0}}
+                Other, 0x115fd8140, {{0.0, 0.0}, {1180.0, 820.0}}
+                  Other, 0x115fd8000, {{0.0, 0.0}, {1180.0, 820.0}}
+                    CollectionView, 0x115fd9540, {{0.0, 0.0}, {1180.0, 820.0}}
+                      Cell, 0x115fd9680, {{0.0, -58.0}, {1180.0, 820.0}}
+                        Other, 0x115fd97c0, {{0.0, -58.0}, {1180.0, 820.0}}
+                          Other, 0x115fd9900, {{0.0, -58.0}, {1180.0, 820.0}}
+                            Other, 0x115fd9a40, {{0.0, -58.0}, {1180.0, 820.0}}
+                              Other, 0x115fd9b80, {{0.0, -58.0}, {1180.0, 820.0}}
+                                Other, 0x115fd9cc0, {{0.0, -58.0}, {1180.0, 820.0}}
+                                  CollectionView, 0x115fd9e00, {{0.0, -58.0}, {1180.0, 820.0}}
+                                    Other, 0x115fd9f40, {{16.0, 158.0}, {1148.0, 56.0}}
+                                      Other, 0x115fda080, {{16.0, 159.5}, {1148.0, 46.5}}
+                                        Other, 0x115fda1c0, {{16.0, 159.5}, {1105.0, 46.5}}
+                                          StaticText, 0x115fda300, {{16.0, 159.5}, {1105.0, 28.0}}, label: 'Featured'
+                                          StaticText, 0x115fda440, {{16.0, 188.5}, {1105.0, 17.5}}, label: 'Mixed 2×2, 2×1 and 1×2 tiles'
+                                        StaticText, 0x115fda580, {{1129.0, 167.5}, {35.0, 17.5}}, label: '9 tiles'
+                                    Cell, 0x115fda6c0, {{16.0, 218.0}, {279.5, 279.5}}, label: 'Northern Lights, Aurora over Tromsø, 2×2 tile'
+                                      Other, 0x115fda800, {{16.0, 218.0}, {279.5, 279.5}}
+                                        Image, 0x115fda940, {{30.0, 229.0}, {34.0, 39.0}}, identifier: 'sparkles', label: 'sparkle'
+                                        StaticText, 0x115fdaa80, {{247.5, 232.0}, {34.0, 18.0}}, label: '2×2'
+                                        Other, 0x115fdabc0, {{30.0, 440.5}, {251.5, 43.0}}
+                                          StaticText, 0x115fdad00, {{30.0, 440.5}, {251.5, 24.5}}, label: 'Northern Lights'
+                                          StaticText, 0x115fdae40, {{30.0, 467.0}, {251.5, 16.5}}, label: 'Aurora over Tromsø'
+                                    Cell, 0x115fdaf80, {{305.5, 218.0}, {134.8, 279.5}}, label: 'Tide Pools, Low tide, Big Sur, 1×2 tile'
+                                      Other, 0x115fdb0c0, {{305.5, 218.0}, {134.8, 279.5}}
+                                        Image, 0x115fdb200, {{319.5, 235.0}, {31.5, 23.0}}, identifier: 'water.waves', label: 'Water waves'
+                                        StaticText, 0x115fdb340, {{393.5, 232.0}, {33.0, 18.0}}, label: '1×2'
+                                        Other, 0x115fdb480, {{319.5, 440.5}, {107.0, 43.0}}
+                                          StaticText, 0x115fdb5c0, {{319.5, 440.5}, {107.0, 24.5}}, label: 'Tide Pools'
+                                          StaticText, 0x115fdb700, {{319.5, 467.0}, {107.0, 16.5}}, label: 'Low tide, Big Sur'
+                                    Cell, 0x115fdb840, {{450.2, 218.0}, {134.8, 134.8}}, label: 'Golden Hour, Twenty minutes of light, 1×1 tile'
+                                      Other, 0x115fdb980, {{450.2, 218.0}, {134.8, 134.8}}
+                                        Image, 0x115fdbac0, {{459.2, 228.0}, {24.5, 16.0}}, identifier: 'sun.horizon', label: 'Sun at the horizon'
+                                        StaticText, 0x115fdbc00, {{544.8, 227.0}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x115fdbd40, {{459.2, 326.5}, {117.0, 17.5}}
+                                          StaticText, 0x115fdbe80, {{459.2, 326.5}, {117.0, 17.5}}, label: 'Golden Hour'
+                                    Cell, 0x1073dfc00, {{595.0, 218.0}, {134.8, 134.8}}, label: 'Street Level, Lisbon, on foot, 1×1 tile'
+                                      Other, 0x1073df980, {{595.0, 218.0}, {134.8, 134.8}}
+                                        Image, 0x1073dfe80, {{604.0, 225.5}, {22.5, 21.0}}, identifier: 'camera.macro', label: 'Camera macro close-up lens flower'
+                                        StaticText, 0x1073df0c0, {{689.5, 227.0}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x1073de440, {{604.0, 326.5}, {117.0, 17.5}}
+                                          StaticText, 0x1073de300, {{604.0, 326.5}, {117.0, 17.5}}, label: 'Street Level'
+                                    Cell, 0x1073ded00, {{739.8, 218.0}, {279.5, 134.8}}, label: 'Long Exposure, Traffic trails at dusk, 2×1 tile'
+                                      Other, 0x1073debc0, {{739.8, 218.0}, {279.5, 134.8}}
+                                        Image, 0x1073df840, {{753.8, 231.0}, {31.0, 31.0}}, identifier: 'timelapse', label: 'Time-lapse'
+                                        StaticText, 0x1073df700, {{972.2, 232.0}, {33.0, 18.0}}, label: '2×1'
+                                        Other, 0x1073dd900, {{753.8, 296.0}, {251.5, 43.0}}
+                                          StaticText, 0x1073dc3c0, {{753.8, 296.0}, {251.5, 24.5}}, label: 'Long Exposure'
+                                          StaticText, 0x1073ddcc0, {{753.8, 322.5}, {251.5, 16.5}}, label: 'Traffic trails at dusk'
+                                    Cell, 0x1073dde00, {{1029.2, 218.0}, {134.8, 279.5}}, label: 'Fog Bank, Marine layer, 1×2 tile'
+                                      Other, 0x1073ddf40, {{1029.2, 218.0}, {134.8, 279.5}}
+                                        Image, 0x1073de080, {{1043.2, 230.5}, {30.5, 31.0}}, identifier: 'cloud.fog', label: 'fog'
+                                        StaticText, 0x1073dcc80, {{1117.2, 232.0}, {33.0, 18.0}}, label: '1×2'
+                                        Other, 0x1073dcf00, {{1043.2, 440.5}, {107.0, 43.0}}
+                                          StaticText, 0x1073dcb40, {{1043.2, 440.5}, {107.0, 24.5}}, label: 'Fog Bank'
+                                          StaticText, 0x1073dd540, {{1043.2, 467.0}, {107.0, 16.5}}, label: 'Marine layer'
+                                    Cell, 0x1073df5c0, {{450.2, 362.8}, {279.5, 279.5}}, label: 'Alpine, Above the treeline, 2×2 tile'
+                                      Other, 0x1073dd7c0, {{450.2, 362.8}, {279.5, 279.5}}
+                                        Image, 0x1073dd680, {{464.2, 378.2}, {58.5, 32.5}}, identifier: 'mountain.2', label: 'Mountain peak'
+                                        StaticText, 0x1073ddb80, {{681.8, 376.8}, {34.0, 18.0}}, label: '2×2'
+                                        Other, 0x1073dc280, {{464.2, 585.2}, {251.5, 43.0}}
+                                          StaticText, 0x1073dcdc0, {{464.2, 585.2}, {251.5, 24.5}}, label: 'Alpine'
+                                          StaticText, 0x1073dca00, {{464.2, 611.8}, {251.5, 16.5}}, label: 'Above the treeline'
+                                    Cell, 0x1073dfd40, {{739.8, 362.8}, {134.8, 134.8}}, label: 'Ember, Campfire study, 1×1 tile'
+                                      Other, 0x1073dc8c0, {{739.8, 362.8}, {134.8, 134.8}}
+                                        Image, 0x1073df480, {{748.8, 370.2}, {16.5, 20.5}}, identifier: 'flame', label: 'Flame'
+                                        StaticText, 0x1073dd400, {{834.2, 371.8}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x1073dc780, {{748.8, 471.2}, {117.0, 17.5}}
+                                          StaticText, 0x10721aa80, {{748.8, 471.2}, {117.0, 17.5}}, label: 'Ember'
+                                    Cell, 0x1072188c0, {{16.0, 507.5}, {279.5, 134.8}}, label: 'Dunes, Wind-carved ridges, 2×1 tile'
+                                      Other, 0x10721b980, {{16.0, 507.5}, {279.5, 134.8}}
+                                        Image, 0x10721bac0, {{30.0, 519.5}, {33.0, 32.5}}, identifier: 'sun.dust', label: 'Sun with dust haze'
+                                        StaticText, 0x107219040, {{248.5, 521.5}, {33.0, 18.0}}, label: '2×1'
+                                        Other, 0x10721be80, {{30.0, 585.5}, {251.5, 43.0}}
+                                          StaticText, 0x10721a800, {{30.0, 585.5}, {251.5, 24.5}}, label: 'Dunes'
+                                          StaticText, 0x10721a300, {{30.0, 612.0}, {251.5, 16.5}}, label: 'Wind-carved ridges'
+                                    Other, 0x10721a080, {{16.0, 670.2}, {1148.0, 56.0}}
+                                      Other, 0x10721ae40, {{16.0, 671.8}, {1148.0, 46.5}}
+                                        Other, 0x10721bc00, {{16.0, 671.8}, {1105.0, 46.5}}
+                                          StaticText, 0x10721a6c0, {{16.0, 671.8}, {1105.0, 28.0}}, label: 'Collections'
+                                          StaticText, 0x10721a1c0, {{16.0, 700.8}, {1105.0, 17.5}}, label: 'Curated sets, updated weekly'
+                                        StaticText, 0x10721a940, {{1129.0, 679.8}, {35.0, 17.5}}, label: '8 tiles'
+                                    Cell, 0x107219e00, {{16.0, 730.2}, {279.5, 134.8}}, label: 'Architecture, 142 photos, 2×1 tile'
+                                      Other, 0x107219f40, {{16.0, 730.2}, {279.5, 134.8}}
+                                        Image, 0x10721a580, {{30.0, 743.2}, {33.5, 30.5}}, identifier: 'building.columns', label: 'Building with columns'
+                                        StaticText, 0x107219cc0, {{248.5, 744.2}, {33.0, 18.0}}, label: '2×1'
+                                        Other, 0x1072192c0, {{30.0, 808.2}, {251.5, 43.0}}
+                                          StaticText, 0x10721abc0, {{30.0, 808.2}, {251.5, 24.5}}, label: 'Architecture'
+                                          StaticText, 0x10721a440, {{30.0, 834.8}, {251.5, 16.5}}, label: '142 photos'
+                                    Cell, 0x107219400, {{305.5, 730.2}, {134.8, 279.5}}, label: 'Portraits, 88 photos, 1×2 tile'
+                                      Other, 0x107219900, {{305.5, 730.2}, {134.8, 279.5}}
+                                        Image, 0x107219a40, {{319.5, 745.2}, {28.5, 26.5}}, identifier: 'person.crop.square', label: 'selfie'
+                                        StaticText, 0x107219b80, {{393.5, 744.2}, {33.0, 18.0}}, label: '1×2'
+                                        Other, 0x10a41ee40, {{319.5, 952.8}, {107.0, 43.0}}
+                                          StaticText, 0x10a41ed00, {{319.5, 952.8}, {107.0, 24.5}}, label: 'Portraits'
+                                          StaticText, 0x10a41f5c0, {{319.5, 979.2}, {107.0, 16.5}}, label: '88 photos'
+                                    Cell, 0x10a41f200, {{450.2, 730.2}, {134.8, 134.8}}, label: 'Macro, 37 photos, 1×1 tile'
+                                      Other, 0x10a41ef80, {{450.2, 730.2}, {134.8, 134.8}}
+                                        Image, 0x10a41e440, {{459.2, 739.2}, {20.0, 18.5}}, identifier: 'leaf', label: 'Leaf'
+                                        StaticText, 0x10a41ea80, {{544.8, 739.2}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x10a41f700, {{459.2, 838.8}, {117.0, 17.5}}
+                                          StaticText, 0x10a41f340, {{459.2, 838.8}, {117.0, 17.5}}, label: 'Macro'
+                                    Cell, 0x10a41f480, {{595.0, 730.2}, {279.5, 279.5}}, label: 'Night Sky, 64 photos, 2×2 tile'
+                                      Other, 0x10a41f0c0, {{595.0, 730.2}, {279.5, 279.5}}
+                                        Image, 0x10a41f980, {{609.0, 741.8}, {35.0, 37.5}}, identifier: 'moon.stars', label: 'clear night'
+                                        StaticText, 0x10a41ebc0, {{826.5, 744.2}, {34.0, 18.0}}, label: '2×2'
+                                        Other, 0x10a41fe80, {{609.0, 952.8}, {251.5, 43.0}}
+                                          StaticText, 0x10a41fac0, {{609.0, 952.8}, {251.5, 24.5}}, label: 'Night Sky'
+                                          StaticText, 0x10a41fc00, {{609.0, 979.2}, {251.5, 16.5}}, label: '64 photos'
+                                    Cell, 0x10a41f840, {{884.5, 730.2}, {134.8, 134.8}}, label: 'Film Scans, 210 photos, 1×1 tile'
+                                      Other, 0x10a41e800, {{884.5, 730.2}, {134.8, 134.8}}
+                                        Image, 0x10a41e6c0, {{893.5, 739.2}, {23.0, 18.0}}, identifier: 'film', label: 'movie'
+                                        StaticText, 0x10a41e580, {{979.0, 739.2}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x10a41fd40, {{893.5, 838.8}, {117.0, 17.5}}
+                                          StaticText, 0x10a41e300, {{893.5, 838.8}, {117.0, 17.5}}, label: 'Film Scans'
+                                    Cell, 0x10a41e940, {{1029.2, 730.2}, {134.8, 279.5}}, label: 'Coastline, 51 photos, 1×2 tile'
+                                      Other, 0x115fe0f00, {{1029.2, 730.2}, {134.8, 279.5}}
+                                        Image, 0x115fe0b40, {{1043.2, 740.2}, {33.0, 37.0}}, identifier: 'sailboat', label: 'Sailboat'
+                                        StaticText, 0x115fe0780, {{1117.2, 744.2}, {33.0, 18.0}}, label: '1×2'
+                                        Other, 0x115fe0000, {{1043.2, 952.8}, {107.0, 43.0}}
+                                          StaticText, 0x115fe0140, {{1043.2, 952.8}, {107.0, 24.5}}, label: 'Coastline'
+                                          StaticText, 0x115fe03c0, {{1043.2, 979.2}, {107.0, 16.5}}, label: '51 photos'
+                                    Other, 0x115fe0280, {{1147.0, 254.0}, {30.0, 488.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%
+                                      Other, 0x115fe12c0, {{1174.0, 257.0}, {3.0, 338.0}}
+                                    Other, 0x115fe1400, {{0.0, 729.0}, {1180.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                                      Other, 0x115fe1540, {{381.0, 756.0}, {793.0, 3.0}}
+                                    Other, 0x115fe1680, {{1147.0, 254.0}, {30.0, 488.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%
+                                      Other, 0x115fe17c0, {{1174.0, 257.0}, {3.0, 338.0}}
+                                    Other, 0x115fe1900, {{0.0, 729.0}, {1180.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                                      Other, 0x115fe1a40, {{381.0, 756.0}, {793.0, 3.0}}
+                      Other, 0x115fe1b80, {{0.0, 0.0}, {1180.0, 820.0}}
+                        Other, 0x115fe35c0, {{0.0, 0.0}, {1180.0, 97.5}}
+                      Other, 0x115fe3c00, {{0.0, 0.0}, {1180.0, 820.0}}
+                        Other, 0x115fe3d40, {{0.0, 0.0}, {1180.0, 97.5}}
+                      Other, 0x115fe3e80, {{1147.0, 96.0}, {30.0, 706.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x115fe3700, {{1174.0, 215.0}, {3.0, 584.0}}
+                      Other, 0x115fe3840, {{1147.0, 96.0}, {30.0, 706.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x115fe3980, {{1174.0, 215.0}, {3.0, 584.0}}
+                    Button, 0x115fe3ac0, {{442.5, 110.0}, {92.0, 88.0}}, label: 'Featured, 9', Selected
+                      Image, 0x115fe3480, {{481.5, 119.5}, {14.0, 17.0}}, identifier: 'sparkles', label: 'Sparkle'
+                      StaticText, 0x115fe2940, {{482.0, 141.8}, {13.0, 28.0}}, label: '9'
+                      StaticText, 0x115fe2f80, {{465.0, 173.8}, {47.0, 16.5}}, label: 'Featured'
+                    Button, 0x115fe30c0, {{538.5, 110.0}, {92.0, 88.0}}, label: 'Collections, 8'
+                      Image, 0x115fe3200, {{577.5, 121.0}, {14.0, 14.0}}, identifier: 'square.grid.2x2', label: 'Grid View'
+                      StaticText, 0x115fe3340, {{578.0, 140.2}, {13.0, 28.0}}, label: '8'
+                      StaticText, 0x115fe2a80, {{555.0, 172.2}, {59.0, 16.5}}, label: 'Collections'
+                    Button, 0x115fe2bc0, {{634.5, 110.0}, {103.0, 88.0}}, label: 'Recently Added, 7'
+                      Image, 0x115fe2d00, {{678.5, 120.0}, {15.5, 15.5}}, identifier: 'clock', label: 'Clock'
+                      StaticText, 0x115fe2e40, {{679.5, 141.0}, {13.0, 28.0}}, label: '7'
+                      StaticText, 0x115fe1e00, {{644.5, 173.0}, {83.0, 16.5}}, label: 'Recently Added'
+                    Button, 0x115fe2440, {{16.0, 754.5}, {72.0, 33.5}}, label: 'Paging implementation: Fix 3'
+                      Button, 0x115fe2580, {{16.0, 754.5}, {72.0, 33.5}}
+                        Image, 0x115fe26c0, {{29.5, 766.0}, {10.5, 11.0}}, identifier: 'switch.2', label: 'Control Centre'
+                        StaticText, 0x115fe2800, {{47.5, 762.5}, {28.5, 17.5}}, label: 'Fix 3'
+            Other, 0x115fe1f40, {{0.0, 0.0}, {1180.0, 820.0}}
+              Toolbar, 0x115fe2080, {{0.0, 0.0}, {1180.0, 820.0}}, identifier: 'Toolbar', label: 'Toolbar'
+                Other, 0x115fe21c0, {{0.0, 0.0}, {1180.0, 820.0}}
+              Other, 0x115fe2300, {{0.0, 29.5}, {1180.0, 48.0}}
+                Button, 0x115fe1cc0, {{449.8, 33.5}, {88.0, 40.0}}, label: 'Mosaic'
+                  Button, 0x115fe0640, {{449.8, 33.5}, {88.0, 40.0}}, label: 'Mosaic'
+                Button, 0x115fe1040, {{537.8, 33.5}, {87.0, 40.0}}, label: 'Library'
+                  Button, 0x115fe0c80, {{537.8, 33.5}, {87.0, 40.0}}, label: 'Library'
+                Button, 0x115fe0dc0, {{624.8, 33.5}, {105.5, 40.0}}, label: 'Overview', Selected
+                  Button, 0x115fe0a00, {{624.8, 33.5}, {105.5, 40.0}}, label: 'Overview', Selected
+Path to element:
+ →Application, 0x115fd9180, pid: 84167, label: 'ComplexLayout'
+Query chain:
+ →Find: Target Application 'com.example.ComplexLayout'
+  Output: {
+    Application, 0x115fe08c0, pid: 84167, label: 'ComplexLayout'
+  }
