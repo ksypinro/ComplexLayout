@@ -1,0 +1,118 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project docs/pager-investigation/Runner.xcodeproj -scheme Investigation -destination id=16592CE0-AE1E-42E7-BA7D-8A5107A25680 -derivedDataPath /tmp/complex-layout-ui-tests -parallel-testing-enabled NO "-only-testing:PagerInvestigationTests/PagerInvestigationTests/testFix3RepeatedRotationsAndPaging" -resultBundlePath /tmp/complex-layout-fix3-v2.xcresult test-without-building CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Writing result bundle at path:
+	/tmp/complex-layout-fix3-v2.xcresult
+
+2026-09-15 23:41:35.838188+0600 PagerInvestigationTests-Runner[43527:25725346] [Default] Running tests...
+2026-09-15 23:41:35.892900+0600 PagerInvestigationTests-Runner[43527:25725346] [UIKit App Config] Update the Info.plist: Launch screens will soon be required.
+    t =      nans Interface orientation changed to Landscape Right
+Test Suite 'Selected tests' started at 2026-09-15 23:41:39.258.
+Test Suite 'PagerInvestigationTests.xctest' started at 2026-09-15 23:41:39.259.
+Test Suite 'PagerInvestigationTests' started at 2026-09-15 23:41:39.259.
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' started.
+    t =     0.01s Start Test at 2026-09-15 23:41:39.269
+    t =     0.08s Set Up
+    t =     0.08s Setting device orientation to Portrait
+    t =     0.09s     Device orientation changed to Portrait
+    t =     0.23s     Interface orientation changed to Portrait
+    t =     0.52s     Wait for com.apple.springboard to idle
+    t =     0.70s Open com.example.ComplexLayout
+    t =     0.70s     Launch com.example.ComplexLayout
+2026-09-15 23:41:40.198 xcodebuild[43494:25725093] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 23:41:40.198 xcodebuild[43494:25725093] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.77s         Setting up automation session
+objc[43527]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x10a8c8310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x1132f0398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     4.96s         Wait for com.example.ComplexLayout to idle
+    t =     7.05s Waiting 10.0s for "Featured, 9" Button to exist
+    t =     8.07s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =     8.07s         Checking existence of `"Featured, 9" Button`
+    t =     8.32s Tap "Collections, 8" Button
+    t =     8.32s     Wait for com.example.ComplexLayout to idle
+    t =     8.32s     Find the "Collections, 8" Button
+    t =     8.39s     Check for interrupting elements affecting "Collections, 8" Button
+    t =     8.46s         Wait for com.apple.springboard to idle
+    t =     8.55s Ignoring failure to get hierarchy for remote element in process 42802 (Error getting main window kAXErrorServerNotFound)
+    t =     8.55s Ignoring failure to get hierarchy for remote element in process 42802 (Error getting main window kAXErrorServerNotFound)
+    t =     8.56s     Synthesize event
+    t =     8.86s     Wait for com.example.ComplexLayout to idle
+    t =     8.87s Find the "Collections, 8" Button
+    t =    10.01s Getting device orientation
+    t =    10.02s Find the Target Application 'com.example.ComplexLayout'
+    t =    10.09s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    10.52s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    10.63s Find the Target Application 'com.example.ComplexLayout'
+    t =    24.31s Setting device orientation to Landscape Left
+    t =    24.35s     Device orientation changed to Landscape Left
+    t =    24.67s     Interface orientation changed to Landscape Right
+    t =    24.85s     Wait for com.example.ComplexLayout to idle
+    t =    25.11s     Wait for com.apple.springboard to idle
+    t =    25.57s Find the "Collections, 8" Button
+    t =    26.66s Getting device orientation
+    t =    26.67s Find the Target Application 'com.example.ComplexLayout'
+    t =    26.73s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    27.06s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    27.14s Find the Target Application 'com.example.ComplexLayout'
+    t =    38.36s Press Target Application 'com.example.ComplexLayout'[0.82, 0.55] for 0.1 seconds, then drag to Target Application 'com.example.ComplexLayout'[0.18, 0.55] with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    38.38s     Wait for com.example.ComplexLayout to idle
+    t =    38.39s     Find the Target Application 'com.example.ComplexLayout'
+    t =    38.53s     Check for interrupting elements affecting "ComplexLayout" Application
+    t =    38.74s         Wait for com.apple.springboard to idle
+    t =    38.90s Ignoring failure to get hierarchy for remote element in process 42802 (Error getting main window kAXErrorServerNotFound)
+    t =    38.90s Ignoring failure to get hierarchy for remote element in process 42802 (Error getting main window kAXErrorServerNotFound)
+    t =    38.91s     Synthesize event
+    t =    38.92s         Find the Target Application 'com.example.ComplexLayout'
+    t =    38.95s         Find the Target Application 'com.example.ComplexLayout'
+    t =    39.00s         Find the Target Application 'com.example.ComplexLayout'
+    t =    39.04s         Find the Target Application 'com.example.ComplexLayout'
+    t =    39.08s         Find the Target Application 'com.example.ComplexLayout'
+    t =    41.00s     Wait for com.example.ComplexLayout to idle
+    t =    41.29s Find the "Recently Added, 7" Button
+    t =    42.39s Getting device orientation
+    t =    42.39s Find the Target Application 'com.example.ComplexLayout'
+    t =    42.46s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    42.78s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    42.86s Find the Target Application 'com.example.ComplexLayout'
+    t =    54.10s Setting device orientation to Portrait
+    t =    54.17s     Device orientation changed to Portrait
+    t =    54.49s     Interface orientation changed to Portrait
+    t =    54.68s     Wait for com.example.ComplexLayout to idle
+    t =    54.96s     Wait for com.apple.springboard to idle
+    t =    55.39s Find the "Recently Added, 7" Button
+    t =    56.51s Getting device orientation
+    t =    56.52s Find the Target Application 'com.example.ComplexLayout'
+    t =    56.58s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    57.05s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    57.15s Find the Target Application 'com.example.ComplexLayout'
+    t =    69.40s Setting device orientation to Landscape Right
+    t =    69.48s     Device orientation changed to Landscape Right
+    t =    69.80s     Interface orientation changed to Landscape Left
+    t =    69.96s     Wait for com.example.ComplexLayout to idle
+    t =    70.22s     Wait for com.apple.springboard to idle
+    t =    70.68s Find the "Recently Added, 7" Button
+    t =    71.78s Getting device orientation
+    t =    71.78s Find the Target Application 'com.example.ComplexLayout'
+    t =    71.82s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    72.14s Requesting snapshot of accessibility hierarchy for app with pid 43543
+    t =    72.22s Find the Target Application 'com.example.ComplexLayout'
+    t =    83.87s Tear Down
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' passed (84.316 seconds).
+Test Suite 'PagerInvestigationTests' passed at 2026-09-15 23:43:03.585.
+	 Executed 1 test, with 0 failures (0 unexpected) in 84.316 (84.326) seconds
+Test Suite 'PagerInvestigationTests.xctest' passed at 2026-09-15 23:43:03.588.
+	 Executed 1 test, with 0 failures (0 unexpected) in 84.316 (84.328) seconds
+Test Suite 'Selected tests' passed at 2026-09-15 23:43:03.589.
+	 Executed 1 test, with 0 failures (0 unexpected) in 84.316 (84.330) seconds
+2026-09-15 23:43:04.112 xcodebuild[43494:25725093] [MT] IDETestOperationsObserverDebug: 90.735 elapsed -- Testing started completed.
+2026-09-15 23:43:04.112 xcodebuild[43494:25725093] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-15 23:43:04.113 xcodebuild[43494:25725093] [MT] IDETestOperationsObserverDebug: 90.735 sec, +90.735 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/complex-layout-fix3-v2.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

@@ -289,6 +289,268 @@
     "mosaics": []
   },
   {
+    "checkpoint": "auto-rebuildPage-landscape",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x104a54000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 3,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 3540,
+            "height": 704
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": -58,
+        "finite": true,
+        "x": 0,
+        "width": 1180,
+        "height": 820
+      },
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 820,
+        "height": 1180
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": -58,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 1180,
+            "height": 1247.25
+          }
+        }
+      },
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 820,
+            "height": 932.25
+          }
+        }
+      }
+    ]
+  },
+  {
+    "checkpoint": "auto-rebuildPager-landscape",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x106660000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 3,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 3540,
+            "height": 820
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 1180,
+        "height": 820
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 1180,
+            "height": 1247.25
+          }
+        }
+      }
+    ]
+  },
+  {
     "checkpoint": "auto-swiftUIList-landscape",
     "windows": [
       {
@@ -358,6 +620,115 @@
       }
     ],
     "mosaics": []
+  },
+  {
+    "checkpoint": "auto-zeroMargins-landscape",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x102e48000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 3,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 3540,
+            "height": 704
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": -58,
+        "finite": true,
+        "x": 0,
+        "width": 1180,
+        "height": 820
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": -58,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 1180,
+            "height": 1247.25
+          }
+        }
+      }
+    ]
   },
   {
     "checkpoint": "baseline-landscape",
@@ -681,6 +1052,989 @@
           "contentSize": {
             "width": 1180,
             "height": 1247.25
+          }
+        }
+      }
+    ]
+  },
+  {
+    "checkpoint": "fix3-first-landscape",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x106a58000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 3,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 1180,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 3540,
+            "height": 820
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 1180,
+        "height": 820
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 1180,
+            "height": 1247.25
+          }
+        }
+      }
+    ]
+  },
+  {
+    "checkpoint": "fix3-selected-page-portrait",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x106a58000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 1,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 820,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 2460,
+            "height": 1180
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": 0,
+        "finite": true,
+        "x": -820,
+        "width": 820,
+        "height": 1180
+      },
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 820,
+        "height": 1180
+      },
+      {
+        "y": 0,
+        "finite": true,
+        "x": 820,
+        "width": 820,
+        "height": 1180
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": -820,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 820,
+            "height": 932.25
+          }
+        }
+      },
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 820,
+            "height": 932.25
+          }
+        }
+      },
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 820,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 820,
+            "height": 932.25
+          }
+        }
+      }
+    ]
+  },
+  {
+    "checkpoint": "fix3-v2-first-landscape",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x102e50000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 3,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 1180,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 3540,
+            "height": 820
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 1180,
+        "height": 820
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 1180,
+            "height": 1247.25
+          }
+        }
+      }
+    ]
+  },
+  {
+    "checkpoint": "fix3-v2-paged-landscape",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x102e50000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 3,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 2360,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 3540,
+            "height": 820
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": 0,
+        "finite": true,
+        "x": -1180,
+        "width": 1180,
+        "height": 820
+      },
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 1180,
+        "height": 820
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": -1180,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 1180,
+            "height": 1247.25
+          }
+        }
+      },
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 1180,
+            "height": 1247.25
+          }
+        }
+      }
+    ]
+  },
+  {
+    "checkpoint": "fix3-v2-returned-portrait",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x102e50000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 1,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 1640,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 2460,
+            "height": 1180
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 820,
+        "height": 1180
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 820,
+            "height": 932.25
+          }
+        }
+      }
+    ]
+  },
+  {
+    "checkpoint": "fix3-v2-second-landscape",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x102e50000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 4,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 2360,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 3540,
+            "height": 820
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 1180,
+        "height": 820
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 1180,
+          "height": 820
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 1180,
+            "height": 1247.25
+          }
+        }
+      }
+    ]
+  },
+  {
+    "checkpoint": "fix3-v2-selected-page-portrait",
+    "windows": [
+      {
+        "keyWindow": true,
+        "screenNativeScale": 2,
+        "id": "v:0x102e50000",
+        "screenBounds": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "screenScale": 2,
+        "sceneActivationState": 0,
+        "orientation": 1,
+        "windowLevel": 0
+      }
+    ],
+    "truncated": false,
+    "pager": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 820,
+            "y": 0
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": true,
+          "contentSize": {
+            "width": 2460,
+            "height": 1180
+          }
+        }
+      }
+    ],
+    "cells": [
+      {
+        "y": 0,
+        "finite": true,
+        "x": -820,
+        "width": 820,
+        "height": 1180
+      },
+      {
+        "y": 0,
+        "finite": true,
+        "x": 0,
+        "width": 820,
+        "height": 1180
+      },
+      {
+        "y": 0,
+        "finite": true,
+        "x": 820,
+        "width": 820,
+        "height": 1180
+      }
+    ],
+    "mosaics": [
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": -820,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 820,
+            "height": 932.25
+          }
+        }
+      },
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 0,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 820,
+            "height": 932.25
+          }
+        }
+      },
+      {
+        "frame": {
+          "y": 0,
+          "finite": true,
+          "x": 820,
+          "width": 820,
+          "height": 1180
+        },
+        "scroll": {
+          "dragging": false,
+          "contentOffset": {
+            "x": 0,
+            "y": -216
+          },
+          "contentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "tracking": false,
+          "scrollEnabled": true,
+          "adjustedContentInset": {
+            "right": 0,
+            "top": 216,
+            "left": 0,
+            "bottom": 20
+          },
+          "decelerating": false,
+          "zoomScale": 1,
+          "pagingEnabled": false,
+          "contentSize": {
+            "width": 820,
+            "height": 932.25
           }
         }
       }

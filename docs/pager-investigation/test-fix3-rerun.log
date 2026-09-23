@@ -1,0 +1,93 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project docs/pager-investigation/Runner.xcodeproj -scheme Investigation -destination id=16592CE0-AE1E-42E7-BA7D-8A5107A25680 -derivedDataPath /tmp/complex-layout-ui-tests -parallel-testing-enabled NO "-only-testing:PagerInvestigationTests/PagerInvestigationTests/testFix3RepeatedRotationsAndPaging" -resultBundlePath /tmp/complex-layout-fix3-rerun.xcresult test-without-building CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Writing result bundle at path:
+	/tmp/complex-layout-fix3-rerun.xcresult
+
+2026-09-15 17:51:19.821935+0600 PagerInvestigationTests-Runner[29806:25543438] [Default] Running tests...
+2026-09-15 17:51:19.897051+0600 PagerInvestigationTests-Runner[29806:25543438] [UIKit App Config] Update the Info.plist: Launch screens will soon be required.
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-09-15 17:51:23.590.
+Test Suite 'PagerInvestigationTests.xctest' started at 2026-09-15 17:51:23.590.
+Test Suite 'PagerInvestigationTests' started at 2026-09-15 17:51:23.591.
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' started.
+    t =     0.02s Start Test at 2026-09-15 17:51:23.610
+    t =     0.12s Set Up
+    t =     0.12s Setting device orientation to Portrait
+    t =     0.19s     Wait for com.apple.springboard to idle
+    t =     0.24s Open com.example.ComplexLayout
+    t =     0.24s     Launch com.example.ComplexLayout
+2026-09-15 17:51:24.211 xcodebuild[29790:25543179] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 17:51:24.211 xcodebuild[29790:25543179] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.89s         Setting up automation session
+objc[29806]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x10a580310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x10ae90398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     5.45s         Wait for com.example.ComplexLayout to idle
+    t =     7.93s Waiting 5.0s for "Overview" Button to exist
+    t =     8.96s     Checking `Expect predicate `existsNoRetry == 1` for object "Overview" Button`
+    t =     8.96s         Checking existence of `"Overview" Button`
+    t =     9.15s Tap "Overview" Button
+    t =     9.15s     Wait for com.example.ComplexLayout to idle
+    t =     9.15s     Find the "Overview" Button
+    t =     9.23s Requesting snapshot of accessibility hierarchy for app with pid 29815
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:48: error: -[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging] : Failed to tap "Overview" Button: Find single matching element. Multiple matching elements found for <XCUIElementQuery: 0x1131e8960>.
+Sparse tree of matches:
+→Application, pid: 29815, label: 'ComplexLayout'
+  ↳Window (Main)
+    ↳Other
+      ↳Other
+        ↳Other
+          ↳Other
+            ↳Other
+              ↳Button, label: 'Overview'
+                ↳Button, label: 'Overview'
+Possibly caused by runtime issues:
+Automation type mismatch: computed Button from legacy attributes vs Cell from modern attribute. Input attributes and values: {
+    "XC_kAXXCAttributeAutomationType" = 75;
+    "XC_kAXXCAttributeElementBaseType" = "_UIFloatingTabBarItemCell";
+    "XC_kAXXCAttributeElementType" = "_UIFloatingTabBarItemCell";
+    "XC_kAXXCAttributeTraits" = 146297323520;
+}
+Automation type mismatch: computed Button from legacy attributes vs Cell from modern attribute. Input attributes and values: {
+    "XC_kAXXCAttributeAutomationType" = 75;
+    "XC_kAXXCAttributeElementBaseType" = "_UIFloatingTabBarItemCell";
+    "XC_kAXXCAttributeElementType" = "_UIFloatingTabBarItemCell";
+    "XC_kAXXCAttributeTraits" = 146297323528;
+}
+Automation type mismatch: computed Button from legacy attributes vs Other from modern attribute. Input attributes and values: {
+    "XC_kAXXCAttributeAutomationType" = 0;
+    "XC_kAXXCAttributeElementBaseType" = "_UIFloatingTabBarItemView";
+    "XC_kAXXCAttributeElementType" = "_UIFloatingTabBarItemView";
+    "XC_kAXXCAttributeTraits" = 8858370056;
+}
+Automation type mismatch: computed Button from legacy attributes vs Other from modern attribute. Input attributes and values: {
+    "XC_kAXXCAttributeAutomationType" = 0;
+    "XC_kAXXCAttributeElementBaseType" = "_UIFloatingTabBarItemView";
+    "XC_kAXXCAttributeElementType" = "_UIFloatingTabBarItemView";
+    "XC_kAXXCAttributeTraits" = 8858370048;
+}
+See test report attachments for more detail.
+    t =     9.43s Tear Down
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' failed (9.672 seconds).
+Test Suite 'PagerInvestigationTests' failed at 2026-09-15 17:51:33.282.
+	 Executed 1 test, with 1 failure (0 unexpected) in 9.672 (9.692) seconds
+Test Suite 'PagerInvestigationTests.xctest' failed at 2026-09-15 17:51:33.283.
+	 Executed 1 test, with 1 failure (0 unexpected) in 9.672 (9.693) seconds
+Test Suite 'Selected tests' failed at 2026-09-15 17:51:33.284.
+	 Executed 1 test, with 1 failure (0 unexpected) in 9.672 (9.695) seconds
+2026-09-15 18:01:33.769 xcodebuild[29790:25543233]  IDETestOperationsObserverDebug: Failure collecting diagnostics from simulator: Timed out after 600.0 seconds while waiting for a response from the invoked process
+2026-09-15 18:01:33.848 xcodebuild[29790:25543179] [MT] IDETestOperationsObserverDebug: 616.908 elapsed -- Testing started completed.
+2026-09-15 18:01:33.849 xcodebuild[29790:25543179] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-15 18:01:33.849 xcodebuild[29790:25543179] [MT] IDETestOperationsObserverDebug: 616.909 sec, +616.909 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/complex-layout-fix3-rerun.xcresult
+
+Failing tests:
+	PagerInvestigationTests.testFix3RepeatedRotationsAndPaging()
+
+** TEST EXECUTE FAILED **
+
+Testing started

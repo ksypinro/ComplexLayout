@@ -83,9 +83,6 @@ enum PagerVariant: String, CaseIterable, Identifiable, Sendable {
     /// Persisted so a relaunch keeps whichever variant is being tested.
     static var current: PagerVariant {
         get {
-            #if DEBUG
-            if PagerExperiment.current != nil { return .fix3 }
-            #endif
             let raw = UserDefaults.standard.string(forKey: defaultsKey) ?? ""
             return PagerVariant(rawValue: raw) ?? .fix1
         }

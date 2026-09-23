@@ -1,0 +1,184 @@
+Attributes: Application, 0x115e28dc0, pid: 43067, label: 'ComplexLayout'
+Element subtree:
+ →Application, 0x115e28dc0, pid: 43067, label: 'ComplexLayout'
+    Window, 0x115e28f00, {{0.0, 0.0}, {1180.0, 820.0}}
+      Other, 0x115e29040, {{0.0, 0.0}, {1180.0, 820.0}}
+        Other, 0x115e29180, {{0.0, 0.0}, {1180.0, 820.0}}
+          Other, 0x115e292c0, {{0.0, 0.0}, {1180.0, 820.0}}
+    Window (Main), 0x115e29400, {{0.0, 0.0}, {1180.0, 820.0}}
+      Other, 0x115e29540, {{0.0, 0.0}, {1180.0, 820.0}}
+      Other, 0x115e29680, {{0.0, 0.0}, {1180.0, 820.0}}
+        Other, 0x115e297c0, {{0.0, 0.0}, {1180.0, 820.0}}
+          Other, 0x115e29900, {{0.0, 0.0}, {1180.0, 820.0}}
+            Other, 0x115e29a40, {{0.0, 0.0}, {1180.0, 820.0}}
+              Other, 0x115e29b80, {{0.0, 0.0}, {1180.0, 820.0}}
+                Other, 0x115e29cc0, {{0.0, 0.0}, {1180.0, 820.0}}
+                  Other, 0x115e29e00, {{0.0, 0.0}, {1180.0, 820.0}}
+                    CollectionView, 0x115e29f40, {{0.0, 0.0}, {1180.0, 820.0}}
+                      Other, 0x115e2a080, {{0.0, 0.0}, {1180.0, 820.0}}
+                        Other, 0x115e2a1c0, {{0.0, 0.0}, {1180.0, 97.5}}
+                      Cell, 0x115e2a300, {{0.0, 0.0}, {1180.0, 820.0}}
+                        Other, 0x115e2a440, {{0.0, 0.0}, {1180.0, 820.0}}
+                          Other, 0x115e2a580, {{0.0, 0.0}, {1180.0, 820.0}}
+                            Other, 0x115e2a6c0, {{0.0, 0.0}, {1180.0, 820.0}}
+                              Other, 0x115e2a800, {{0.0, 0.0}, {1180.0, 820.0}}
+                                Other, 0x115e2a940, {{0.0, 0.0}, {1180.0, 820.0}}
+                                  CollectionView, 0x115e2aa80, {{0.0, 0.0}, {1180.0, 820.0}}
+                                    Other, 0x115e2abc0, {{16.0, 216.0}, {1148.0, 56.0}}
+                                      Other, 0x115e2ad00, {{16.0, 217.5}, {1148.0, 46.5}}
+                                        Other, 0x115e2ae40, {{16.0, 217.5}, {1105.0, 46.5}}
+                                          StaticText, 0x115e2af80, {{16.0, 217.5}, {1105.0, 28.0}}, label: 'Collections'
+                                          StaticText, 0x115e2b0c0, {{16.0, 246.5}, {1105.0, 17.5}}, label: 'Curated sets, updated weekly'
+                                        StaticText, 0x115e2b200, {{1129.0, 225.5}, {35.0, 17.5}}, label: '8 tiles'
+                                    Cell, 0x115e2b340, {{16.0, 276.0}, {279.5, 134.8}}, label: 'Architecture, 142 photos, 2×1 tile'
+                                      Other, 0x115e2b480, {{16.0, 276.0}, {279.5, 134.8}}
+                                        Image, 0x115e2b5c0, {{30.0, 289.0}, {33.5, 30.5}}, identifier: 'building.columns', label: 'Building with columns'
+                                        StaticText, 0x115e2b700, {{248.5, 290.0}, {33.0, 18.0}}, label: '2×1'
+                                        Other, 0x115e2b840, {{30.0, 354.0}, {251.5, 43.0}}
+                                          StaticText, 0x115e2b980, {{30.0, 354.0}, {251.5, 24.5}}, label: 'Architecture'
+                                          StaticText, 0x115e2bac0, {{30.0, 380.5}, {251.5, 16.5}}, label: '142 photos'
+                                    Cell, 0x115e2bc00, {{305.5, 276.0}, {134.8, 279.5}}, label: 'Portraits, 88 photos, 1×2 tile'
+                                      Other, 0x115e2bd40, {{305.5, 276.0}, {134.8, 279.5}}
+                                        Image, 0x115e2be80, {{319.5, 291.0}, {28.5, 26.5}}, identifier: 'person.crop.square', label: 'selfie'
+                                        StaticText, 0x1073d3840, {{393.5, 290.0}, {33.0, 18.0}}, label: '1×2'
+                                        Other, 0x1073d3980, {{319.5, 498.5}, {107.0, 43.0}}
+                                          StaticText, 0x1073d03c0, {{319.5, 498.5}, {107.0, 24.5}}, label: 'Portraits'
+                                          StaticText, 0x1073d3e80, {{319.5, 525.0}, {107.0, 16.5}}, label: '88 photos'
+                                    Cell, 0x1073d3c00, {{450.2, 276.0}, {134.8, 134.8}}, label: 'Macro, 37 photos, 1×1 tile'
+                                      Other, 0x1073d2080, {{450.2, 276.0}, {134.8, 134.8}}
+                                        Image, 0x1073d2300, {{459.2, 285.0}, {20.0, 18.5}}, identifier: 'leaf', label: 'Leaf'
+                                        StaticText, 0x1073d2bc0, {{544.8, 285.0}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x1073d3700, {{459.2, 384.5}, {117.0, 17.5}}
+                                          StaticText, 0x1073d30c0, {{459.2, 384.5}, {117.0, 17.5}}, label: 'Macro'
+                                    Cell, 0x1073d2a80, {{595.0, 276.0}, {279.5, 279.5}}, label: 'Night Sky, 64 photos, 2×2 tile'
+                                      Other, 0x1073d2440, {{595.0, 276.0}, {279.5, 279.5}}
+                                        Image, 0x1073d1900, {{609.0, 287.5}, {35.0, 37.5}}, identifier: 'moon.stars', label: 'clear night'
+                                        StaticText, 0x1073d1680, {{826.5, 290.0}, {34.0, 18.0}}, label: '2×2'
+                                        Other, 0x1073d1f40, {{609.0, 498.5}, {251.5, 43.0}}
+                                          StaticText, 0x1073d1cc0, {{609.0, 498.5}, {251.5, 24.5}}, label: 'Night Sky'
+                                          StaticText, 0x1073d1e00, {{609.0, 525.0}, {251.5, 16.5}}, label: '64 photos'
+                                    Cell, 0x1073d1b80, {{884.5, 276.0}, {134.8, 134.8}}, label: 'Film Scans, 210 photos, 1×1 tile'
+                                      Other, 0x1073d0c80, {{884.5, 276.0}, {134.8, 134.8}}
+                                        Image, 0x1073d0b40, {{893.5, 285.0}, {23.0, 18.0}}, identifier: 'film', label: 'movie'
+                                        StaticText, 0x1073d0f00, {{979.0, 285.0}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x1073d17c0, {{893.5, 384.5}, {117.0, 17.5}}
+                                          StaticText, 0x1073d1400, {{893.5, 384.5}, {117.0, 17.5}}, label: 'Film Scans'
+                                    Cell, 0x1073d0dc0, {{1029.2, 276.0}, {134.8, 279.5}}, label: 'Coastline, 51 photos, 1×2 tile'
+                                      Other, 0x1073d0a00, {{1029.2, 276.0}, {134.8, 279.5}}
+                                        Image, 0x1073d1540, {{1043.2, 286.0}, {33.0, 37.0}}, identifier: 'sailboat', label: 'Sailboat'
+                                        StaticText, 0x1073d1a40, {{1117.2, 290.0}, {33.0, 18.0}}, label: '1×2'
+                                        Other, 0x1073d08c0, {{1043.2, 498.5}, {107.0, 43.0}}
+                                          StaticText, 0x1073d0280, {{1043.2, 498.5}, {107.0, 24.5}}, label: 'Coastline'
+                                          StaticText, 0x10a017340, {{1043.2, 525.0}, {107.0, 16.5}}, label: '51 photos'
+                                    Cell, 0x10a016a80, {{16.0, 420.8}, {279.5, 134.8}}, label: 'Black & White, 96 photos, 2×1 tile'
+                                      Other, 0x10a016bc0, {{16.0, 420.8}, {279.5, 134.8}}
+                                        Image, 0x10a016d00, {{30.0, 435.2}, {28.5, 28.5}}, identifier: 'circle.lefthalf.filled', label: 'Circle with the left half filled'
+                                        StaticText, 0x10a016e40, {{248.5, 434.8}, {33.0, 18.0}}, label: '2×1'
+                                        Other, 0x10a016f80, {{30.0, 498.8}, {251.5, 43.0}}
+                                          StaticText, 0x10a0170c0, {{30.0, 498.8}, {251.5, 24.5}}, label: 'Black & White'
+                                          StaticText, 0x10a017200, {{30.0, 525.2}, {251.5, 16.5}}, label: '96 photos'
+                                    Cell, 0x10a017840, {{450.2, 420.8}, {134.8, 134.8}}, label: 'Motion, 29 photos, 1×1 tile'
+                                      Other, 0x10a017980, {{450.2, 420.8}, {134.8, 134.8}}
+                                        Image, 0x10a017ac0, {{459.2, 428.2}, {18.0, 21.0}}, identifier: 'figure.run', label: 'Running'
+                                        StaticText, 0x10a017480, {{544.8, 429.8}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x10a0175c0, {{459.2, 529.2}, {117.0, 17.5}}
+                                          StaticText, 0x10a017700, {{459.2, 529.2}, {117.0, 17.5}}, label: 'Motion'
+                                    Other, 0x10a017c00, {{16.0, 583.5}, {1148.0, 56.0}}
+                                      Other, 0x10a017e80, {{16.0, 585.0}, {1148.0, 46.5}}
+                                        Other, 0x10a017d40, {{16.0, 585.0}, {1106.0, 46.5}}
+                                          StaticText, 0x10a016800, {{16.0, 585.0}, {1106.0, 28.0}}, label: 'Recently Added'
+                                          StaticText, 0x10a016940, {{16.0, 614.0}, {1106.0, 17.5}}, label: 'From the last seven days'
+                                        StaticText, 0x107216440, {{1130.0, 593.0}, {34.0, 17.5}}, label: '7 tiles'
+                                    Cell, 0x1072152c0, {{16.0, 643.5}, {134.8, 279.5}}, label: 'Harbour, Tuesday, 1×2 tile'
+                                      Other, 0x107215400, {{16.0, 643.5}, {134.8, 279.5}}
+                                        Image, 0x107215a40, {{30.0, 655.0}, {32.0, 34.0}}, identifier: 'ferry', label: 'Ferry boat'
+                                        StaticText, 0x107215cc0, {{104.0, 657.5}, {33.0, 18.0}}, label: '1×2'
+                                        Other, 0x107215b80, {{30.0, 846.0}, {107.0, 43.0}}
+                                          StaticText, 0x107215900, {{30.0, 846.0}, {107.0, 24.5}}, label: 'Harbour'
+                                          StaticText, 0x107215f40, {{30.0, 872.5}, {107.0, 16.5}}, label: 'Tuesday'
+                                    Cell, 0x107215e00, {{160.8, 643.5}, {134.8, 134.8}}, label: 'Market Day, Tuesday, 1×1 tile'
+                                      Other, 0x1072161c0, {{160.8, 643.5}, {134.8, 134.8}}
+                                        Image, 0x107216580, {{169.8, 651.5}, {23.0, 20.5}}, identifier: 'basket', label: 'Shopping basket with a handle'
+                                        StaticText, 0x107216bc0, {{255.2, 652.5}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x107216e40, {{169.8, 752.0}, {117.0, 17.5}}
+                                          StaticText, 0x107217980, {{169.8, 752.0}, {117.0, 17.5}}, label: 'Market Day'
+                                    Cell, 0x107217e80, {{305.5, 643.5}, {134.8, 134.8}}, label: 'Rooftops, Wednesday, 1×1 tile'
+                                      Other, 0x107217ac0, {{305.5, 643.5}, {134.8, 134.8}}
+                                        Image, 0x1072148c0, {{314.5, 653.0}, {37.0, 17.5}}, identifier: 'house.lodge', label: 'Lodge-style house'
+                                        StaticText, 0x107217d40, {{400.0, 652.5}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x107215040, {{314.5, 752.0}, {117.0, 17.5}}
+                                          StaticText, 0x107216940, {{314.5, 752.0}, {117.0, 17.5}}, label: 'Rooftops'
+                                    Cell, 0x107216300, {{450.2, 643.5}, {279.5, 134.8}}, label: 'Rain Study, Thursday, 2×1 tile'
+                                      Other, 0x1072166c0, {{450.2, 643.5}, {279.5, 134.8}}
+                                        Image, 0x107216a80, {{464.2, 656.5}, {30.5, 32.0}}, identifier: 'cloud.rain', label: 'rain'
+                                        StaticText, 0x107216800, {{682.8, 657.5}, {33.0, 18.0}}, label: '2×1'
+                                        Other, 0x107216080, {{464.2, 721.5}, {251.5, 43.0}}
+                                          StaticText, 0x1136b8000, {{464.2, 721.5}, {251.5, 24.5}}, label: 'Rain Study'
+                                          StaticText, 0x1136b8140, {{464.2, 748.0}, {251.5, 16.5}}, label: 'Thursday'
+                                    Cell, 0x1136b8280, {{739.8, 643.5}, {279.5, 279.5}}, label: 'Greenhouse, Friday, 2×2 tile'
+                                      Other, 0x1136b83c0, {{739.8, 643.5}, {279.5, 279.5}}
+                                        Image, 0x1136b8500, {{753.8, 657.0}, {36.0, 36.0}}, identifier: 'camera.aperture', label: 'Camera lens aperture blades'
+                                        StaticText, 0x1136b8640, {{971.2, 657.5}, {34.0, 18.0}}, label: '2×2'
+                                        Other, 0x1136b8780, {{753.8, 846.0}, {251.5, 43.0}}
+                                          StaticText, 0x1136b88c0, {{753.8, 846.0}, {251.5, 24.5}}, label: 'Greenhouse'
+                                          StaticText, 0x1136b8a00, {{753.8, 872.5}, {251.5, 16.5}}, label: 'Friday'
+                                    Cell, 0x1136b8b40, {{1029.2, 643.5}, {134.8, 279.5}}, label: 'Late Train, Saturday, 1×2 tile'
+                                      Other, 0x1136b8c80, {{1029.2, 643.5}, {134.8, 279.5}}
+                                        Image, 0x1136b8dc0, {{1043.2, 654.5}, {27.5, 35.0}}, identifier: 'tram.fill', label: 'train'
+                                        StaticText, 0x1136b8f00, {{1117.2, 657.5}, {33.0, 18.0}}, label: '1×2'
+                                        Other, 0x1136b9040, {{1043.2, 846.0}, {107.0, 43.0}}
+                                          StaticText, 0x1136b9180, {{1043.2, 846.0}, {107.0, 24.5}}, label: 'Late Train'
+                                          StaticText, 0x1136b92c0, {{1043.2, 872.5}, {107.0, 16.5}}, label: 'Saturday'
+                                    Cell, 0x1136b9400, {{160.8, 788.2}, {134.8, 134.8}}, label: 'Low Sun, Sunday, 1×1 tile'
+                                      Other, 0x1136b9540, {{160.8, 788.2}, {134.8, 134.8}}
+                                        Image, 0x1136b9680, {{169.8, 796.8}, {24.5, 22.0}}, identifier: 'sunset', label: 'sunset'
+                                        StaticText, 0x1136b97c0, {{255.2, 797.2}, {31.5, 18.0}}, label: '1×1'
+                                        Other, 0x1136b9900, {{169.8, 876.8}, {117.0, 17.5}}
+                                          StaticText, 0x1136b9a40, {{169.8, 876.8}, {117.0, 17.5}}, label: 'Low Sun'
+                                    Other, 0x1136b9b80, {{1147.0, 312.0}, {30.0, 468.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%
+                                      Other, 0x1136b9cc0, {{1174.0, 770.0}, {3.0, 7.0}}
+                                    Other, 0x1136b9e00, {{18.0, 787.0}, {1144.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                                      Other, 0x1136b9f40, {{1170.0, 814.0}, {7.0, 3.0}}
+                                    Other, 0x1136ba080, {{1147.0, 312.0}, {30.0, 468.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%
+                                      Other, 0x1136ba1c0, {{1174.0, 770.0}, {3.0, 7.0}}
+                                    Other, 0x1136ba300, {{18.0, 787.0}, {1144.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                                      Other, 0x1136ba440, {{1170.0, 814.0}, {7.0, 3.0}}
+                      Other, 0x1136ba580, {{0.0, 0.0}, {1180.0, 820.0}}
+                        Other, 0x1136ba6c0, {{0.0, 0.0}, {1180.0, 97.5}}
+                      Other, 0x1136ba800, {{1147.0, 96.0}, {30.0, 706.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%
+                        Other, 0x1136ba940, {{1174.0, 792.0}, {3.0, 7.0}}
+                      Other, 0x1136baa80, {{1147.0, 96.0}, {30.0, 706.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%
+                        Other, 0x1136babc0, {{1174.0, 792.0}, {3.0, 7.0}}
+                    Button, 0x1136bad00, {{442.5, 110.0}, {92.0, 88.0}}, label: 'Featured, 9'
+                      Image, 0x1136bae40, {{481.5, 119.5}, {14.0, 17.0}}, identifier: 'sparkles', label: 'Sparkle'
+                      StaticText, 0x1136baf80, {{482.0, 141.8}, {13.0, 28.0}}, label: '9'
+                      StaticText, 0x1136bb0c0, {{465.0, 173.8}, {47.0, 16.5}}, label: 'Featured'
+                    Button, 0x1136bb200, {{538.5, 110.0}, {92.0, 88.0}}, label: 'Collections, 8', Selected
+                      Image, 0x1136bb340, {{577.5, 121.0}, {14.0, 14.0}}, identifier: 'square.grid.2x2', label: 'Grid View'
+                      StaticText, 0x1136bb480, {{578.0, 140.2}, {13.0, 28.0}}, label: '8'
+                      StaticText, 0x1136bb5c0, {{555.0, 172.2}, {59.0, 16.5}}, label: 'Collections'
+                    Button, 0x1136bb700, {{634.5, 110.0}, {103.0, 88.0}}, label: 'Recently Added, 7'
+                      Image, 0x1136bb840, {{678.5, 120.0}, {15.5, 15.5}}, identifier: 'clock', label: 'Clock'
+                      StaticText, 0x1136bb980, {{679.5, 141.0}, {13.0, 28.0}}, label: '7'
+                      StaticText, 0x1136bbac0, {{644.5, 173.0}, {83.0, 16.5}}, label: 'Recently Added'
+                    Button, 0x1136bbc00, {{16.0, 754.5}, {72.0, 33.5}}, label: 'Paging implementation: Fix 3'
+                      Button, 0x1136bbd40, {{16.0, 754.5}, {72.0, 33.5}}
+                        Image, 0x1136bbe80, {{29.5, 766.0}, {10.5, 11.0}}, identifier: 'switch.2', label: 'Control Centre'
+                        StaticText, 0x115e14000, {{47.5, 762.5}, {28.5, 17.5}}, label: 'Fix 3'
+            Other, 0x115e14140, {{0.0, 0.0}, {1180.0, 820.0}}
+              Toolbar, 0x115e14280, {{0.0, 0.0}, {1180.0, 820.0}}, identifier: 'Toolbar', label: 'Toolbar'
+                Other, 0x115e143c0, {{0.0, 0.0}, {1180.0, 820.0}}
+              Other, 0x115e14500, {{0.0, 29.5}, {1180.0, 48.0}}
+                Button, 0x115e14640, {{449.8, 33.5}, {88.0, 40.0}}, label: 'Mosaic'
+                  Button, 0x115e14780, {{449.8, 33.5}, {88.0, 40.0}}, label: 'Mosaic'
+                Button, 0x115e148c0, {{537.8, 33.5}, {87.0, 40.0}}, label: 'Library'
+                  Button, 0x115e14a00, {{537.8, 33.5}, {87.0, 40.0}}, label: 'Library'
+                Button, 0x115e14b40, {{624.8, 33.5}, {105.5, 40.0}}, label: 'Overview', Selected
+                  Button, 0x115e14c80, {{624.8, 33.5}, {105.5, 40.0}}, label: 'Overview', Selected
+Path to element:
+ →Application, 0x115e28dc0, pid: 43067, label: 'ComplexLayout'
+Query chain:
+ →Find: Target Application 'com.example.ComplexLayout'
+  Output: {
+    Application, 0x115e14dc0, pid: 43067, label: 'ComplexLayout'
+  }
