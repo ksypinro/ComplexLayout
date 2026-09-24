@@ -27,7 +27,6 @@ final class MainTabBarController: UITabBarController {
     /// Namespaced so customization persists against these tabs specifically,
     /// rather than against whatever happens to occupy the same position later.
     private static let customizationID = "com.complexlayout.tabs"
-	let searchController = SearchViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +55,7 @@ final class MainTabBarController: UITabBarController {
         tabs = [
             makeMosaicTab(),
             makeLibraryTab(),
-            makeOverviewTab(),
-            makeSearchTab()
+            makeOverviewTab()
         ]
     }
 
@@ -142,29 +140,118 @@ final class MainTabBarController: UITabBarController {
         return group
     }
 
-    /// Tab 4 — searches every other tab.
+    // MARK: - Search accessory
+
+    private lazy var searchPill: SearchPillView = {
+        let view = SearchPillView()
+        view.onTap = { [weak self] in self?.presentSearch() }
+        return view
+    }()
+
+    /// Floats search above the tab bar instead of putting it inside.
     ///
-    /// `UISearchTab` rather than a `UITab` carrying a magnifying glass. The
-    /// system supplies the symbol and localized title, separates it from the
-    /// other tabs at the trailing edge, and — because no `prominentTabIdentifier`
-    /// is set and this tab activates its field on appearance — gives it the
-    /// prominent treatment in the bar.
-    private func makeSearchTab() -> UISearchTab {
-        let tab = UISearchTab { [weak self] tab in
-			guard
-				let self,
-				let tab = tab as? UISearchTab
-			else { return UINavigationController() }
-			
-			tab.automaticallyActivatesSearch = true
-            return UINavigationController(rootViewController: searchController)
+    /// As a `UISearchTab` this was a fourth tab competing with the three
+    /// content destinations, even though it is an action rather than a place.
+    ///
+    /// Not `bottomAccessory` either, which was the first thing tried: the
+    /// accessory draws its own glass the full width of the screen and gives no
+    /// way to shrink or soften it, so it covered the content it was meant to
+    /// float over. See `SearchPillView`.
+    ///
+    /// Pinned to `contentLayoutGuide`, which is the area left unobscured by
+    /// the tab bar or sidebar. The pill therefore sits just above the bar
+    /// wherever the bar happens to be, and follows it down when it minimizes,
+    /// without this having to know the bar's height on any platform.
+    private func configureSearchPill() {
+        searchPill.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(searchPill)
+
+        // Measured from the safe area rather than `contentLayoutGuide`: the
+        // guide's bottom edge shifts by the height the accessory below
+        // reserves, so anchoring to it would move the pill whenever that
+        // changed. The safe area's bottom is the home indicator and stays put.
+        let bottom = searchPill.bottomAnchor.constraint(
+            equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+            constant: PillOffset.aboveExpandedBar
+        )
+        pillBottomConstraint = bottom
+
+        NSLayoutConstraint.activate([
+            searchPill.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bottom
+        ])
+
+        // Nothing in the layout moves when the bar minimizes, so the pill has
+        // to be told. See `TabBarMinimizeSensor` for why the signal comes from
+        // an empty accessory.
+        let sensor = TabBarMinimizeSensor()
+        sensor.onChange = { [weak self] isMinimized in
+            self?.moveSearchPill(minimized: isMinimized)
         }
-        // Opening a tab whose only purpose is search should put the caret in
-        // the field rather than ask for one more tap.
-       // tab.automaticallyActivatesSearch = true
-        // Pinned: always visible on the trailing edge, image only.
-        tab.preferredPlacement = .pinned
-        return tab
+        bottomAccessory = UITabAccessory(contentView: sensor)
+    }
+
+    private var pillBottomConstraint: NSLayoutConstraint?
+
+    /// Where the pill's bottom edge sits, relative to the safe area's.
+    ///
+    /// Both measured against the bar as it is actually drawn: the expanded bar
+    /// runs to 57pt above the safe area's bottom edge, the collapsed one to
+    /// 3pt, and the pill clears each by the same small margin.
+    private enum PillOffset {
+        /// Just clear of the top edge of the full-height bar.
+        static let aboveExpandedBar: CGFloat = -57
+        /// Down into the row the collapsed bar occupies, alongside it rather
+        /// than stranded above it.
+        static let besideMinimizedBar: CGFloat = -3
+    }
+
+    /// Drops the pill into the collapsed bar's row, or lifts it back above the
+    /// expanded one.
+    ///
+    /// Spring-animated to sit with the bar's own movement: the sensor reports
+    /// in step with that animation, so the two travel together instead of the
+    /// pill snapping after the bar has already settled.
+    private func moveSearchPill(minimized: Bool) {
+        guard let pillBottomConstraint else { return }
+
+        let target = minimized ? PillOffset.besideMinimizedBar : PillOffset.aboveExpandedBar
+        guard pillBottomConstraint.constant != target else { return }
+        pillBottomConstraint.constant = target
+
+        // Nothing to animate before the view is on screen; the first report
+        // arrives as the sensor lands in its window.
+        guard view.window != nil else {
+            view.layoutIfNeeded()
+            return
+        }
+
+        UIView.animate(springDuration: 0.45, bounce: 0.15) {
+            self.view.layoutIfNeeded()
+        }
+    }
+
+    /// Opens search, growing it out of the pill that was tapped.
+    ///
+    /// A zoom transition rather than the default sheet slide: the pill and the
+    /// search field are the same control at two sizes, so the movement should
+    /// read as one expanding rather than as a new screen arriving over the old
+    /// one.
+    private func presentSearch() {
+        let search = SearchViewController()
+        search.onSelectTab = { [weak self] tab in
+            guard let self else { return }
+            // Dismiss first, then select: switching tabs underneath a sheet
+            // that is still up leaves the wrong tab behind when it closes.
+            dismiss(animated: true) { self.select(tab) }
+        }
+        search.onFinish = { [weak self] in self?.dismiss(animated: true) }
+
+        let navigation = UINavigationController(rootViewController: search)
+        navigation.preferredTransition = .zoom { [weak self] _ in
+            self?.searchPill.zoomSourceView
+        }
+        present(navigation, animated: true)
     }
 
     private static func pageIdentifier(for page: OverviewPage) -> String {
@@ -221,6 +308,8 @@ final class MainTabBarController: UITabBarController {
 
         // Persist whatever people rearrange in the tab bar and sidebar.
         customizationIdentifier = Self.customizationID
+
+        configureSearchPill()
     }
 
     /// Selects a top-level tab by identifier.

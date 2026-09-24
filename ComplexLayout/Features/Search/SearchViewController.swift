@@ -26,6 +26,17 @@ final class SearchViewController: UIViewController {
     private typealias DataSource = UICollectionViewDiffableDataSource<AppTab, SearchSource>
     private typealias Snapshot = NSDiffableDataSourceSnapshot<AppTab, SearchSource>
 
+    /// Called when a result is chosen, with the tab it came from.
+    ///
+    /// A closure rather than a walk up to `tabBarController`: search is
+    /// presented as a sheet now, so the tab bar is its *presenting* controller
+    /// rather than an ancestor. Handing the destination back to whoever put
+    /// this on screen keeps that decision out of here.
+    var onSelectTab: ((AppTab) -> Void)?
+
+    /// Called when the user is done searching and the sheet should close.
+    var onFinish: (() -> Void)?
+
     private let resultsController = SearchResultsViewController()
     private lazy var searchController = UISearchController(searchResultsController: resultsController)
 
@@ -34,18 +45,6 @@ final class SearchViewController: UIViewController {
 
     // MARK: - Lifecycle
 
-    /// Configures search here rather than in `viewDidLoad`.
-    ///
-    /// The tab's `viewControllerProvider` does not run until the search tab is
-    /// first selected, and the tab bar begins its transition as soon as it has
-    /// the controller back. Configuring in the initializer means the
-    /// navigation item already names its search controller before the provider
-    /// returns, rather than acquiring one partway through that transition.
-    ///
-    /// Worth knowing if you are chasing a layout problem here: this on its own
-    /// did *not* fix the first-appearance flash that used to affect this tab.
-    /// That had two other causes — see `preferredSearchBarPlacement` below and
-    /// `prewarmTextInput()` in `MainTabBarController`.
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -63,6 +62,32 @@ final class SearchViewController: UIViewController {
         configureDataSource()
     }
 
+    private var hasActivatedSearch = false
+
+    /// Focuses the field once, after the sheet has finished arriving.
+    ///
+    /// Deliberately not earlier: the presentation grows this sheet out of the
+    /// accessory pill, and taking first responder while that is still running
+    /// makes the keyboard race the transition. `viewDidAppear` is the first
+    /// moment both are finished. The search tab used to get this for free from
+    /// `automaticallyActivatesSearch`, which went with the tab.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        guard !hasActivatedSearch else { return }
+        hasActivatedSearch = true
+        searchController.isActive = true
+
+        // Deferred a turn on purpose. `isActive` starts the search
+        // controller's own presentation, and until that settles the search bar
+        // is not yet placed in the navigation bar — a first responder request
+        // made now is simply dropped, which showed up as a field that looked
+        // focused, cancel button and all, but swallowed every keystroke.
+        DispatchQueue.main.async { [weak self] in
+            self?.searchController.searchBar.becomeFirstResponder()
+        }
+    }
+
     // MARK: - Search controller
 
     private func configureSearchController() {
@@ -70,6 +95,7 @@ final class SearchViewController: UIViewController {
         resultsController.delegate = self
 
         searchController.searchResultsUpdater = self
+        searchController.delegate = self
         searchController.searchBar.placeholder = "Mosaic, Library and Overview"
         searchController.searchBar.autocapitalizationType = .none
         searchController.searchBar.delegate = self
@@ -78,23 +104,29 @@ final class SearchViewController: UIViewController {
         // focused but empty, so don't dim it out from under the user.
         searchController.obscuresBackgroundDuringPresentation = false
 
-        // Integrated, which on iPhone means the navigation controller hands
-        // the field to the bar at the bottom of the screen — where search
-        // lives in a search tab, and where this one ends up regardless.
+        // Stacked: the field sits below the title, full width, as the thing
+        // this sheet exists for.
         //
-        // Asking for `.stacked` here instead is what caused the field to flash
-        // over the content on the tab's first appearance. Stacked puts the
-        // field in the navigation bar at the top, the search tab then moves it
-        // down into the tab bar's glass, and until that relocation settles the
-        // browse list underneath is laid out for the wrong bar and scrolls up
-        // through the field. Naming the placement the system is going to use
-        // leaves nothing to relocate, so the first laid-out frame is correct.
+        // This asked for `.integrated` while search was a tab, because the tab
+        // bar took the field over and floated it in its own glass at the
+        // bottom — and naming a placement the system was going to override
+        // cost a visible relocation on first appearance. Off the tab bar there
+        // is nothing to override it, so stacked is both what is asked for and
+        // what gets rendered.
         navigationItem.searchController = searchController
-        navigationItem.preferredSearchBarPlacement = .integrated
+        navigationItem.preferredSearchBarPlacement = .stacked
         navigationItem.hidesSearchBarWhenScrolling = false
+
+        // Stacked placement suppresses the suggestion list by default, and the
+        // scope suggestions are the whole of the empty state here.
+        searchController.ignoresSearchSuggestionsForSearchBarPlacementStacked = false
         searchController.searchSuggestions = Self.scopeSuggestions
 
         navigationItem.largeTitleDisplayMode = .inline
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            systemItem: .done,
+            primaryAction: UIAction { [weak self] _ in self?.onFinish?() }
+        )
     }
 
     /// One suggestion per tab, offered as a way to narrow the search.
@@ -200,18 +232,12 @@ final class SearchViewController: UIViewController {
 
     // MARK: - Routing
 
-    /// Switches the tab bar to `tab` and dismisses search.
-    ///
-    /// Looked up by identifier rather than by index because the tab bar and
-    /// sidebar let people reorder and hide tabs, which makes a position an
-    /// unreliable way to name a destination.
+    /// Hands the chosen destination back to whoever presented search.
     private func open(_ tab: AppTab) {
-        searchController.isActive = false
-        guard
-            let tabBarController,
-            let destination = tabBarController.tab(forIdentifier: tab.tabIdentifier)
-        else { return }
-        tabBarController.selectedTab = destination
+        // Resign first so the keyboard is already on its way out when the
+        // dismissal starts, rather than collapsing partway through it.
+        searchController.searchBar.resignFirstResponder()
+        onSelectTab?(tab)
     }
 }
 
@@ -268,15 +294,41 @@ extension SearchViewController: UISearchResultsUpdating {
     }
 }
 
+// MARK: - UISearchControllerDelegate
+
+extension SearchViewController: UISearchControllerDelegate {
+
+    /// Focuses the field once the search controller has finished presenting.
+    ///
+    /// Asking for first responder alongside `isActive = true` is too early —
+    /// the search controller is still presenting, the field is not in the
+    /// window yet, and the request is dropped: the cancel button appears but
+    /// typing goes nowhere. This is the callback that says the field is real.
+    func didPresentSearchController(_ searchController: UISearchController) {
+        searchController.searchBar.becomeFirstResponder()
+
+        // Activating in code does not drive a results update the way typing
+        // does, so the first thing shown would otherwise be an empty panel
+        // instead of the scope suggestions. Ask for the update explicitly.
+        updateSearchResults(for: searchController)
+    }
+}
+
 // MARK: - UISearchBarDelegate
 
 extension SearchViewController: UISearchBarDelegate {
 
-    /// Restores the suggestion list when the field is cleared back to empty,
-    /// so cancelling out of a search returns to the starting state.
+    /// Cancel closes search rather than emptying it.
+    ///
+    /// The sheet opens straight into an active field, so a cancel that only
+    /// deactivated the search would strand the user on an idle screen they
+    /// never asked for, with the way out — the navigation bar's Done button —
+    /// hidden underneath the search bar that is still presented. Treating
+    /// cancel as "I am finished" matches what the control looks like it does.
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.searchTextField.tokens = []
         searchController.searchSuggestions = Self.scopeSuggestions
+        onFinish?()
     }
 }
 
