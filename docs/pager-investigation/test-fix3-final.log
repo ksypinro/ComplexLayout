@@ -1,0 +1,89 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project docs/pager-investigation/Runner.xcodeproj -scheme Investigation -destination id=16592CE0-AE1E-42E7-BA7D-8A5107A25680 -derivedDataPath /tmp/complex-layout-ui-tests -parallel-testing-enabled NO "-only-testing:PagerInvestigationTests/PagerInvestigationTests/testFix3RepeatedRotationsAndPaging" -resultBundlePath /tmp/complex-layout-fix3-final.xcresult test-without-building CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Writing result bundle at path:
+	/tmp/complex-layout-fix3-final.xcresult
+
+2026-09-15 23:39:30.767530+0600 PagerInvestigationTests-Runner[43028:25720633] [Default] Running tests...
+2026-09-15 23:39:30.842655+0600 PagerInvestigationTests-Runner[43028:25720633] [UIKit App Config] Update the Info.plist: Launch screens will soon be required.
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-09-15 23:39:34.353.
+Test Suite 'PagerInvestigationTests.xctest' started at 2026-09-15 23:39:34.354.
+Test Suite 'PagerInvestigationTests' started at 2026-09-15 23:39:34.354.
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' started.
+    t =     0.00s Start Test at 2026-09-15 23:39:34.359
+    t =     0.22s Set Up
+    t =     0.22s Setting device orientation to Portrait
+    t =     0.50s     Wait for com.apple.springboard to idle
+    t =     0.55s Open com.example.ComplexLayout
+    t =     0.56s     Launch com.example.ComplexLayout
+2026-09-15 23:39:35.328 xcodebuild[42979:25719981] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 23:39:35.337 xcodebuild[42979:25719981] [MT] IDELaunchParametersSnapshot: no debugger version
+objc[43028]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x10a6a4310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x112e88398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     2.89s         Setting up automation session
+    t =     6.73s         Wait for com.example.ComplexLayout to idle
+    t =     9.21s Waiting 10.0s for "Featured, 9" Button to exist
+    t =    10.23s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    10.24s         Checking existence of `"Featured, 9" Button`
+    t =    10.51s Tap "Collections, 8" Button
+    t =    10.51s     Wait for com.example.ComplexLayout to idle
+    t =    10.51s     Find the "Collections, 8" Button
+    t =    10.59s     Check for interrupting elements affecting "Collections, 8" Button
+    t =    10.73s         Wait for com.apple.springboard to idle
+    t =    10.81s Ignoring failure to get hierarchy for remote element in process 42802 (Error getting main window kAXErrorServerNotFound)
+    t =    10.81s Ignoring failure to get hierarchy for remote element in process 42802 (Error getting main window kAXErrorServerNotFound)
+    t =    10.82s     Synthesize event
+    t =    11.26s     Wait for com.example.ComplexLayout to idle
+    t =    11.26s Find the "Collections, 8" Button
+    t =    12.43s Getting device orientation
+    t =    12.44s Find the Target Application 'com.example.ComplexLayout'
+    t =    12.50s Requesting snapshot of accessibility hierarchy for app with pid 43067
+    t =    12.97s Requesting snapshot of accessibility hierarchy for app with pid 43067
+    t =    13.08s Find the Target Application 'com.example.ComplexLayout'
+    t =    29.43s Setting device orientation to Landscape Left
+    t =    29.45s     Device orientation changed to Landscape Left
+    t =    29.97s     Interface orientation changed to Landscape Right
+    t =    30.03s     Wait for com.example.ComplexLayout to idle
+    t =    30.24s     Wait for com.apple.springboard to idle
+    t =    30.76s Find the "Collections, 8" Button
+    t =    31.87s Getting device orientation
+    t =    31.87s Find the Target Application 'com.example.ComplexLayout'
+    t =    31.91s Requesting snapshot of accessibility hierarchy for app with pid 43067
+    t =    32.28s Requesting snapshot of accessibility hierarchy for app with pid 43067
+    t =    32.36s Find the Target Application 'com.example.ComplexLayout'
+    t =    46.44s Swipe left Target Application 'com.example.ComplexLayout'
+    t =    46.44s     Wait for com.example.ComplexLayout to idle
+    t =    46.45s     Find the Target Application 'com.example.ComplexLayout'
+    t =    46.58s     Check for interrupting elements affecting "ComplexLayout" Application
+    t =    46.77s         Wait for com.apple.springboard to idle
+    t =    46.93s Ignoring failure to get hierarchy for remote element in process 42802 (Error getting main window kAXErrorServerNotFound)
+    t =    46.94s Ignoring failure to get hierarchy for remote element in process 42802 (Error getting main window kAXErrorServerNotFound)
+    t =    46.94s     Synthesize event
+    t =    47.40s     Wait for com.example.ComplexLayout to idle
+    t =    47.40s Find the "Recently Added, 7" Button
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:62: error: -[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging] : XCTAssertTrue failed
+    t =    47.62s Tear Down
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' failed (47.913 seconds).
+Test Suite 'PagerInvestigationTests' failed at 2026-09-15 23:40:22.273.
+	 Executed 1 test, with 1 failure (0 unexpected) in 47.913 (47.919) seconds
+Test Suite 'PagerInvestigationTests.xctest' failed at 2026-09-15 23:40:22.274.
+	 Executed 1 test, with 1 failure (0 unexpected) in 47.913 (47.920) seconds
+Test Suite 'Selected tests' failed at 2026-09-15 23:40:22.275.
+	 Executed 1 test, with 1 failure (0 unexpected) in 47.913 (47.922) seconds
+2026-09-15 23:50:22.870 xcodebuild[42979:25723025]  IDETestOperationsObserverDebug: Failure collecting diagnostics from simulator: Timed out after 600.0 seconds while waiting for a response from the invoked process
+2026-09-15 23:50:22.945 xcodebuild[42979:25719981] [MT] IDETestOperationsObserverDebug: 666.535 elapsed -- Testing started completed.
+2026-09-15 23:50:22.945 xcodebuild[42979:25719981] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-15 23:50:22.945 xcodebuild[42979:25719981] [MT] IDETestOperationsObserverDebug: 666.535 sec, +666.535 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/complex-layout-fix3-final.xcresult
+
+Failing tests:
+	PagerInvestigationTests.testFix3RepeatedRotationsAndPaging()
+
+** TEST EXECUTE FAILED **
+
+Testing started

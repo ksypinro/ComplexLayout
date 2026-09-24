@@ -1,0 +1,992 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project docs/pager-investigation/Runner.xcodeproj -scheme Investigation -configuration Debug -destination id=16592CE0-AE1E-42E7-BA7D-8A5107A25680 -derivedDataPath /tmp/complex-layout-ui-tests build-for-testing CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'PagerInvestigationTests' in project 'Runner'
+        ➜ Explicit dependency on target 'ComplexLayout' in project 'Runner'
+    Target 'ComplexLayout' in project 'Runner' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /tmp/complex-layout-ui-tests/SDKStatCaches.noindex/iphonesimulator27.0-24A5355p-3243818bda632a4370e1cc7a9fd181c5.sdkstatcache
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation/Runner.xcodeproj
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /tmp/complex-layout-ui-tests/SDKStatCaches.noindex/iphonesimulator27.0-24A5355p-3243818bda632a4370e1cc7a9fd181c5.sdkstatcache
+
+SwiftDriver PagerInvestigationTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    builtin-SwiftDriver -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PagerInvestigationTests -Onone @/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-upcoming-feature StrictConcurrency -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/complex-layout-ui-tests/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator -F /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/complex-layout-ui-tests/SDKStatCaches.noindex/iphonesimulator27.0-24A5355p-3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -sdk-module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -emit-dependencies -emit-module -emit-module-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/complex-layout-ui-tests/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-generated-files.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-own-target-headers.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-project-headers.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources/arm64 -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-Swift.h -working-directory /Users/samin/Documents/ComplexLayout/docs/pager-investigation -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ PagerInvestigationTests.swift /Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift (in target 'PagerInvestigationTests' from project 'Runner')
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:12:46: warning: main actor-isolated property 'orientation' can not be referenced from a nonisolated context
+ 4 |     private let sync = URL(fileURLWithPath: "/tmp/complex-layout-uitest-sync", isDirectory: true)
+ 5 | 
+ 6 |     private func checkpoint(_ name: String, app: XCUIApplication) throws {
+   |                  `- note: add '@MainActor' to make instance method 'checkpoint(_:app:)' part of global actor 'MainActor'
+ 7 |         // XCTest has already waited for UI idleness; let rotation rendering settle.
+ 8 |         Thread.sleep(forTimeInterval: 1)
+   :
+10 |         let data = try JSONSerialization.data(withJSONObject: [
+11 |             "name": name,
+12 |             "orientation": XCUIDevice.shared.orientation.rawValue,
+   |                                              `- warning: main actor-isolated property 'orientation' can not be referenced from a nonisolated context
+13 |             "runnerPID": ProcessInfo.processInfo.processIdentifier,
+14 |             "appFrame": String(describing: app.frame)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:55:43: note: property declared here
+ 53 | #if TARGET_OS_IOS
+ 54 | /*! The orientation of the device. */
+ 55 | @property (nonatomic) UIDeviceOrientation orientation;
+    |                                           `- note: property declared here
+ 56 | /*!
+ 57 |  * Provides access to an object representing the Siri interface on the device.
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:12:39: warning: main actor-isolated class property 'shared' can not be referenced from a nonisolated context
+ 4 |     private let sync = URL(fileURLWithPath: "/tmp/complex-layout-uitest-sync", isDirectory: true)
+ 5 | 
+ 6 |     private func checkpoint(_ name: String, app: XCUIApplication) throws {
+   |                  `- note: add '@MainActor' to make instance method 'checkpoint(_:app:)' part of global actor 'MainActor'
+ 7 |         // XCTest has already waited for UI idleness; let rotation rendering settle.
+ 8 |         Thread.sleep(forTimeInterval: 1)
+   :
+10 |         let data = try JSONSerialization.data(withJSONObject: [
+11 |             "name": name,
+12 |             "orientation": XCUIDevice.shared.orientation.rawValue,
+   |                                       `- warning: main actor-isolated class property 'shared' can not be referenced from a nonisolated context
+13 |             "runnerPID": ProcessInfo.processInfo.processIdentifier,
+14 |             "appFrame": String(describing: app.frame)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:42:41: note: class property declared here
+ 40 | 
+ 41 | /*! The current device. */
+ 42 | @property (class, readonly) XCUIDevice *sharedDevice;
+    |                                         `- note: class property declared here
+ 43 | 
+ 44 | + (instancetype)new XCUI_UNAVAILABLE("Access XCUIDevice through +sharedDevice");
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:14:48: warning: main actor-isolated property 'frame' can not be referenced from a nonisolated context
+ 4 |     private let sync = URL(fileURLWithPath: "/tmp/complex-layout-uitest-sync", isDirectory: true)
+ 5 | 
+ 6 |     private func checkpoint(_ name: String, app: XCUIApplication) throws {
+   |                  `- note: add '@MainActor' to make instance method 'checkpoint(_:app:)' part of global actor 'MainActor'
+ 7 |         // XCTest has already waited for UI idleness; let rotation rendering settle.
+ 8 |         Thread.sleep(forTimeInterval: 1)
+   :
+12 |             "orientation": XCUIDevice.shared.orientation.rawValue,
+13 |             "runnerPID": ProcessInfo.processInfo.processIdentifier,
+14 |             "appFrame": String(describing: app.frame)
+   |                                                `- warning: main actor-isolated property 'frame' can not be referenced from a nonisolated context
+15 |         ], options: .prettyPrinted)
+16 |         try app.debugDescription.write(to: sync.appendingPathComponent("\(name)-ax.txt"), atomically: true, encoding: .utf8)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementAttributes.h:38:29: note: property declared here
+ 36 | 
+ 37 | /*! The frame of the element in the screen coordinate space. */
+ 38 | @property (readonly) CGRect frame;
+    |                             `- note: property declared here
+ 39 | 
+ 40 | /*! The raw value attribute of the element. Depending on the element, the actual type can vary. */
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:17:30: warning: main actor-isolated property 'pngRepresentation' can not be referenced from a nonisolated context
+ 4 |     private let sync = URL(fileURLWithPath: "/tmp/complex-layout-uitest-sync", isDirectory: true)
+ 5 | 
+ 6 |     private func checkpoint(_ name: String, app: XCUIApplication) throws {
+   |                  `- note: add '@MainActor' to make instance method 'checkpoint(_:app:)' part of global actor 'MainActor'
+ 7 |         // XCTest has already waited for UI idleness; let rotation rendering settle.
+ 8 |         Thread.sleep(forTimeInterval: 1)
+   :
+15 |         ], options: .prettyPrinted)
+16 |         try app.debugDescription.write(to: sync.appendingPathComponent("\(name)-ax.txt"), atomically: true, encoding: .utf8)
+17 |         try app.screenshot().pngRepresentation.write(to: sync.appendingPathComponent("\(name).png"))
+   |                              `- warning: main actor-isolated property 'pngRepresentation' can not be referenced from a nonisolated context
+18 |         try data.write(to: sync.appendingPathComponent("current.json"), options: .atomic)
+19 |         let release = sync.appendingPathComponent("\(name).continue")
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIScreenshot.h:38:36: note: property declared here
+36 |  * PNG image data of the underlying image.
+37 |  */
+38 | @property (readonly, copy) NSData *PNGRepresentation;
+   |                                    `- note: property declared here
+39 | 
+40 | @end
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:17:17: warning: call to main actor-isolated instance method 'screenshot()' in a synchronous nonisolated context [#ActorIsolatedCall]
+ 4 |     private let sync = URL(fileURLWithPath: "/tmp/complex-layout-uitest-sync", isDirectory: true)
+ 5 | 
+ 6 |     private func checkpoint(_ name: String, app: XCUIApplication) throws {
+   |                  `- note: add '@MainActor' to make instance method 'checkpoint(_:app:)' part of global actor 'MainActor'
+ 7 |         // XCTest has already waited for UI idleness; let rotation rendering settle.
+ 8 |         Thread.sleep(forTimeInterval: 1)
+   :
+15 |         ], options: .prettyPrinted)
+16 |         try app.debugDescription.write(to: sync.appendingPathComponent("\(name)-ax.txt"), atomically: true, encoding: .utf8)
+17 |         try app.screenshot().pngRepresentation.write(to: sync.appendingPathComponent("\(name).png"))
+   |                 `- warning: call to main actor-isolated instance method 'screenshot()' in a synchronous nonisolated context [#ActorIsolatedCall]
+18 |         try data.write(to: sync.appendingPathComponent("current.json"), options: .atomic)
+19 |         let release = sync.appendingPathComponent("\(name).continue")
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIScreenshotProviding.h:22:1: note: calls to instance method 'screenshot()' from outside of its actor context are implicitly asynchronous
+20 |  * the occluded window is captured, the front window will be visible in the screenshot.
+21 |  */
+22 | - (XCUIScreenshot *)screenshot;
+   | `- note: calls to instance method 'screenshot()' from outside of its actor context are implicitly asynchronous
+23 | 
+24 | @end
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:30:31: warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+25 |     }
+26 | 
+27 |     func testAlternatives() throws {
+   |          `- note: add '@MainActor' to make instance method 'testAlternatives()' part of global actor 'MainActor'
+28 |         continueAfterFailure = false
+29 |         for variant in ["baseline", "swiftUIList", "listNoIgnore", "geometryPage", "zeroMargins", "rebuildPage", "rebuildPager"] {
+30 |             XCUIDevice.shared.orientation = .portrait
+   |                               `- warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+31 |             let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+32 |             app.launchArguments = ["--pager-experiment=\(variant)"]
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:55:43: note: mutation of this property is only permitted within the actor
+ 53 | #if TARGET_OS_IOS
+ 54 | /*! The orientation of the device. */
+ 55 | @property (nonatomic) UIDeviceOrientation orientation;
+    |                                           `- note: mutation of this property is only permitted within the actor
+ 56 | /*!
+ 57 |  * Provides access to an object representing the Siri interface on the device.
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:30:24: warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+25 |     }
+26 | 
+27 |     func testAlternatives() throws {
+   |          `- note: add '@MainActor' to make instance method 'testAlternatives()' part of global actor 'MainActor'
+28 |         continueAfterFailure = false
+29 |         for variant in ["baseline", "swiftUIList", "listNoIgnore", "geometryPage", "zeroMargins", "rebuildPage", "rebuildPager"] {
+30 |             XCUIDevice.shared.orientation = .portrait
+   |                        `- warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+31 |             let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+32 |             app.launchArguments = ["--pager-experiment=\(variant)"]
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:42:41: note: mutation of this class property is only permitted within the actor
+ 40 | 
+ 41 | /*! The current device. */
+ 42 | @property (class, readonly) XCUIDevice *sharedDevice;
+    |                                         `- note: mutation of this class property is only permitted within the actor
+ 43 | 
+ 44 | + (instancetype)new XCUI_UNAVAILABLE("Access XCUIDevice through +sharedDevice");
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:31:23: warning: call to main actor-isolated initializer 'init(bundleIdentifier:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+25 |     }
+26 | 
+27 |     func testAlternatives() throws {
+   |          `- note: add '@MainActor' to make instance method 'testAlternatives()' part of global actor 'MainActor'
+28 |         continueAfterFailure = false
+29 |         for variant in ["baseline", "swiftUIList", "listNoIgnore", "geometryPage", "zeroMargins", "rebuildPage", "rebuildPager"] {
+30 |             XCUIDevice.shared.orientation = .portrait
+31 |             let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+   |                       `- warning: call to main actor-isolated initializer 'init(bundleIdentifier:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+32 |             app.launchArguments = ["--pager-experiment=\(variant)"]
+33 |             app.launch()
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIApplication.h:35:1: note: calls to initializer 'init(bundleIdentifier:)' from outside of its actor context are implicitly asynchronous
+ 33 |  * Returns a proxy for an application associated with the specified bundle identifier.
+ 34 |  */
+ 35 | - (instancetype)initWithBundleIdentifier:(NSString *)bundleIdentifier NS_DESIGNATED_INITIALIZER;
+    | `- note: calls to initializer 'init(bundleIdentifier:)' from outside of its actor context are implicitly asynchronous
+ 36 | 
+ 37 | #if TARGET_OS_OSX || TARGET_OS_MACCATALYST
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:32:17: warning: main actor-isolated property 'launchArguments' can not be mutated from a nonisolated context
+25 |     }
+26 | 
+27 |     func testAlternatives() throws {
+   |          `- note: add '@MainActor' to make instance method 'testAlternatives()' part of global actor 'MainActor'
+28 |         continueAfterFailure = false
+29 |         for variant in ["baseline", "swiftUIList", "listNoIgnore", "geometryPage", "zeroMargins", "rebuildPage", "rebuildPager"] {
+30 |             XCUIDevice.shared.orientation = .portrait
+31 |             let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+32 |             app.launchArguments = ["--pager-experiment=\(variant)"]
+   |                 `- warning: main actor-isolated property 'launchArguments' can not be mutated from a nonisolated context
+33 |             app.launch()
+34 |             XCTAssertTrue(app.buttons["Featured, 9"].waitForExistence(timeout: 10))
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIApplication.h:93:51: note: mutation of this property is only permitted within the actor
+ 91 |  * is launched.
+ 92 |  */
+ 93 | @property (nonatomic, copy) NSArray <NSString *> *launchArguments;
+    |                                                   `- note: mutation of this property is only permitted within the actor
+ 94 | 
+ 95 | /*!
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:33:17: warning: call to main actor-isolated instance method 'launch()' in a synchronous nonisolated context [#ActorIsolatedCall]
+25 |     }
+26 | 
+27 |     func testAlternatives() throws {
+   |          `- note: add '@MainActor' to make instance method 'testAlternatives()' part of global actor 'MainActor'
+28 |         continueAfterFailure = false
+29 |         for variant in ["baseline", "swiftUIList", "listNoIgnore", "geometryPage", "zeroMargins", "rebuildPage", "rebuildPager"] {
+   :
+31 |             let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+32 |             app.launchArguments = ["--pager-experiment=\(variant)"]
+33 |             app.launch()
+   |                 `- warning: call to main actor-isolated instance method 'launch()' in a synchronous nonisolated context [#ActorIsolatedCall]
+34 |             XCTAssertTrue(app.buttons["Featured, 9"].waitForExistence(timeout: 10))
+35 |             XCUIDevice.shared.orientation = .landscapeLeft
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIApplication.h:54:1: note: calls to instance method 'launch()' from outside of its actor context are implicitly asynchronous
+ 52 |  * at that point.
+ 53 | */
+ 54 | - (void)launch;
+    | `- note: calls to instance method 'launch()' from outside of its actor context are implicitly asynchronous
+ 55 | 
+ 56 | /*!
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:34:54: warning: call to main actor-isolated instance method 'waitForExistence(timeout:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+32 |             app.launchArguments = ["--pager-experiment=\(variant)"]
+33 |             app.launch()
+34 |             XCTAssertTrue(app.buttons["Featured, 9"].waitForExistence(timeout: 10))
+   |                                                      `- warning: call to main actor-isolated instance method 'waitForExistence(timeout:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+35 |             XCUIDevice.shared.orientation = .landscapeLeft
+36 |             try checkpoint("auto-\(variant)-landscape", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElement.h:57:1: note: calls to instance method 'waitForExistence(timeout:)' from outside of its actor context are implicitly asynchronous
+ 55 | 
+ 56 | /*! Waits the specified amount of time for the element's exist property to be true and returns false if the timeout expires without the element coming into existence. */
+ 57 | - (BOOL)waitForExistenceWithTimeout:(NSTimeInterval)timeout XCUI_WARN_UNUSED;
+    | `- note: calls to instance method 'waitForExistence(timeout:)' from outside of its actor context are implicitly asynchronous
+ 58 | 
+ 59 | /*! Waits the specified amount of time for the element's exist property to be false and returns false if the timeout expires without the element disappearing. */
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:34:38: warning: main actor-isolated subscript 'subscript(_:)' can not be referenced from a nonisolated autoclosure
+32 |             app.launchArguments = ["--pager-experiment=\(variant)"]
+33 |             app.launch()
+34 |             XCTAssertTrue(app.buttons["Featured, 9"].waitForExistence(timeout: 10))
+   |                                      `- warning: main actor-isolated subscript 'subscript(_:)' can not be referenced from a nonisolated autoclosure
+35 |             XCUIDevice.shared.orientation = .landscapeLeft
+36 |             try checkpoint("auto-\(variant)-landscape", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementQuery.h:46:1: note: subscript declared here
+44 | 
+45 | /*! Keyed subscripting is implemented as a shortcut for matching an identifier only. For example, app.descendants["Foo"] -> XCUIElement. */
+46 | - (XCUIElement *)objectForKeyedSubscript:(NSString *)key;
+   | `- note: subscript declared here
+47 | 
+48 | /*! Immediately evaluates the query and returns an array of elements bound to the resulting accessibility elements. */
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:34:31: warning: main actor-isolated property 'buttons' can not be referenced from a nonisolated autoclosure
+32 |             app.launchArguments = ["--pager-experiment=\(variant)"]
+33 |             app.launch()
+34 |             XCTAssertTrue(app.buttons["Featured, 9"].waitForExistence(timeout: 10))
+   |                               `- warning: main actor-isolated property 'buttons' can not be referenced from a nonisolated autoclosure
+35 |             XCUIDevice.shared.orientation = .landscapeLeft
+36 |             try checkpoint("auto-\(variant)-landscape", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementTypeQueryProvider.h:22:46: note: property declared here
+ 20 | @property (readonly, copy) XCUIElementQuery *alerts;
+ 21 | @property (readonly, copy) XCUIElementQuery *dialogs;
+ 22 | @property (readonly, copy) XCUIElementQuery *buttons;
+    |                                              `- note: property declared here
+ 23 | @property (readonly, copy) XCUIElementQuery *radioButtons;
+ 24 | @property (readonly, copy) XCUIElementQuery *radioGroups;
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:35:31: warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+25 |     }
+26 | 
+27 |     func testAlternatives() throws {
+   |          `- note: add '@MainActor' to make instance method 'testAlternatives()' part of global actor 'MainActor'
+28 |         continueAfterFailure = false
+29 |         for variant in ["baseline", "swiftUIList", "listNoIgnore", "geometryPage", "zeroMargins", "rebuildPage", "rebuildPager"] {
+   :
+33 |             app.launch()
+34 |             XCTAssertTrue(app.buttons["Featured, 9"].waitForExistence(timeout: 10))
+35 |             XCUIDevice.shared.orientation = .landscapeLeft
+   |                               `- warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+36 |             try checkpoint("auto-\(variant)-landscape", app: app)
+37 |             app.terminate()
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:55:43: note: mutation of this property is only permitted within the actor
+ 53 | #if TARGET_OS_IOS
+ 54 | /*! The orientation of the device. */
+ 55 | @property (nonatomic) UIDeviceOrientation orientation;
+    |                                           `- note: mutation of this property is only permitted within the actor
+ 56 | /*!
+ 57 |  * Provides access to an object representing the Siri interface on the device.
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:35:24: warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+25 |     }
+26 | 
+27 |     func testAlternatives() throws {
+   |          `- note: add '@MainActor' to make instance method 'testAlternatives()' part of global actor 'MainActor'
+28 |         continueAfterFailure = false
+29 |         for variant in ["baseline", "swiftUIList", "listNoIgnore", "geometryPage", "zeroMargins", "rebuildPage", "rebuildPager"] {
+   :
+33 |             app.launch()
+34 |             XCTAssertTrue(app.buttons["Featured, 9"].waitForExistence(timeout: 10))
+35 |             XCUIDevice.shared.orientation = .landscapeLeft
+   |                        `- warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+36 |             try checkpoint("auto-\(variant)-landscape", app: app)
+37 |             app.terminate()
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:42:41: note: mutation of this class property is only permitted within the actor
+ 40 | 
+ 41 | /*! The current device. */
+ 42 | @property (class, readonly) XCUIDevice *sharedDevice;
+    |                                         `- note: mutation of this class property is only permitted within the actor
+ 43 | 
+ 44 | + (instancetype)new XCUI_UNAVAILABLE("Access XCUIDevice through +sharedDevice");
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:37:17: warning: call to main actor-isolated instance method 'terminate()' in a synchronous nonisolated context [#ActorIsolatedCall]
+25 |     }
+26 | 
+27 |     func testAlternatives() throws {
+   |          `- note: add '@MainActor' to make instance method 'testAlternatives()' part of global actor 'MainActor'
+28 |         continueAfterFailure = false
+29 |         for variant in ["baseline", "swiftUIList", "listNoIgnore", "geometryPage", "zeroMargins", "rebuildPage", "rebuildPager"] {
+   :
+35 |             XCUIDevice.shared.orientation = .landscapeLeft
+36 |             try checkpoint("auto-\(variant)-landscape", app: app)
+37 |             app.terminate()
+   |                 `- warning: call to main actor-isolated instance method 'terminate()' in a synchronous nonisolated context [#ActorIsolatedCall]
+38 |         }
+39 |     }
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIApplication.h:84:1: note: calls to instance method 'terminate()' from outside of its actor context are implicitly asynchronous
+ 82 |  * is sent to the process.
+ 83 |  */
+ 84 | - (void)terminate;
+    | `- note: calls to instance method 'terminate()' from outside of its actor context are implicitly asynchronous
+ 85 | 
+ 86 | /*!
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:43:27: warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   |                           `- warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+44 |         let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+45 |         app.launchArguments = ["--open-overview"]
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:55:43: note: mutation of this property is only permitted within the actor
+ 53 | #if TARGET_OS_IOS
+ 54 | /*! The orientation of the device. */
+ 55 | @property (nonatomic) UIDeviceOrientation orientation;
+    |                                           `- note: mutation of this property is only permitted within the actor
+ 56 | /*!
+ 57 |  * Provides access to an object representing the Siri interface on the device.
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:43:20: warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   |                    `- warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+44 |         let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+45 |         app.launchArguments = ["--open-overview"]
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:42:41: note: mutation of this class property is only permitted within the actor
+ 40 | 
+ 41 | /*! The current device. */
+ 42 | @property (class, readonly) XCUIDevice *sharedDevice;
+    |                                         `- note: mutation of this class property is only permitted within the actor
+ 43 | 
+ 44 | + (instancetype)new XCUI_UNAVAILABLE("Access XCUIDevice through +sharedDevice");
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:44:19: warning: call to main actor-isolated initializer 'init(bundleIdentifier:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+44 |         let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+   |                   `- warning: call to main actor-isolated initializer 'init(bundleIdentifier:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+45 |         app.launchArguments = ["--open-overview"]
+46 |         app.launch()
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIApplication.h:35:1: note: calls to initializer 'init(bundleIdentifier:)' from outside of its actor context are implicitly asynchronous
+ 33 |  * Returns a proxy for an application associated with the specified bundle identifier.
+ 34 |  */
+ 35 | - (instancetype)initWithBundleIdentifier:(NSString *)bundleIdentifier NS_DESIGNATED_INITIALIZER;
+    | `- note: calls to initializer 'init(bundleIdentifier:)' from outside of its actor context are implicitly asynchronous
+ 36 | 
+ 37 | #if TARGET_OS_OSX || TARGET_OS_MACCATALYST
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:45:13: warning: main actor-isolated property 'launchArguments' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+44 |         let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+45 |         app.launchArguments = ["--open-overview"]
+   |             `- warning: main actor-isolated property 'launchArguments' can not be mutated from a nonisolated context
+46 |         app.launch()
+47 | 
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIApplication.h:93:51: note: mutation of this property is only permitted within the actor
+ 91 |  * is launched.
+ 92 |  */
+ 93 | @property (nonatomic, copy) NSArray <NSString *> *launchArguments;
+    |                                                   `- note: mutation of this property is only permitted within the actor
+ 94 | 
+ 95 | /*!
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:46:13: warning: call to main actor-isolated instance method 'launch()' in a synchronous nonisolated context [#ActorIsolatedCall]
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+44 |         let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+45 |         app.launchArguments = ["--open-overview"]
+46 |         app.launch()
+   |             `- warning: call to main actor-isolated instance method 'launch()' in a synchronous nonisolated context [#ActorIsolatedCall]
+47 | 
+48 |         let first = app.buttons["Featured, 9"]
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIApplication.h:54:1: note: calls to instance method 'launch()' from outside of its actor context are implicitly asynchronous
+ 52 |  * at that point.
+ 53 | */
+ 54 | - (void)launch;
+    | `- note: calls to instance method 'launch()' from outside of its actor context are implicitly asynchronous
+ 55 | 
+ 56 | /*!
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:48:32: warning: main actor-isolated subscript 'subscript(_:)' can not be referenced from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+46 |         app.launch()
+47 | 
+48 |         let first = app.buttons["Featured, 9"]
+   |                                `- warning: main actor-isolated subscript 'subscript(_:)' can not be referenced from a nonisolated context
+49 |         let second = app.buttons["Collections, 8"]
+50 |         let third = app.buttons["Recently Added, 7"]
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementQuery.h:46:1: note: subscript declared here
+44 | 
+45 | /*! Keyed subscripting is implemented as a shortcut for matching an identifier only. For example, app.descendants["Foo"] -> XCUIElement. */
+46 | - (XCUIElement *)objectForKeyedSubscript:(NSString *)key;
+   | `- note: subscript declared here
+47 | 
+48 | /*! Immediately evaluates the query and returns an array of elements bound to the resulting accessibility elements. */
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:48:25: warning: main actor-isolated property 'buttons' can not be referenced from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+46 |         app.launch()
+47 | 
+48 |         let first = app.buttons["Featured, 9"]
+   |                         `- warning: main actor-isolated property 'buttons' can not be referenced from a nonisolated context
+49 |         let second = app.buttons["Collections, 8"]
+50 |         let third = app.buttons["Recently Added, 7"]
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementTypeQueryProvider.h:22:46: note: property declared here
+ 20 | @property (readonly, copy) XCUIElementQuery *alerts;
+ 21 | @property (readonly, copy) XCUIElementQuery *dialogs;
+ 22 | @property (readonly, copy) XCUIElementQuery *buttons;
+    |                                              `- note: property declared here
+ 23 | @property (readonly, copy) XCUIElementQuery *radioButtons;
+ 24 | @property (readonly, copy) XCUIElementQuery *radioGroups;
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:49:33: warning: main actor-isolated subscript 'subscript(_:)' can not be referenced from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+47 | 
+48 |         let first = app.buttons["Featured, 9"]
+49 |         let second = app.buttons["Collections, 8"]
+   |                                 `- warning: main actor-isolated subscript 'subscript(_:)' can not be referenced from a nonisolated context
+50 |         let third = app.buttons["Recently Added, 7"]
+51 |         XCTAssertTrue(first.waitForExistence(timeout: 10))
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementQuery.h:46:1: note: subscript declared here
+44 | 
+45 | /*! Keyed subscripting is implemented as a shortcut for matching an identifier only. For example, app.descendants["Foo"] -> XCUIElement. */
+46 | - (XCUIElement *)objectForKeyedSubscript:(NSString *)key;
+   | `- note: subscript declared here
+47 | 
+48 | /*! Immediately evaluates the query and returns an array of elements bound to the resulting accessibility elements. */
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:49:26: warning: main actor-isolated property 'buttons' can not be referenced from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+47 | 
+48 |         let first = app.buttons["Featured, 9"]
+49 |         let second = app.buttons["Collections, 8"]
+   |                          `- warning: main actor-isolated property 'buttons' can not be referenced from a nonisolated context
+50 |         let third = app.buttons["Recently Added, 7"]
+51 |         XCTAssertTrue(first.waitForExistence(timeout: 10))
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementTypeQueryProvider.h:22:46: note: property declared here
+ 20 | @property (readonly, copy) XCUIElementQuery *alerts;
+ 21 | @property (readonly, copy) XCUIElementQuery *dialogs;
+ 22 | @property (readonly, copy) XCUIElementQuery *buttons;
+    |                                              `- note: property declared here
+ 23 | @property (readonly, copy) XCUIElementQuery *radioButtons;
+ 24 | @property (readonly, copy) XCUIElementQuery *radioGroups;
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:50:32: warning: main actor-isolated subscript 'subscript(_:)' can not be referenced from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+48 |         let first = app.buttons["Featured, 9"]
+49 |         let second = app.buttons["Collections, 8"]
+50 |         let third = app.buttons["Recently Added, 7"]
+   |                                `- warning: main actor-isolated subscript 'subscript(_:)' can not be referenced from a nonisolated context
+51 |         XCTAssertTrue(first.waitForExistence(timeout: 10))
+52 | 
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementQuery.h:46:1: note: subscript declared here
+44 | 
+45 | /*! Keyed subscripting is implemented as a shortcut for matching an identifier only. For example, app.descendants["Foo"] -> XCUIElement. */
+46 | - (XCUIElement *)objectForKeyedSubscript:(NSString *)key;
+   | `- note: subscript declared here
+47 | 
+48 | /*! Immediately evaluates the query and returns an array of elements bound to the resulting accessibility elements. */
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:50:25: warning: main actor-isolated property 'buttons' can not be referenced from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+48 |         let first = app.buttons["Featured, 9"]
+49 |         let second = app.buttons["Collections, 8"]
+50 |         let third = app.buttons["Recently Added, 7"]
+   |                         `- warning: main actor-isolated property 'buttons' can not be referenced from a nonisolated context
+51 |         XCTAssertTrue(first.waitForExistence(timeout: 10))
+52 | 
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementTypeQueryProvider.h:22:46: note: property declared here
+ 20 | @property (readonly, copy) XCUIElementQuery *alerts;
+ 21 | @property (readonly, copy) XCUIElementQuery *dialogs;
+ 22 | @property (readonly, copy) XCUIElementQuery *buttons;
+    |                                              `- note: property declared here
+ 23 | @property (readonly, copy) XCUIElementQuery *radioButtons;
+ 24 | @property (readonly, copy) XCUIElementQuery *radioGroups;
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:51:29: warning: call to main actor-isolated instance method 'waitForExistence(timeout:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+49 |         let second = app.buttons["Collections, 8"]
+50 |         let third = app.buttons["Recently Added, 7"]
+51 |         XCTAssertTrue(first.waitForExistence(timeout: 10))
+   |                             `- warning: call to main actor-isolated instance method 'waitForExistence(timeout:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+52 | 
+53 |         second.tap()
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElement.h:57:1: note: calls to instance method 'waitForExistence(timeout:)' from outside of its actor context are implicitly asynchronous
+ 55 | 
+ 56 | /*! Waits the specified amount of time for the element's exist property to be true and returns false if the timeout expires without the element coming into existence. */
+ 57 | - (BOOL)waitForExistenceWithTimeout:(NSTimeInterval)timeout XCUI_WARN_UNUSED;
+    | `- note: calls to instance method 'waitForExistence(timeout:)' from outside of its actor context are implicitly asynchronous
+ 58 | 
+ 59 | /*! Waits the specified amount of time for the element's exist property to be false and returns false if the timeout expires without the element disappearing. */
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:53:16: warning: call to main actor-isolated instance method 'tap()' in a synchronous nonisolated context [#ActorIsolatedCall]
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+51 |         XCTAssertTrue(first.waitForExistence(timeout: 10))
+52 | 
+53 |         second.tap()
+   |                `- warning: call to main actor-isolated instance method 'tap()' in a synchronous nonisolated context [#ActorIsolatedCall]
+54 |         XCTAssertTrue(second.isSelected)
+55 |         try checkpoint("fix3-v2-selected-page-portrait", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElement.h:139:1: note: calls to instance method 'tap()' from outside of its actor context are implicitly asynchronous
+137 |  * Sends a tap event to a hittable point computed for the element.
+138 |  */
+139 | - (void)tap API_UNAVAILABLE(tvos);
+    | `- note: calls to instance method 'tap()' from outside of its actor context are implicitly asynchronous
+140 | 
+141 | /*!
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:54:30: warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+52 | 
+53 |         second.tap()
+54 |         XCTAssertTrue(second.isSelected)
+   |                              `- warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+55 |         try checkpoint("fix3-v2-selected-page-portrait", app: app)
+56 | 
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementAttributes.h:65:48: note: property declared here
+ 63 | 
+ 64 | /*! Whether or not the element is selected. */
+ 65 | @property (readonly, getter = isSelected) BOOL selected;
+    |                                                `- note: property declared here
+ 66 | 
+ 67 | #if !TARGET_OS_OSX
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:57:27: warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+55 |         try checkpoint("fix3-v2-selected-page-portrait", app: app)
+56 | 
+57 |         XCUIDevice.shared.orientation = .landscapeLeft
+   |                           `- warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+58 |         XCTAssertTrue(second.isSelected)
+59 |         try checkpoint("fix3-v2-first-landscape", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:55:43: note: mutation of this property is only permitted within the actor
+ 53 | #if TARGET_OS_IOS
+ 54 | /*! The orientation of the device. */
+ 55 | @property (nonatomic) UIDeviceOrientation orientation;
+    |                                           `- note: mutation of this property is only permitted within the actor
+ 56 | /*!
+ 57 |  * Provides access to an object representing the Siri interface on the device.
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:57:20: warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+55 |         try checkpoint("fix3-v2-selected-page-portrait", app: app)
+56 | 
+57 |         XCUIDevice.shared.orientation = .landscapeLeft
+   |                    `- warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+58 |         XCTAssertTrue(second.isSelected)
+59 |         try checkpoint("fix3-v2-first-landscape", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:42:41: note: mutation of this class property is only permitted within the actor
+ 40 | 
+ 41 | /*! The current device. */
+ 42 | @property (class, readonly) XCUIDevice *sharedDevice;
+    |                                         `- note: mutation of this class property is only permitted within the actor
+ 43 | 
+ 44 | + (instancetype)new XCUI_UNAVAILABLE("Access XCUIDevice through +sharedDevice");
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:58:30: warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+56 | 
+57 |         XCUIDevice.shared.orientation = .landscapeLeft
+58 |         XCTAssertTrue(second.isSelected)
+   |                              `- warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+59 |         try checkpoint("fix3-v2-first-landscape", app: app)
+60 | 
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementAttributes.h:65:48: note: property declared here
+ 63 | 
+ 64 | /*! Whether or not the element is selected. */
+ 65 | @property (readonly, getter = isSelected) BOOL selected;
+    |                                                `- note: property declared here
+ 66 | 
+ 67 | #if !TARGET_OS_OSX
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:61:30: warning: call to main actor-isolated instance method 'coordinate(withNormalizedOffset:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+59 |         try checkpoint("fix3-v2-first-landscape", app: app)
+60 | 
+61 |         let swipeStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.82, dy: 0.55))
+   |                              `- warning: call to main actor-isolated instance method 'coordinate(withNormalizedOffset:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+62 |         let swipeEnd = app.coordinate(withNormalizedOffset: CGVector(dx: 0.18, dy: 0.55))
+63 |         swipeStart.press(forDuration: 0.1, thenDragTo: swipeEnd)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElement.h:73:1: note: calls to instance method 'coordinate(withNormalizedOffset:)' from outside of its actor context are implicitly asynchronous
+ 71 | #if !TARGET_OS_TV
+ 72 | /*! Creates and returns a new coordinate that will compute its screen point by adding the offset multiplied by the size of the element’s frame to the origin of the element’s frame. */
+ 73 | - (XCUICoordinate *)coordinateWithNormalizedOffset:(CGVector)normalizedOffset;
+    | `- note: calls to instance method 'coordinate(withNormalizedOffset:)' from outside of its actor context are implicitly asynchronous
+ 74 | #endif
+ 75 | 
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:62:28: warning: call to main actor-isolated instance method 'coordinate(withNormalizedOffset:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+60 | 
+61 |         let swipeStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.82, dy: 0.55))
+62 |         let swipeEnd = app.coordinate(withNormalizedOffset: CGVector(dx: 0.18, dy: 0.55))
+   |                            `- warning: call to main actor-isolated instance method 'coordinate(withNormalizedOffset:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+63 |         swipeStart.press(forDuration: 0.1, thenDragTo: swipeEnd)
+64 |         XCTAssertTrue(third.isSelected)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElement.h:73:1: note: calls to instance method 'coordinate(withNormalizedOffset:)' from outside of its actor context are implicitly asynchronous
+ 71 | #if !TARGET_OS_TV
+ 72 | /*! Creates and returns a new coordinate that will compute its screen point by adding the offset multiplied by the size of the element’s frame to the origin of the element’s frame. */
+ 73 | - (XCUICoordinate *)coordinateWithNormalizedOffset:(CGVector)normalizedOffset;
+    | `- note: calls to instance method 'coordinate(withNormalizedOffset:)' from outside of its actor context are implicitly asynchronous
+ 74 | #endif
+ 75 | 
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:63:20: warning: call to main actor-isolated instance method 'press(forDuration:thenDragTo:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+61 |         let swipeStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.82, dy: 0.55))
+62 |         let swipeEnd = app.coordinate(withNormalizedOffset: CGVector(dx: 0.18, dy: 0.55))
+63 |         swipeStart.press(forDuration: 0.1, thenDragTo: swipeEnd)
+   |                    `- warning: call to main actor-isolated instance method 'press(forDuration:thenDragTo:)' in a synchronous nonisolated context [#ActorIsolatedCall]
+64 |         XCTAssertTrue(third.isSelected)
+65 |         try checkpoint("fix3-v2-paged-landscape", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUICoordinate.h:45:1: note: calls to instance method 'press(forDuration:thenDragTo:)' from outside of its actor context are implicitly asynchronous
+ 43 | - (void)doubleTap;
+ 44 | - (void)pressForDuration:(NSTimeInterval)duration;
+ 45 | - (void)pressForDuration:(NSTimeInterval)duration thenDragToCoordinate:(XCUICoordinate *)otherCoordinate;
+    | `- note: calls to instance method 'press(forDuration:thenDragTo:)' from outside of its actor context are implicitly asynchronous
+ 46 | - (void)pressForDuration:(NSTimeInterval)duration thenDragToCoordinate:(XCUICoordinate *)otherCoordinate withVelocity:(XCUIGestureVelocity)velocity thenHoldForDuration:(NSTimeInterval)holdDuration;
+ 47 | 
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:64:29: warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+62 |         let swipeEnd = app.coordinate(withNormalizedOffset: CGVector(dx: 0.18, dy: 0.55))
+63 |         swipeStart.press(forDuration: 0.1, thenDragTo: swipeEnd)
+64 |         XCTAssertTrue(third.isSelected)
+   |                             `- warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+65 |         try checkpoint("fix3-v2-paged-landscape", app: app)
+66 | 
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementAttributes.h:65:48: note: property declared here
+ 63 | 
+ 64 | /*! Whether or not the element is selected. */
+ 65 | @property (readonly, getter = isSelected) BOOL selected;
+    |                                                `- note: property declared here
+ 66 | 
+ 67 | #if !TARGET_OS_OSX
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:67:27: warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+65 |         try checkpoint("fix3-v2-paged-landscape", app: app)
+66 | 
+67 |         XCUIDevice.shared.orientation = .portrait
+   |                           `- warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+68 |         XCTAssertTrue(third.isSelected)
+69 |         try checkpoint("fix3-v2-returned-portrait", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:55:43: note: mutation of this property is only permitted within the actor
+ 53 | #if TARGET_OS_IOS
+ 54 | /*! The orientation of the device. */
+ 55 | @property (nonatomic) UIDeviceOrientation orientation;
+    |                                           `- note: mutation of this property is only permitted within the actor
+ 56 | /*!
+ 57 |  * Provides access to an object representing the Siri interface on the device.
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:67:20: warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+65 |         try checkpoint("fix3-v2-paged-landscape", app: app)
+66 | 
+67 |         XCUIDevice.shared.orientation = .portrait
+   |                    `- warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+68 |         XCTAssertTrue(third.isSelected)
+69 |         try checkpoint("fix3-v2-returned-portrait", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:42:41: note: mutation of this class property is only permitted within the actor
+ 40 | 
+ 41 | /*! The current device. */
+ 42 | @property (class, readonly) XCUIDevice *sharedDevice;
+    |                                         `- note: mutation of this class property is only permitted within the actor
+ 43 | 
+ 44 | + (instancetype)new XCUI_UNAVAILABLE("Access XCUIDevice through +sharedDevice");
+
+
+SwiftCompile normal arm64 /Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    builtin-SwiftPerFileCompile PagerInvestigationTests.swift
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:68:29: warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+66 | 
+67 |         XCUIDevice.shared.orientation = .portrait
+68 |         XCTAssertTrue(third.isSelected)
+   |                             `- warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+69 |         try checkpoint("fix3-v2-returned-portrait", app: app)
+70 | 
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementAttributes.h:65:48: note: property declared here
+ 63 | 
+ 64 | /*! Whether or not the element is selected. */
+ 65 | @property (readonly, getter = isSelected) BOOL selected;
+    |                                                `- note: property declared here
+ 66 | 
+ 67 | #if !TARGET_OS_OSX
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:71:27: warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+69 |         try checkpoint("fix3-v2-returned-portrait", app: app)
+70 | 
+71 |         XCUIDevice.shared.orientation = .landscapeRight
+   |                           `- warning: main actor-isolated property 'orientation' can not be mutated from a nonisolated context
+72 |         XCTAssertTrue(third.isSelected)
+73 |         try checkpoint("fix3-v2-second-landscape", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:55:43: note: mutation of this property is only permitted within the actor
+ 53 | #if TARGET_OS_IOS
+ 54 | /*! The orientation of the device. */
+ 55 | @property (nonatomic) UIDeviceOrientation orientation;
+    |                                           `- note: mutation of this property is only permitted within the actor
+ 56 | /*!
+ 57 |  * Provides access to an object representing the Siri interface on the device.
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:71:20: warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+39 |     }
+40 | 
+41 |     func testFix3RepeatedRotationsAndPaging() throws {
+   |          `- note: add '@MainActor' to make instance method 'testFix3RepeatedRotationsAndPaging()' part of global actor 'MainActor'
+42 |         continueAfterFailure = false
+43 |         XCUIDevice.shared.orientation = .portrait
+   :
+69 |         try checkpoint("fix3-v2-returned-portrait", app: app)
+70 | 
+71 |         XCUIDevice.shared.orientation = .landscapeRight
+   |                    `- warning: main actor-isolated class property 'shared' can not be mutated from a nonisolated context
+72 |         XCTAssertTrue(third.isSelected)
+73 |         try checkpoint("fix3-v2-second-landscape", app: app)
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIDevice.h:42:41: note: mutation of this class property is only permitted within the actor
+ 40 | 
+ 41 | /*! The current device. */
+ 42 | @property (class, readonly) XCUIDevice *sharedDevice;
+    |                                         `- note: mutation of this class property is only permitted within the actor
+ 43 | 
+ 44 | + (instancetype)new XCUI_UNAVAILABLE("Access XCUIDevice through +sharedDevice");
+
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:72:29: warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+70 | 
+71 |         XCUIDevice.shared.orientation = .landscapeRight
+72 |         XCTAssertTrue(third.isSelected)
+   |                             `- warning: main actor-isolated property 'isSelected' can not be referenced from a nonisolated autoclosure
+73 |         try checkpoint("fix3-v2-second-landscape", app: app)
+74 |     }
+
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework/Headers/XCUIElementAttributes.h:65:48: note: property declared here
+ 63 | 
+ 64 | /*! Whether or not the element is selected. */
+ 65 | @property (readonly, getter = isSelected) BOOL selected;
+    |                                                `- note: property declared here
+ 66 | 
+ 67 | #if !TARGET_OS_OSX
+
+[#ActorIsolatedCall]: <https://docs.swift.org/compiler/documentation/diagnostics/actor-isolated-call>
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PagerInvestigationTests (in target 'PagerInvestigationTests' from project 'Runner')
+
+SwiftCompile normal arm64 (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling PagerInvestigationTests.swift (in target 'PagerInvestigationTests' from project 'Runner')
+
+SwiftDriver\ Compilation PagerInvestigationTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    builtin-Swift-Compilation -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PagerInvestigationTests -Onone @/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-upcoming-feature StrictConcurrency -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/complex-layout-ui-tests/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator -F /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/complex-layout-ui-tests/SDKStatCaches.noindex/iphonesimulator27.0-24A5355p-3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -sdk-module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -emit-dependencies -emit-module -emit-module-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/complex-layout-ui-tests/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-generated-files.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-own-target-headers.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-project-headers.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources/arm64 -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-Swift.h -working-directory /Users/samin/Documents/ComplexLayout/docs/pager-investigation -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PagerInvestigationTests (in target 'PagerInvestigationTests' from project 'Runner')
+
+SwiftDriver\ Compilation\ Requirements PagerInvestigationTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PagerInvestigationTests -Onone @/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-upcoming-feature StrictConcurrency -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/complex-layout-ui-tests/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator -F /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/complex-layout-ui-tests/SDKStatCaches.noindex/iphonesimulator27.0-24A5355p-3243818bda632a4370e1cc7a9fd181c5.sdkstatcache -output-file-map /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -sdk-module-cache-path /tmp/complex-layout-ui-tests/ModuleCache.noindex -emit-dependencies -emit-module -emit-module-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/complex-layout-ui-tests/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-generated-files.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-own-target-headers.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests-project-headers.hmap -Xcc -I/tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources/arm64 -Xcc -I/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests-Swift.h -working-directory /Users/samin/Documents/ComplexLayout/docs/pager-investigation -experimental-emit-module-separately -disable-cmo
+
+Copy /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.swiftsourceinfo (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.swiftsourceinfo /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+Ld /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/PagerInvestigationTests normal (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -bundle -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -L/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator -L/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/tmp/complex-layout-ui-tests/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -filelist /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -o /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/PagerInvestigationTests
+
+Copy /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.abi.json (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.abi.json /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+ExtractAppIntentsMetadata (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name PagerInvestigationTests --sdk-root /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A5194q --platform-family iOS --deployment-target 17.0 --bundle-identifier com.example.PagerInvestigationTests --output /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest --target-triple arm64-apple-ios17.0-simulator --binary-file /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/PagerInvestigationTests --dependency-file /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests_dependency_info.dat --stringsdata-file /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.SwiftFileList --metadata-file-list /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests.DependencyMetadataFileList --static-metadata-file-list /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/PagerInvestigationTests.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/Objects-normal/arm64/PagerInvestigationTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-09-15 23:41:15.891 appintentsmetadataprocessor[43464:25724823] Starting appintentsmetadataprocessor export
+2026-09-15 23:41:15.896 appintentsmetadataprocessor[43464:25724823] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CopySwiftLibs /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest (in target 'PagerInvestigationTests' from project 'Runner')
+    cd /Users/samin/Documents/ComplexLayout/docs/pager-investigation
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/PagerInvestigationTests --scan-folder /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/Frameworks --scan-folder /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/PlugIns --scan-folder /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/SystemExtensions --scan-folder /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/Extensions --platform iphonesimulator --toolchain /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/complex-layout-ui-tests/Build/Products/Debug-iphonesimulator/PagerInvestigationTests-Runner.app/PlugIns/PagerInvestigationTests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/PagerInvestigationTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+PruneExplicitPrecompiledModules /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/complex-layout-ui-tests/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+** TEST BUILD SUCCEEDED **
+

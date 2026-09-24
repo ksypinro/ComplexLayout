@@ -1,0 +1,86 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project docs/pager-investigation/Runner.xcodeproj -scheme Investigation -destination id=16592CE0-AE1E-42E7-BA7D-8A5107A25680 -derivedDataPath /tmp/complex-layout-ui-tests -parallel-testing-enabled NO "-only-testing:PagerInvestigationTests/PagerInvestigationTests/testFix3RepeatedRotationsAndPaging" -resultBundlePath /tmp/complex-layout-fix3.xcresult test-without-building CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Writing result bundle at path:
+	/tmp/complex-layout-fix3.xcresult
+
+2026-09-15 17:50:05.881788+0600 PagerInvestigationTests-Runner[29565:25540993] [Default] Running tests...
+2026-09-15 17:50:05.945173+0600 PagerInvestigationTests-Runner[29565:25540993] [UIKit App Config] Update the Info.plist: Launch screens will soon be required.
+    t =      nans Interface orientation changed to Landscape Left
+Test Suite 'Selected tests' started at 2026-09-15 17:50:09.230.
+Test Suite 'PagerInvestigationTests.xctest' started at 2026-09-15 17:50:09.231.
+Test Suite 'PagerInvestigationTests' started at 2026-09-15 17:50:09.231.
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' started.
+    t =     0.00s Start Test at 2026-09-15 17:50:09.233
+    t =     0.21s Set Up
+    t =     0.21s Setting device orientation to Portrait
+    t =     0.23s     Device orientation changed to Portrait
+    t =     0.61s     Interface orientation changed to Portrait
+    t =     0.68s     Wait for com.apple.springboard to idle
+    t =     1.41s Open com.example.ComplexLayout
+    t =     1.41s     Launch com.example.ComplexLayout
+2026-09-15 17:50:11.301 xcodebuild[29527:25540506] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 17:50:11.303 xcodebuild[29527:25540506] [MT] IDELaunchParametersSnapshot: no debugger version
+objc[29565]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x1076ec310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x1102a4398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     4.68s         Setting up automation session
+    t =     7.82s         Wait for com.example.ComplexLayout to idle
+    t =    10.34s Waiting 10.0s for "Featured, 9" Button to exist
+    t =    11.36s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    11.37s         Checking existence of `"Featured, 9" Button`
+    t =    11.59s         Capturing element debug description
+    t =    12.41s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    12.41s         Checking existence of `"Featured, 9" Button`
+    t =    12.52s         Capturing element debug description
+    t =    13.34s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    13.35s         Checking existence of `"Featured, 9" Button`
+    t =    13.45s         Capturing element debug description
+    t =    14.38s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    14.38s         Checking existence of `"Featured, 9" Button`
+    t =    14.48s         Capturing element debug description
+    t =    15.41s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    15.41s         Checking existence of `"Featured, 9" Button`
+    t =    15.52s         Capturing element debug description
+    t =    16.43s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    16.44s         Checking existence of `"Featured, 9" Button`
+    t =    16.54s         Capturing element debug description
+    t =    17.37s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    17.37s         Checking existence of `"Featured, 9" Button`
+    t =    17.48s         Capturing element debug description
+    t =    18.40s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    18.41s         Checking existence of `"Featured, 9" Button`
+    t =    18.51s         Capturing element debug description
+    t =    19.43s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    19.44s         Checking existence of `"Featured, 9" Button`
+    t =    19.54s         Capturing element debug description
+    t =    20.34s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    20.34s         Checking existence of `"Featured, 9" Button`
+    t =    20.45s         Capturing element debug description
+    t =    20.45s     Checking existence of `"Featured, 9" Button`
+    t =    20.52s Collecting debug information to assist test failure triage
+    t =    20.52s     Requesting snapshot of accessibility hierarchy for app with pid 29599
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:51: error: -[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging] : XCTAssertTrue failed
+    t =    20.77s Tear Down
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' failed (21.051 seconds).
+Test Suite 'PagerInvestigationTests' failed at 2026-09-15 17:50:30.285.
+	 Executed 1 test, with 1 failure (0 unexpected) in 21.051 (21.054) seconds
+Test Suite 'PagerInvestigationTests.xctest' failed at 2026-09-15 17:50:30.286.
+	 Executed 1 test, with 1 failure (0 unexpected) in 21.051 (21.056) seconds
+Test Suite 'Selected tests' failed at 2026-09-15 17:50:30.287.
+	 Executed 1 test, with 1 failure (0 unexpected) in 21.051 (21.057) seconds
+2026-09-15 18:00:31.068 xcodebuild[29527:25540583]  IDETestOperationsObserverDebug: Failure collecting diagnostics from simulator: Timed out after 600.0 seconds while waiting for a response from the invoked process
+2026-09-15 18:00:31.135 xcodebuild[29527:25540506] [MT] IDETestOperationsObserverDebug: 638.797 elapsed -- Testing started completed.
+2026-09-15 18:00:31.135 xcodebuild[29527:25540506] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-15 18:00:31.135 xcodebuild[29527:25540506] [MT] IDETestOperationsObserverDebug: 638.797 sec, +638.797 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/complex-layout-fix3.xcresult
+
+Failing tests:
+	PagerInvestigationTests.testFix3RepeatedRotationsAndPaging()
+
+** TEST EXECUTE FAILED **
+
+Testing started

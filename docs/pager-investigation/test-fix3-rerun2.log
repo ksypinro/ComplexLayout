@@ -1,0 +1,96 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild -project docs/pager-investigation/Runner.xcodeproj -scheme Investigation -destination id=16592CE0-AE1E-42E7-BA7D-8A5107A25680 -derivedDataPath /tmp/complex-layout-ui-tests -parallel-testing-enabled NO "-only-testing:PagerInvestigationTests/PagerInvestigationTests/testFix3RepeatedRotationsAndPaging" -resultBundlePath /tmp/complex-layout-fix3-rerun2.xcresult test-without-building CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Writing result bundle at path:
+	/tmp/complex-layout-fix3-rerun2.xcresult
+
+2026-09-15 17:52:28.193379+0600 PagerInvestigationTests-Runner[30000:25545466] [Default] Running tests...
+2026-09-15 17:52:28.274015+0600 PagerInvestigationTests-Runner[30000:25545466] [UIKit App Config] Update the Info.plist: Launch screens will soon be required.
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-09-15 17:52:31.897.
+Test Suite 'PagerInvestigationTests.xctest' started at 2026-09-15 17:52:31.898.
+Test Suite 'PagerInvestigationTests' started at 2026-09-15 17:52:31.898.
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' started.
+    t =     0.00s Start Test at 2026-09-15 17:52:31.900
+    t =     0.08s Set Up
+    t =     0.08s Setting device orientation to Portrait
+    t =     0.15s     Wait for com.apple.springboard to idle
+    t =     0.17s Open com.example.ComplexLayout
+    t =     0.17s     Launch com.example.ComplexLayout
+2026-09-15 17:52:32.386 xcodebuild[29986:25545253] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-09-15 17:52:32.386 xcodebuild[29986:25545253] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.53s         Setting up automation session
+objc[30000]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x106228310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.5355.16.NhlPFH/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x106ba8398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     5.27s         Wait for com.example.ComplexLayout to idle
+    t =     7.61s Tap Target Application 'com.example.ComplexLayout'[0.56, 0.10]
+    t =     7.61s     Wait for com.example.ComplexLayout to idle
+    t =     7.61s     Find the Target Application 'com.example.ComplexLayout'
+    t =     7.87s     Check for interrupting elements affecting "ComplexLayout" Application
+    t =     7.96s         Wait for com.apple.springboard to idle
+    t =     8.36s Ignoring failure to get hierarchy for remote element in process 24098 (Error getting main window kAXErrorServerNotFound)
+    t =     8.36s Ignoring failure to get hierarchy for remote element in process 24098 (Error getting main window kAXErrorServerNotFound)
+    t =     8.37s     Synthesize event
+    t =     8.37s         Find the Target Application 'com.example.ComplexLayout'
+    t =     8.42s         Find the Target Application 'com.example.ComplexLayout'
+    t =     8.46s         Find the Target Application 'com.example.ComplexLayout'
+    t =     8.92s     Wait for com.example.ComplexLayout to idle
+    t =     8.92s Waiting 10.0s for "Featured, 9" Button to exist
+    t =     9.96s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =     9.96s         Checking existence of `"Featured, 9" Button`
+    t =    10.11s         Capturing element debug description
+    t =    10.93s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    10.93s         Checking existence of `"Featured, 9" Button`
+    t =    11.03s         Capturing element debug description
+    t =    11.95s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    11.95s         Checking existence of `"Featured, 9" Button`
+    t =    12.06s         Capturing element debug description
+    t =    12.98s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    12.99s         Checking existence of `"Featured, 9" Button`
+    t =    13.06s         Capturing element debug description
+    t =    13.98s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    13.99s         Checking existence of `"Featured, 9" Button`
+    t =    14.06s         Capturing element debug description
+    t =    14.98s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    14.98s         Checking existence of `"Featured, 9" Button`
+    t =    15.08s         Capturing element debug description
+    t =    16.01s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    16.01s         Checking existence of `"Featured, 9" Button`
+    t =    16.10s         Capturing element debug description
+    t =    17.02s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    17.02s         Checking existence of `"Featured, 9" Button`
+    t =    17.12s         Capturing element debug description
+    t =    17.95s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    17.95s         Checking existence of `"Featured, 9" Button`
+    t =    18.05s         Capturing element debug description
+    t =    18.93s     Checking `Expect predicate `existsNoRetry == 1` for object "Featured, 9" Button`
+    t =    18.93s         Checking existence of `"Featured, 9" Button`
+    t =    19.03s         Capturing element debug description
+    t =    19.03s     Checking existence of `"Featured, 9" Button`
+    t =    19.10s Collecting debug information to assist test failure triage
+    t =    19.10s     Requesting snapshot of accessibility hierarchy for app with pid 30015
+/Users/samin/Documents/ComplexLayout/docs/pager-investigation/UITests/PagerInvestigationTests.swift:55: error: -[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging] : XCTAssertTrue failed
+    t =    19.30s Tear Down
+Test Case '-[PagerInvestigationTests.PagerInvestigationTests testFix3RepeatedRotationsAndPaging]' failed (19.561 seconds).
+Test Suite 'PagerInvestigationTests' failed at 2026-09-15 17:52:51.461.
+	 Executed 1 test, with 1 failure (0 unexpected) in 19.561 (19.564) seconds
+Test Suite 'PagerInvestigationTests.xctest' failed at 2026-09-15 17:52:51.462.
+	 Executed 1 test, with 1 failure (0 unexpected) in 19.561 (19.565) seconds
+Test Suite 'Selected tests' failed at 2026-09-15 17:52:51.463.
+	 Executed 1 test, with 1 failure (0 unexpected) in 19.561 (19.566) seconds
+2026-09-15 18:02:52.288 xcodebuild[29986:25545277]  IDETestOperationsObserverDebug: Failure collecting diagnostics from simulator: Timed out after 600.0 seconds while waiting for a response from the invoked process
+2026-09-15 18:02:52.356 xcodebuild[29986:25545253] [MT] IDETestOperationsObserverDebug: 626.898 elapsed -- Testing started completed.
+2026-09-15 18:02:52.356 xcodebuild[29986:25545253] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-15 18:02:52.356 xcodebuild[29986:25545253] [MT] IDETestOperationsObserverDebug: 626.899 sec, +626.899 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/complex-layout-fix3-rerun2.xcresult
+
+Failing tests:
+	PagerInvestigationTests.testFix3RepeatedRotationsAndPaging()
+
+** TEST EXECUTE FAILED **
+
+Testing started

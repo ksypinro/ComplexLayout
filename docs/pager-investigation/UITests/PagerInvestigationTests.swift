@@ -37,4 +37,64 @@ final class PagerInvestigationTests: XCTestCase {
             app.terminate()
         }
     }
+
+    func testFix3RepeatedRotationsAndPaging() throws {
+        continueAfterFailure = false
+        XCUIDevice.shared.orientation = .portrait
+        let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+        app.launchArguments = ["--open-overview"]
+        app.launch()
+
+        let first = app.buttons["Featured, 9"]
+        let second = app.buttons["Collections, 8"]
+        let third = app.buttons["Recently Added, 7"]
+        XCTAssertTrue(first.waitForExistence(timeout: 10))
+
+        second.tap()
+        XCTAssertTrue(second.isSelected)
+        try checkpoint("fix3-v2-selected-page-portrait", app: app)
+
+        XCUIDevice.shared.orientation = .landscapeLeft
+        XCTAssertTrue(second.isSelected)
+        try checkpoint("fix3-v2-first-landscape", app: app)
+
+        let swipeStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.82, dy: 0.55))
+        let swipeEnd = app.coordinate(withNormalizedOffset: CGVector(dx: 0.18, dy: 0.55))
+        swipeStart.press(forDuration: 0.1, thenDragTo: swipeEnd)
+        XCTAssertTrue(third.isSelected)
+        try checkpoint("fix3-v2-paged-landscape", app: app)
+
+        XCUIDevice.shared.orientation = .portrait
+        XCTAssertTrue(third.isSelected)
+        try checkpoint("fix3-v2-returned-portrait", app: app)
+
+        XCUIDevice.shared.orientation = .landscapeRight
+        XCTAssertTrue(third.isSelected)
+        try checkpoint("fix3-v2-second-landscape", app: app)
+    }
+
+    func testFix3ControllerStrategies() throws {
+        continueAfterFailure = false
+        let strategies = [
+            "baseline",
+            "invalidatePager",
+            "layoutPager",
+            "performPagerUpdates",
+            "disablePagerAdjustment",
+            "compensateChild",
+            "repairPageCell"
+        ]
+
+        for strategy in strategies {
+            XCUIDevice.shared.orientation = .portrait
+            let app = XCUIApplication(bundleIdentifier: "com.example.ComplexLayout")
+            app.launchArguments = ["--open-overview", "--fix3-strategy=\(strategy)"]
+            app.launch()
+            XCTAssertTrue(app.buttons["Featured, 9"].waitForExistence(timeout: 10))
+
+            XCUIDevice.shared.orientation = .landscapeLeft
+            try checkpoint("inside-\(strategy)-landscape", app: app)
+            app.terminate()
+        }
+    }
 }
